@@ -2,5 +2,11 @@
 <classpath>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
 	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="D:/Documents/eclipse-workspace/stanford-corenlp-full-2018-01-31/stanford-corenlp-full-2018-01-31/stanford-corenlp-3.9.0.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/D:/Documents/eclipse-workspace/stanford-corenlp-full-2018-01-31/stanford-corenlp-full-2018-01-31/stanford-corenlp-3.9.0-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="D:/Documents/eclipse-workspace/stanford-corenlp-full-2018-01-31/stanford-corenlp-full-2018-01-31/stanford-corenlp-3.9.0-models.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
