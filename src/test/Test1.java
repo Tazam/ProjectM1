@@ -10,19 +10,8 @@ package test;
 import java.io.*;
 import java.util.*;
 
-import edu.stanford.nlp.coref.data.CorefChain;
-import edu.stanford.nlp.ie.util.RelationTriple;
-import edu.stanford.nlp.ling.CoreLabel;
-import edu.stanford.nlp.pipeline.CoreDocument;
-import edu.stanford.nlp.pipeline.CoreEntityMention;
-import edu.stanford.nlp.pipeline.CoreQuote;
-import edu.stanford.nlp.pipeline.CoreSentence;
-import edu.stanford.nlp.pipeline.StanfordCoreNLP;
-import edu.stanford.nlp.semgraph.SemanticGraph;
-import edu.stanford.nlp.trees.Tree;
-
 public class Test1 {
-
+/* 
   public static void main(String[] args) throws IOException {
 	   String text = "Joe Smith was born in California. " +
 		      "In 2017, he went to Paris, France in the summer. " +
@@ -38,14 +27,14 @@ public class Test1 {
 		    // set a property for an annotator, in this case the coref annotator is being set to use the neural algorithm
 		    props.setProperty("coref.algorithm", "neural");
 		    // build pipeline
-		    /*/
+		     
 		    StanfordCoreNLP pipeline = new StanfordCoreNLP(props);
 		    // create a document object
 		    CoreDocument document = new CoreDocument(text);
 		    // annnotate the document
 		    pipeline.annotate(document);
 		    // examples
-//*
+
 		    // 10th token of the document
 		    CoreLabel token = document.tokens().get(10);
 		    System.out.println("Example: token");
@@ -113,7 +102,6 @@ public class Test1 {
 		    System.out.println("Example: canonical speaker of quote");
 		    System.out.println(quote.canonicalSpeaker().get());
 		    System.out.println();
-		    //*/
   }
-
+*/
 }
