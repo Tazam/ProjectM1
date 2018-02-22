@@ -4,7 +4,7 @@
 package test;
 
 /**
- * @author Schmidt Gaëtan
+ * @author Schmidt GaÃ«tan
  *
  */
 import java.io.*;
