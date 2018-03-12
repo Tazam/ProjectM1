@@ -7,9 +7,10 @@ package test;
  * @author Schmidt Gaëtan
  *
  */
+/*
 import java.io.*;
 import java.util.*;
-
+*/
 public class Test1 {
 /* 
   public static void main(String[] args) throws IOException {
