@@ -17,7 +17,7 @@ public class Test_ssplit
 	{
 		// Lecture du contenu d'un texte du corpus. Il faut télécharger et
 		// ajouter au path org.apache.commons.io.IOUtils;
-		String path = "corpus" + File.separator + "reference.txt";
+		String path = "corpus" + File.separator + "bnw_page1.txt";
 		FileInputStream is = new FileInputStream(path);     
 		String content = IOUtils.toString(is, "UTF-8");
 
@@ -25,6 +25,7 @@ public class Test_ssplit
 		Properties props = new Properties();
 		// pour tester ssplit, on a besoin de tokenize
 		props.setProperty("annotators", "tokenize, ssplit");
+		//props.setProperty("ssplit.boundaryTokenRegex", "null");
 		StanfordCoreNLP pipeline = new StanfordCoreNLP(props);
 		CoreDocument document = new CoreDocument(content);
 		pipeline.annotate(document);
@@ -33,10 +34,12 @@ public class Test_ssplit
 		List<CoreSentence> sentences = document.sentences();
 		// CoreSentence firstSentence = sentences.get(0);
 		
+		int i = 0;
 		for(CoreSentence sentence : sentences)
 		{
+			i ++;
 			String sentenceText = sentence.text();
-			System.out.println(sentenceText);
+			System.out.println("Phrase " + i + " : " + sentenceText);
 		}
   }
 }

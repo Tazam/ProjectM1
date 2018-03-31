@@ -4,14 +4,12 @@ import edu.stanford.nlp.pipeline.*;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.*;
-import java.util.stream.Stream;
 
 import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.io.IOUtils;
@@ -25,11 +23,9 @@ public class SentencesFilesBuilder
 	private List<String> properties;
 	
 	// Créer les fichiers avec des propriétés différentes
-	public SentencesFilesBuilder(List<String> properties)
+	public SentencesFilesBuilder(Properties props)
 	{
 		this.corpusFolder = new File(Consts.CORPUS_PATH);
-		Properties props = new Properties();
-		props.setProperty("annotators", "tokenize, ssplit");
 		this.pipeline = new StanfordCoreNLP(props);
 	}
 	
@@ -62,13 +58,15 @@ public class SentencesFilesBuilder
 		pipeline.annotate(document);
 		List<CoreSentence> sentences = document.sentences();
 		List<String> sentencesText = new ArrayList<>();
+		// on remplace les retours à la ligne par des espaces dans les phrases
+		// car on veut un fichier où une ligne représente une phrase
 		for(CoreSentence sentence : sentences) {
-			sentencesText.add(sentence.text());
+			sentencesText.add(sentence.text().replace("\r\n", " "));
 		}
-		
+	
 		// On écrit le résultat dans un autre fichier
 		String resultName = FilenameUtils.removeExtension(file.getName());
-		String resultPath = Consts.SSPLIT_PATH + File.separator + resultName + Consts.RESULT_EXTENSION;
+		String resultPath = Consts.STANFORD_SSPLIT_PATH + File.separator + resultName + Consts.RESULT_EXTENSION;
 		System.out.println("J'écris le résultat dans : " + resultPath);
 		Path result = Paths.get(resultPath);
 		Files.write(result, sentencesText, Charset.forName(Consts.FORMAT));

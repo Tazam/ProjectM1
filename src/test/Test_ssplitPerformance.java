@@ -2,7 +2,9 @@ package test;
 
 import java.io.IOException;
 
+import performance.BasicStats;
 import performance.ssplit.SentencesFilesBuilder;
+import performance.ssplit.SentencesFilesComparator;
 
 public class Test_ssplitPerformance 
 {
@@ -10,5 +12,13 @@ public class Test_ssplitPerformance
 	{
 		SentencesFilesBuilder builder = new SentencesFilesBuilder();
 		builder.buildSentencesFiles();
+		
+		SentencesFilesComparator comparator = new SentencesFilesComparator();
+		BasicStats stats = comparator.compareFiles();
+		
+		System.out.println(stats.toString());
+		System.out.println("Precision : " + stats.getPrecision());
+		System.out.println("Recall : " + stats.getRecall());
+		System.out.println("f-mesure : " + stats.getFMesure());
 	}
 }
