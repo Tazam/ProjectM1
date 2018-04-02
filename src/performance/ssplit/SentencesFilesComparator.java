@@ -8,6 +8,9 @@ import java.io.IOException;
 import performance.BasicStats;
 import performance.Consts;
 
+
+// @TODO Peut servir pour plusieurs annotateurs, à renommer BasicAnnotatorFilesComparator et déplacer dans package performance ???
+
 // Cette classe permet de comparer les résultats obtenus par l'annotateur ssplit de StanfordNLP
 // avec une référence qui correspond aux même textes annotés manuellement
 public class SentencesFilesComparator 

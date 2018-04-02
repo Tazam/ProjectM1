@@ -1,6 +1,7 @@
 package performance.ssplit;
 
 import edu.stanford.nlp.pipeline.*;
+import performance.AnnotatorBuilder;
 import performance.Consts;
 
 import java.io.File;
@@ -17,26 +18,18 @@ import org.apache.commons.io.IOUtils;
 
 // Le but de cette classe est de construire les fichiers textes
 // contenant les phrases déterminées par StanfordNLP
-public class SentencesFilesBuilder 
-{
-	private File corpusFolder;
-	private StanfordCoreNLP pipeline;
-	private List<String> properties;
-	
+public class SentencesFilesBuilder extends AnnotatorBuilder
+{	
 	// Créer les fichiers avec des propriétés différentes
 	public SentencesFilesBuilder(Properties props)
 	{
-		this.corpusFolder = new File(Consts.CORPUS_PATH);
-		this.pipeline = new StanfordCoreNLP(props);
+		super(props);
 	}
 	
 	// Créer les fichiers avec les propriétés de base de Stanford
 	public SentencesFilesBuilder()
 	{
-		this.corpusFolder = new File(Consts.CORPUS_PATH);
-		Properties props = new Properties();
-		props.setProperty("annotators", "tokenize, ssplit");
-		this.pipeline = new StanfordCoreNLP(props);
+		super(getDefaultProps());
 	}
 		
 	public void buildSentencesFiles() throws IOException
@@ -71,5 +64,12 @@ public class SentencesFilesBuilder
 		System.out.println("J'écris le résultat dans : " + resultPath);
 		Path result = Paths.get(resultPath);
 		Files.write(result, sentencesText, Charset.forName(Consts.FORMAT));
+	}
+	
+	private static Properties getDefaultProps()
+	{
+		Properties props = new Properties();
+		props.setProperty("annotators", "tokenize, ssplit");
+		return props;
 	}
 }
