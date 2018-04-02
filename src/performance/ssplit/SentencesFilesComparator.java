@@ -6,6 +6,7 @@ import java.io.FileReader;
 import java.io.IOException;
 
 import performance.BasicStats;
+import performance.Consts;
 
 // Cette classe permet de comparer les résultats obtenus par l'annotateur ssplit de StanfordNLP
 // avec une référence qui correspond aux même textes annotés manuellement

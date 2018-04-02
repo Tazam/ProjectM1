@@ -1,6 +1,7 @@
 package performance.ssplit;
 
 import edu.stanford.nlp.pipeline.*;
+import performance.Consts;
 
 import java.io.File;
 import java.io.FileInputStream;

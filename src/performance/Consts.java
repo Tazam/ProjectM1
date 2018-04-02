@@ -1,0 +1,15 @@
+package performance;
+
+import java.io.File;
+
+public final class Consts 
+{
+	public static final String CORPUS_PATH = "corpus";
+	private static final String STANFORD_PATH = "performance" + File.separator + "stanford";
+	private static final String REFERENCE_PATH = "performance" + File.separator + "reference";
+	public static final String RESULT_EXTENSION = "_stanford.txt";
+	public static final String FORMAT = "UTF-8";
+	
+	public static final String STANFORD_SSPLIT_PATH = STANFORD_PATH + File.separator + "ssplit";
+	public static final String REFERENCE_SSPLIT_PATH = REFERENCE_PATH + File.separator + "ssplit";
+}

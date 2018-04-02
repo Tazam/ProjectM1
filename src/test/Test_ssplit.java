@@ -25,7 +25,7 @@ public class Test_ssplit
 		Properties props = new Properties();
 		// pour tester ssplit, on a besoin de tokenize
 		props.setProperty("annotators", "tokenize, ssplit");
-		//props.setProperty("ssplit.boundaryTokenRegex", "null");
+		//props.setProperty("ssplit.boundaryTokenRegex", "...");
 		StanfordCoreNLP pipeline = new StanfordCoreNLP(props);
 		CoreDocument document = new CoreDocument(content);
 		pipeline.annotate(document);
