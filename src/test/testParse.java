@@ -25,7 +25,8 @@ import edu.stanford.nlp.util.CoreMap;
  *
  */
 public class testParse {
-	public static void main(String[] args) throws IOException {	
+	public static void main(String[] args) throws IOException {
+		
 		
 			String text = "Joe Smith was born in California. " +
 			      "In 2017, he went to Paris, France in the summer. " +
@@ -39,13 +40,14 @@ public class testParse {
 	    props.setProperty("annotators", "tokenize,ssplit,parse");
 	    props.setProperty("parse.binaryTrees", "true");
 	    
+	    
+	    
 	 // build pipeline
 	    StanfordCoreNLP pipeline = new StanfordCoreNLP(props);
 	    // create a document object
 	    CoreDocument document = new CoreDocument(text);
-	    // annnotate the document
+	 // annnotate the document
 	    pipeline.annotate(document);
-	    
 	    // examples
 	    
 	    // first sentence
