@@ -2,31 +2,14 @@
 <classpath>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="lib" path="C:/Users/Poisson Blob/Downloads/commons-io-2.6/commons-io-2.6.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Poisson Blob/Downloads/commons-io-2.6/commons-io-2.6-javadoc.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Poisson Blob/Downloads/commons-io-2.6/commons-io-2.6-sources.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Poisson Blob/Downloads/commons-io-2.6/commons-io-2.6-tests.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Poisson Blob/Downloads/commons-io-2.6/commons-io-2.6-test-sources.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Poisson Blob/Downloads/stanford-corenlp-full-2018-02-27/ejml-0.23.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Poisson Blob/Downloads/stanford-corenlp-full-2018-02-27/ejml-0.23-src.zip"/>
-	<classpathentry kind="lib" path="C:/Users/Poisson Blob/Downloads/stanford-corenlp-full-2018-02-27/javax.json.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Poisson Blob/Downloads/stanford-corenlp-full-2018-02-27/javax.json-api-1.0-sources.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Poisson Blob/Downloads/stanford-corenlp-full-2018-02-27/joda-time.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Poisson Blob/Downloads/stanford-corenlp-full-2018-02-27/joda-time-2.9-sources.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Poisson Blob/Downloads/stanford-corenlp-full-2018-02-27/jollyday.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Poisson Blob/Downloads/stanford-corenlp-full-2018-02-27/jollyday-0.4.9-sources.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Poisson Blob/Downloads/stanford-corenlp-full-2018-02-27/protobuf.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Poisson Blob/Downloads/stanford-corenlp-full-2018-02-27/slf4j-api.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Poisson Blob/Downloads/stanford-corenlp-full-2018-02-27/slf4j-simple.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Poisson Blob/Downloads/stanford-corenlp-full-2018-02-27/stanford-corenlp-3.9.1.jar">
+	<classpathentry kind="lib" path="../stanford-corenlp-full-2018-01-31/stanford-corenlp-3.9.0.jar" sourcepath="../stanford-corenlp-full-2018-01-31/stanford-corenlp-3.9.0-sources.jar">
 		<attributes>
-			<attribute name="javadoc_location" value="jar:file:/C:/Users/Poisson%20Blob/Downloads/stanford-corenlp-full-2018-02-27/stanford-corenlp-3.9.1-javadoc.jar!/"/>
+			<attribute name="javadoc_location" value="jar:file:/../stanford-corenlp-full-2018-01-31/stanford-corenlp-3.9.0-javadoc.jar!/"/>
+			<attribute name="source_encoding" value="UTF-8"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Poisson Blob/Downloads/stanford-corenlp-full-2018-02-27/stanford-corenlp-3.9.1-javadoc.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Poisson Blob/Downloads/stanford-corenlp-full-2018-02-27/stanford-corenlp-3.9.1-models.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Poisson Blob/Downloads/stanford-corenlp-full-2018-02-27/stanford-corenlp-3.9.1-sources.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Poisson Blob/Downloads/stanford-corenlp-full-2018-02-27/xom.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Poisson Blob/Downloads/stanford-corenlp-full-2018-02-27/xom-1.2.10-src.jar"/>
+	<classpathentry kind="lib" path="../stanford-corenlp-full-2018-01-31/slf4j-api.jar"/>
+	<classpathentry kind="lib" path="../stanford-corenlp-full-2018-01-31/slf4j-simple.jar"/>
+	<classpathentry kind="lib" path="../stanford-corenlp-full-2018-01-31/stanford-english-corenlp-2018-01-31-models.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
