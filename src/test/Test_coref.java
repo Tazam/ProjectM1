@@ -50,5 +50,8 @@ public class Test_coref
 		System.out.println("Example: coref chains for document");
 		System.out.println(corefChains);
 		System.out.println();
+		
+		CorefChain chain = corefChains.get(18);
+		System.out.println(chain);
   }
 }

@@ -1,7 +1,7 @@
 package performance.ssplit;
 
 import edu.stanford.nlp.pipeline.*;
-import performance.AnnotatorBuilder;
+import performance.AnnotatorFilesBuilder;
 import performance.Consts;
 
 import java.io.File;
@@ -18,7 +18,7 @@ import org.apache.commons.io.IOUtils;
 
 // Le but de cette classe est de construire les fichiers textes
 // contenant les phrases déterminées par StanfordNLP
-public class SentencesFilesBuilder extends AnnotatorBuilder
+public class SentencesFilesBuilder extends AnnotatorFilesBuilder
 {	
 	// Créer les fichiers avec des propriétés différentes
 	public SentencesFilesBuilder(Properties props)
@@ -69,7 +69,7 @@ public class SentencesFilesBuilder extends AnnotatorBuilder
 	private static Properties getDefaultProps()
 	{
 		Properties props = new Properties();
-		props.setProperty("annotators", "tokenize, ssplit");
+		props.setProperty("annotator", Consts.SSPLIT_DEFAULT_PROPS);
 		return props;
 	}
 }

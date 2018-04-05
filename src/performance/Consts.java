@@ -1,6 +1,7 @@
 package performance;
 
 import java.io.File;
+import java.util.Properties;
 
 public final class Consts 
 {
@@ -12,4 +13,7 @@ public final class Consts
 	
 	public static final String STANFORD_SSPLIT_PATH = STANFORD_PATH + File.separator + "ssplit";
 	public static final String REFERENCE_SSPLIT_PATH = REFERENCE_PATH + File.separator + "ssplit";
+	public static final String SSPLIT_DEFAULT_PROPS = "tokenize, ssplit";
+	
+	public static final String COREF_DEFAULT_PROPS = "tokenize,ssplit,pos,lemma,ner,parse,depparse, coref";
 }
