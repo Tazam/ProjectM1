@@ -76,12 +76,19 @@ public class SentencesFilesComparator
 		return document.sentences();
 	}
 	
+
+	// Cette méthode n'est prévu que pour "file" étant un fichier de référence !
+	// Ssplit "propre" et tokenizer et pos de base, étant non évalué
+	public Annotation getCleanSsplitAnnotation(File file) throws IOException
+	{
+		Annotation annotation = getSsplitAnnotation(file);
+		POSTaggerAnnotator annotator = new POSTaggerAnnotator();
+		annotator.annotate(annotation);
+		return annotation;
+	}
+	
 	// Permet de réaliser la séparation en phrases pour un format de fichier précis :
 	// une ligne == une phrase.
-	
-	// TODO une méthode qui renvoie l'annotation nettoyé de ssplit et des annotateurs suivants non évalués
-	// comme POS, pour les prochains annotateurs évalués
-	
 	private Annotation getSsplitAnnotation(File file) throws IOException
 	{	
 		Annotation annotation = getInitAnnotation(file);
