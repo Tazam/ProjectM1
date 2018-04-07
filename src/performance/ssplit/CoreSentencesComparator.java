@@ -5,22 +5,21 @@ import java.util.Properties;
 
 import org.apache.commons.io.IOUtils;
 
-import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileReader;
 import java.io.IOException;
 import edu.stanford.nlp.pipeline.*;
+import performance.AnnotationComparator;
 import performance.BasicStats;
 import performance.Consts;
 
 // Cette classe permet de comparer les r�sultats obtenus par l'annotateur ssplit de StanfordNLP
 // avec une r�f�rence qui correspond aux m�me textes annot�s manuellement
-public class SentencesFilesComparator 
+public class CoreSentencesComparator implements AnnotationComparator<CoreSentence>
 {
 	private BasicStats stats;
 	
-	public SentencesFilesComparator()
+	public CoreSentencesComparator()
 	{
 		stats = new BasicStats();
 	}
@@ -41,7 +40,7 @@ public class SentencesFilesComparator
 		return this.stats;
 	}
 	
-	private void compareFile(List<CoreSentence> stanfordSentences, List<CoreSentence> referenceSentences) throws IOException
+	public void compareFile(List<CoreSentence> stanfordSentences, List<CoreSentence> referenceSentences) throws IOException
 	{
 		int tp = 0;
 		int fp = 0;
@@ -56,21 +55,17 @@ public class SentencesFilesComparator
 				if(stext.equals(rtext))
 				{
 					tp ++;
-					System.out.println(tp + ":" +rtext);
-					System.out.println(tp + ":" +stext);
 					break;
 				}
 			}
 		}
-		System.out.println(stanfordSentences.size());
-		System.out.println(referenceSentences.size());
 		fp = stanfordSentences.size() - tp;
 		fn = referenceSentences.size() - tp;
 		
 		stats.updateStats(tp, fp, fn);
 	}
 	
-	private List<CoreSentence> getSentencesFromFile(File file) throws IOException
+	public List<CoreSentence> getSentencesFromFile(File file) throws IOException
 	{
 		CoreDocument document = new CoreDocument(getSsplitAnnotation(file));
 		return document.sentences();
@@ -89,7 +84,7 @@ public class SentencesFilesComparator
 	
 	// Permet de réaliser la séparation en phrases pour un format de fichier précis :
 	// une ligne == une phrase.
-	private Annotation getSsplitAnnotation(File file) throws IOException
+	public Annotation getSsplitAnnotation(File file) throws IOException
 	{	
 		Annotation annotation = getInitAnnotation(file);
 		Properties props = new Properties();
@@ -103,7 +98,7 @@ public class SentencesFilesComparator
 	
 	// Utile que si Tokenizer n'est pas évalué
 	// Dans le cas contraire, il faut récupérer l'annotation générée par le Tokenizer nettoyé
-	private Annotation getInitAnnotation(File file) throws IOException
+	public Annotation getInitAnnotation(File file) throws IOException
 	{
 		FileInputStream is = new FileInputStream(file);     
 		String content = IOUtils.toString(is, "UTF-8");

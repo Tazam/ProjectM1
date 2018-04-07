@@ -1,17 +1,18 @@
 package performance;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.List;
 import java.util.Properties;
 
 import edu.stanford.nlp.pipeline.StanfordCoreNLP;
 
-public class AnnotatorFilesBuilder 
+public abstract class AnnotatorFilesBuilder 
 {
 	protected File corpusFolder;
 	protected StanfordCoreNLP pipeline;
 	
-	// Créer les fichiers avec des propriétés différentes
+	// Crï¿½er les fichiers avec des propriï¿½tï¿½s diffï¿½rentes
 	public AnnotatorFilesBuilder(Properties props)
 	{
 		this.corpusFolder = new File(Consts.CORPUS_PATH);
@@ -21,5 +22,15 @@ public class AnnotatorFilesBuilder
 	public AnnotatorFilesBuilder() 
 	{
 		this.corpusFolder = new File(Consts.CORPUS_PATH);
+	}
+	
+	private void buildFile(File file) throws IOException
+	{
+		
+	}
+	
+	public void buildFile() throws IOException
+	{
+		
 	}
 }

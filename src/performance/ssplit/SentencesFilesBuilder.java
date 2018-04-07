@@ -35,15 +35,15 @@ public class SentencesFilesBuilder extends AnnotatorFilesBuilder
 		this.pipeline = new StanfordCoreNLP(props);
 	}
 		
-	public void buildSentencesFiles() throws IOException
+	public void buildFiles() throws IOException
 	{
 		for (final File fileEntry : corpusFolder.listFiles()) 
 		{
-			buildSentenceFile(fileEntry);
+			buildFile(fileEntry);
 		}
 	}
 	
-	private void buildSentenceFile(File file) throws IOException
+	private void buildFile(File file) throws IOException
 	{
 		// On lit le contenu du fichier texte d'origine
 		System.out.println("Je traite " + file.getName());

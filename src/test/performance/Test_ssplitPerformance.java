@@ -5,7 +5,7 @@ import java.util.Properties;
 
 import performance.BasicStats;
 import performance.ssplit.SentencesFilesBuilder;
-import performance.ssplit.SentencesFilesComparator;
+import performance.ssplit.CoreSentencesComparator;
 
 public class Test_ssplitPerformance 
 {
@@ -14,7 +14,7 @@ public class Test_ssplitPerformance
 		SentencesFilesBuilder builder = new SentencesFilesBuilder();
 		builder.buildSentencesFiles();
 		
-		SentencesFilesComparator comparator = new SentencesFilesComparator();
+		CoreSentencesComparator comparator = new CoreSentencesComparator();
 		BasicStats stats = comparator.compareFiles();
 		
 		System.out.println(stats.toString());

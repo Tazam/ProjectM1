@@ -1,6 +1,6 @@
 package performance;
 
-public class BasicStats 
+public class BasicStats implements Stats
 {
 	float truePositives;
 	float falsePositives;

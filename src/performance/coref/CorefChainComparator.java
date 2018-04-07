@@ -4,13 +4,13 @@ import java.io.IOException;
 
 import performance.BasicStats;
 
-public class CorefFilesComparator 
+public class CorefChainComparator 
 {
 	private BCubeStats bcube;
 	private CEAFStats ceaf;
 	private BasicStats muc;
 	
-	public CorefFilesComparator()
+	public CorefChainComparator()
 	{
 		this.bcube = new BCubeStats();
 		this.ceaf = new CEAFStats();
