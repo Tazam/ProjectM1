@@ -1,6 +1,7 @@
-package test;
+package test.performance;
 
 import java.io.IOException;
+import java.util.Properties;
 
 import performance.BasicStats;
 import performance.ssplit.SentencesFilesBuilder;

@@ -17,19 +17,22 @@ import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.io.IOUtils;
 
 // Le but de cette classe est de construire les fichiers textes
-// contenant les phrases déterminées par StanfordNLP
+// contenant les phrases dï¿½terminï¿½es par StanfordNLP
 public class SentencesFilesBuilder extends AnnotatorFilesBuilder
 {	
-	// Créer les fichiers avec des propriétés différentes
+	// Crï¿½er les fichiers avec des propriï¿½tï¿½s diffï¿½rentes
 	public SentencesFilesBuilder(Properties props)
 	{
 		super(props);
 	}
 	
-	// Créer les fichiers avec les propriétés de base de Stanford
+	// Crï¿½er les fichiers avec les propriï¿½tï¿½s de base de Stanford
 	public SentencesFilesBuilder()
 	{
-		super(getDefaultProps());
+		super();
+		Properties props = new Properties();
+		props.setProperty("annotators", Consts.SSPLIT_DEFAULT_PROPS);
+		this.pipeline = new StanfordCoreNLP(props);
 	}
 		
 	public void buildSentencesFiles() throws IOException
@@ -52,24 +55,17 @@ public class SentencesFilesBuilder extends AnnotatorFilesBuilder
 		pipeline.annotate(document);
 		List<CoreSentence> sentences = document.sentences();
 		List<String> sentencesText = new ArrayList<>();
-		// on remplace les retours à la ligne par des espaces dans les phrases
-		// car on veut un fichier où une ligne représente une phrase
+		// on remplace les retours ï¿½ la ligne par des espaces dans les phrases
+		// car on veut un fichier oï¿½ une ligne reprï¿½sente une phrase
 		for(CoreSentence sentence : sentences) {
 			sentencesText.add(sentence.text().replace("\r\n", " "));
 		}
 	
-		// On écrit le résultat dans un autre fichier
+		// On ï¿½crit le rï¿½sultat dans un autre fichier
 		String resultName = FilenameUtils.removeExtension(file.getName());
 		String resultPath = Consts.STANFORD_SSPLIT_PATH + File.separator + resultName + Consts.RESULT_EXTENSION;
-		System.out.println("J'écris le résultat dans : " + resultPath);
+		System.out.println("J'Ã©cris les rÃ©sultats dans " + resultPath);
 		Path result = Paths.get(resultPath);
 		Files.write(result, sentencesText, Charset.forName(Consts.FORMAT));
-	}
-	
-	private static Properties getDefaultProps()
-	{
-		Properties props = new Properties();
-		props.setProperty("annotator", Consts.SSPLIT_DEFAULT_PROPS);
-		return props;
 	}
 }

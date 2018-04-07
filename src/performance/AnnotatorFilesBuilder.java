@@ -10,12 +10,16 @@ public class AnnotatorFilesBuilder
 {
 	protected File corpusFolder;
 	protected StanfordCoreNLP pipeline;
-	protected List<String> properties;
 	
 	// Créer les fichiers avec des propriétés différentes
 	public AnnotatorFilesBuilder(Properties props)
 	{
 		this.corpusFolder = new File(Consts.CORPUS_PATH);
 		this.pipeline = new StanfordCoreNLP(props);
+	}
+	
+	public AnnotatorFilesBuilder() 
+	{
+		this.corpusFolder = new File(Consts.CORPUS_PATH);
 	}
 }
