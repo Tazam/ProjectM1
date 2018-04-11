@@ -12,7 +12,7 @@ public class Test_ssplitPerformance
 	public static void main(String[] args) throws IOException
 	{
 		SentencesFilesBuilder builder = new SentencesFilesBuilder();
-		builder.buildSentencesFiles();
+		builder.buildFiles();
 		
 		CoreSentencesComparator comparator = new CoreSentencesComparator();
 		BasicStats stats = comparator.compareFiles();

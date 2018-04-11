@@ -1,4 +1,4 @@
-The enormous room on the ground floor faced towards the north.
+﻿The enormous room on the ground floor faced towards the north.
 Cold for all the summer beyond the panes, for all the tropical heat of the room itself, a harsh thin light glared through the windows, hungrily seeking some draped lay figure, some pallid shape of academic goose-flesh, but finding only the glass and nickel and bleakly shining porcelain of a laboratory.
 Wintriness responded to wintriness.
 The overalls of the workers were white, their hands gloved with a pale corpse-coloured rubber.
@@ -17,7 +17,7 @@ For particulars, as every one knows, make for virture and happiness; generalitie
 Not philosophers but fretsawyers and stamp collectors compose the backbone of society.
 "To-morrow," he would add, smiling at them with a slightly menacing geniality, "you'll be settling down to serious work.
 You won't have time for generalities.
-Meanwhile �"
+Meanwhile …"
 Meanwhile, it was a privilege.
 Straight from the horse's mouth into the notebook.
 The boys scribbled like mad.

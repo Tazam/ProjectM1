@@ -2,13 +2,17 @@ package test;
 
 import edu.stanford.nlp.ie.machinereading.structure.AnnotationUtils;
 import edu.stanford.nlp.ling.CoreAnnotations;
+import edu.stanford.nlp.ling.CoreAnnotations.NamedEntityTagAnnotation;
 import edu.stanford.nlp.ling.CoreAnnotations.SentencesAnnotation;
 import edu.stanford.nlp.ling.CoreAnnotations.TextAnnotation;
+import edu.stanford.nlp.ling.CoreAnnotations.TokensAnnotation;
+import edu.stanford.nlp.ling.CoreAnnotations.PartOfSpeechAnnotation;
 import edu.stanford.nlp.ling.CoreLabel;
 import edu.stanford.nlp.pipeline.*;
 import edu.stanford.nlp.simple.Sentence;
 import edu.stanford.nlp.util.ArrayCoreMap;
 import edu.stanford.nlp.util.CoreMap;
+import performance.ssplit.SsplitUtils;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -24,7 +28,8 @@ public class Test_ssplit
 	public static void main(String[] args) throws IOException 
 	{
 		//TestPipeLine();
-		TestWordsToSentencesAnnotator();
+		//TestWordsToSentencesAnnotator();
+		TestSsplitUtils();
 	}
 	
 	public static void TestPipeLine() throws IOException
@@ -92,31 +97,47 @@ public class Test_ssplit
 	//	
 	}
 	
-	// Prise en main/découverte de stanford NLP
-	public static void TestCustomSentences() throws IOException
+	// Tests divers
+	public static void testCustomSsplit() throws IOException
 	{
-		/*
 		System.out.println("Ceci est un test de ssplit � l'envers");
 		String content = lireExemple();
 		
 		Annotation annotation = new Annotation(content);
 		TokenizerAnnotator required = new TokenizerAnnotator();
 		required.annotate(annotation);
-		List<CoreLabel> tokens = annotation.get(CoreAnnotations.TokensAnnotation.class);
-		//System.out.println(annotation);
-		CoreMap coreMapSentence = new CoreLabel();
-		coreMapSentence.set(CoreAnnotations.TokensAnnotation.class, tokens);
-		//System.out.println(coreMapSentence.toShorterString());
-		List<CoreMap> sentences = new ArrayList<>();
-		sentences.add(coreMapSentence);
+		
+		WordsToSentencesAnnotator sentenceSplitter = new WordsToSentencesAnnotator();
+		sentenceSplitter.annotate(annotation);
+		List<CoreMap> sentences = annotation.get(SentencesAnnotation.class);
+
+		Annotation annotation2 = new Annotation(content);
+		required.annotate(annotation);
+		annotation2.set(CoreAnnotations.SentencesAnnotation.class, sentences);
+		List<CoreMap> sentences2 = annotation.get(SentencesAnnotation.class);
+		
+		for(int i = 0; i < sentences2.size(); i++)
+				System.out.println("Phrase" + sentences2.get(i));
+	}
 	
-		AnnotationUtils.addSentence(annotation, sentences.get(0));
-		System.out.println(AnnotationUtils.sentenceToString(sentences.get(0)));
-		CoreDocument test = new CoreDocument(annotation);
-		List<CoreSentence> phrases = test.sentences();
-		for(CoreSentence phrase : phrases)
-			System.out.println(phrase);
-		*/
+	public static void TestSsplitUtils() throws IOException
+	{
+		System.out.println("Ceci est un test de ssplit utils");
+		
+		String path = "corpus" + File.separator + "bnw_page1.txt";
+		File file = new File(path);
+		
+		Annotation annotation = SsplitUtils.getAnnotationCleaned(file);
+		CoreDocument document = new CoreDocument(annotation);
+		
+		List<CoreSentence> sentences = document.sentences();
+		int i = 0;
+		for(CoreSentence sentence : sentences)
+		{
+			i ++;
+			String sentenceText = sentence.text();
+			System.out.println("Phrase " + i + " : " + sentenceText);
+		}
 	}
 	
 	public static String lireExemple() throws IOException
@@ -124,7 +145,7 @@ public class Test_ssplit
 		String path2 = "performance" + File.separator + "reference" + File.separator + "ssplit" + File.separator + "bnw_page1_reference.txt";
 		String path3 = "performance" + File.separator + "stanford" + File.separator + "ssplit" + File.separator + "bnw_page1_stanford.txt";
 		String path = "corpus" + File.separator + "bnw_page1.txt";
-		FileInputStream is = new FileInputStream(path3);     
+		FileInputStream is = new FileInputStream(path);     
 		String content = IOUtils.toString(is, "UTF-8");
 		return content;
 	}
