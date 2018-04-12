@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document>
+  <chain chainID="1">
+    <mention mentionID="5_1">"The light" in sentence 5</mention>
+    <mention mentionID="6_10">"it" in sentence 6</mention>
+    <mention mentionID="12_1">"It" in sentence 12</mention>
+  </chain>
+  <chain chainID="2">
+    <mention mentionID="34_8">"them" in sentence 34</mention>
+    <mention mentionID="34_30">"they" in sentence 34</mention>
+  </chain>
+  <chain chainID="3">
+    <mention mentionID="31_15">"A. F. 632" in sentence 31</mention>
+    <mention mentionID="31_19">"it" in sentence 31</mention>
+    <mention mentionID="31_27">"it" in sentence 31</mention>
+  </chain>
+  <chain chainID="4">
+    <mention mentionID="8_1">"Bent over their instruments , three hundred Fertilizers were plunged , as the Director of Hatcheries and Conditioning entered the room , in the scarcely breathing silence , the absent-minded , soliloquizing hum or whistle , of absorbed concentration" in sentence 8</mention>
+    <mention mentionID="8_3">"their" in sentence 8</mention>
+  </chain>
+  <chain chainID="5">
+    <mention mentionID="13_15">"his" in sentence 13</mention>
+    <mention mentionID="14_11">"he" in sentence 14</mention>
+  </chain>
+  <chain chainID="6">
+    <mention mentionID="14_15">"them" in sentence 14</mention>
+    <mention mentionID="15_9">"they" in sentence 15</mention>
+    <mention mentionID="15_14">"they" in sentence 15</mention>
+    <mention mentionID="15_18">"their" in sentence 15</mention>
+    <mention mentionID="15_27">"they" in sentence 15</mention>
+    <mention mentionID="18_11">"them" in sentence 18</mention>
+    <mention mentionID="18_19">"you" in sentence 18</mention>
+    <mention mentionID="19_1">"You" in sentence 19</mention>
+  </chain>
+  <chain chainID="7">
+    <mention mentionID="11_3">"the horse 's" in sentence 11</mention>
+    <mention mentionID="22_3">"the horse 's" in sentence 22</mention>
+  </chain>
+  <chain chainID="8">
+    <mention mentionID="32_6">"the beginning" in sentence 32</mention>
+    <mention mentionID="32_27">"the beginning" in sentence 32</mention>
+  </chain>
+  <chain chainID="9">
+    <mention mentionID="4_4">"the workers" in sentence 4</mention>
+    <mention mentionID="4_9">"their" in sentence 4</mention>
+  </chain>
+  <chain chainID="10">
+    <mention mentionID="10_5">"a notebook , in which , whenever the great man spoke , he desperately scribbled" in sentence 10</mention>
+    <mention mentionID="22_8">"the notebook" in sentence 22</mention>
+  </chain>
+  <chain chainID="11">
+    <mention mentionID="32_14">"the more zealous students" in sentence 32</mention>
+    <mention mentionID="32_22">"their" in sentence 32</mention>
+    <mention mentionID="33_2">"These" in sentence 33</mention>
+  </chain>
+  <chain chainID="12">
+    <mention mentionID="32_19">"his" in sentence 32</mention>
+    <mention mentionID="33_5">"he" in sentence 33</mention>
+    <mention mentionID="33_7">"his" in sentence 33</mention>
+    <mention mentionID="34_6">"he" in sentence 34</mention>
+    <mention mentionID="34_24">"he" in sentence 34</mention>
+  </chain>
+  <chain chainID="13">
+    <mention mentionID="1_1">"The enormous room on the ground floor" in sentence 1</mention>
+    <mention mentionID="2_16">"the room itself" in sentence 2</mention>
+    <mention mentionID="2_18">"itself" in sentence 2</mention>
+    <mention mentionID="8_20">"the room" in sentence 8</mention>
+    <mention mentionID="24_12">"the room" in sentence 24</mention>
+  </chain>
+  <chain chainID="14">
+    <mention mentionID="7_7">"the Director" in sentence 7</mention>
+    <mention mentionID="9_22">"the Director 's" in sentence 9</mention>
+    <mention mentionID="24_8">"the Director" in sentence 24</mention>
+    <mention mentionID="25_1">"He" in sentence 25</mention>
+    <mention mentionID="25_16">"he" in sentence 25</mention>
+    <mention mentionID="25_22">"his" in sentence 25</mention>
+  </chain>
+  <chain chainID="15">
+    <mention mentionID="9_22">"the Director 's heels" in sentence 9</mention>
+    <mention mentionID="10_3">"them" in sentence 10</mention>
+  </chain>
+  <chain chainID="16">
+    <mention mentionID="10_12">"the great man" in sentence 10</mention>
+    <mention mentionID="10_17">"he" in sentence 10</mention>
+  </chain>
+</document>

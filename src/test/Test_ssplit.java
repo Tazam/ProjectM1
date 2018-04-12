@@ -9,13 +9,16 @@ import edu.stanford.nlp.ling.CoreAnnotations.TokensAnnotation;
 import edu.stanford.nlp.ling.CoreAnnotations.PartOfSpeechAnnotation;
 import edu.stanford.nlp.ling.CoreLabel;
 import edu.stanford.nlp.pipeline.*;
+import edu.stanford.nlp.process.WordToSentenceProcessor;
 import edu.stanford.nlp.simple.Sentence;
 import edu.stanford.nlp.util.ArrayCoreMap;
 import edu.stanford.nlp.util.CoreMap;
 import performance.ssplit.SsplitUtils;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileReader;
 import java.io.IOException;
 import java.util.*;
 
@@ -29,7 +32,11 @@ public class Test_ssplit
 	{
 		//TestPipeLine();
 		//TestWordsToSentencesAnnotator();
-		TestSsplitUtils();
+		//TestSsplitUtils();
+		//testCustomSsplit();
+		//test();
+		//TestCoreLabels();
+		TestCleanAnnotation();
 	}
 	
 	public static void TestPipeLine() throws IOException
@@ -107,6 +114,9 @@ public class Test_ssplit
 		TokenizerAnnotator required = new TokenizerAnnotator();
 		required.annotate(annotation);
 		
+		//SsplitUtils.test(annotation);
+		
+		
 		WordsToSentencesAnnotator sentenceSplitter = new WordsToSentencesAnnotator();
 		sentenceSplitter.annotate(annotation);
 		List<CoreMap> sentences = annotation.get(SentencesAnnotation.class);
@@ -120,34 +130,60 @@ public class Test_ssplit
 				System.out.println("Phrase" + sentences2.get(i));
 	}
 	
-	public static void TestSsplitUtils() throws IOException
-	{
-		System.out.println("Ceci est un test de ssplit utils");
-		
-		String path = "corpus" + File.separator + "bnw_page1.txt";
-		File file = new File(path);
-		
-		Annotation annotation = SsplitUtils.getAnnotationCleaned(file);
-		CoreDocument document = new CoreDocument(annotation);
-		
-		List<CoreSentence> sentences = document.sentences();
-		int i = 0;
-		for(CoreSentence sentence : sentences)
-		{
-			i ++;
-			String sentenceText = sentence.text();
-			System.out.println("Phrase " + i + " : " + sentenceText);
-		}
-	}
-	
 	public static String lireExemple() throws IOException
 	{
 		String path2 = "performance" + File.separator + "reference" + File.separator + "ssplit" + File.separator + "bnw_page1_reference.txt";
 		String path3 = "performance" + File.separator + "stanford" + File.separator + "ssplit" + File.separator + "bnw_page1_stanford.txt";
 		String path = "corpus" + File.separator + "bnw_page1.txt";
-		FileInputStream is = new FileInputStream(path);     
+		FileInputStream is = new FileInputStream(path2);     
 		String content = IOUtils.toString(is, "UTF-8");
 		return content;
+	}
+	
+	public static void test() throws IOException
+	{
+		String content = lireExemple();
+		Annotation annotation = new Annotation(content);
+		
+		TokenizerAnnotator tokenizer = new TokenizerAnnotator();
+		tokenizer.annotate(annotation);
+		WordsToSentencesAnnotator sentenceSplitter = new WordsToSentencesAnnotator();
+		sentenceSplitter.annotate(annotation);
+		
+		List<List<CoreLabel>> coreLabelsDoc = new ArrayList<>();
+		List<CoreMap> sentences = annotation.get(SentencesAnnotation.class);
+		for(CoreMap sentence: sentences) 
+		{
+			coreLabelsDoc.add(sentence.get(TokensAnnotation.class));
+		}
+		for(int i = 0; i < coreLabelsDoc.size(); i++)
+		{
+			List<CoreLabel> coreLabelsPhrase = coreLabelsDoc.get(i);
+			System.out.println("PHRASE " + i + ": " + coreLabelsPhrase.size() + "   " + coreLabelsPhrase.toString());
+		}
+		String path2 = "performance" + File.separator + "reference" + File.separator + "ssplit" + File.separator + "bnw_page1_reference.txt";
+		File f = new File(path2);
+        BufferedReader b = new BufferedReader(new FileReader(f));
+        String readLine = "";
+        readLine = b.readLine();
+        System.out.println(readLine);
+        Annotation annotation2 = new Annotation(readLine);
+        tokenizer.annotate(annotation2);
+        List<CoreLabel> test = annotation2.get(TokensAnnotation.class);
+        System.out.println("PHRASE : " + test.size() + "   " + test.toString());
+	}
+	
+	public static void TestCleanAnnotation() throws IOException
+	{
+		String path2 = "performance" + File.separator + "reference" + File.separator + "ssplit" + File.separator + "bnw_page1_reference.txt";
+		String path3 = "performance" + File.separator + "stanford" + File.separator + "ssplit" + File.separator + "bnw_page1_stanford.txt";
+		String path = "corpus" + File.separator + "bnw_page1.txt";
+		File file = new File(path);
+		Annotation annotation = SsplitUtils.getCleanAnnotation(file);
+		CoreDocument doc = new CoreDocument(annotation);
+		List<CoreSentence> sentences = doc.sentences();
+		for(int i = 0; i < sentences.size(); i ++)
+			System.out.println("Phrase : " + i + " " + sentences.get(i).toString());
 	}
 }
 

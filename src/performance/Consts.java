@@ -14,9 +14,7 @@ public final class Consts
 	
 	public static final String STANFORD_SSPLIT_PATH = STANFORD_PATH + File.separator + "ssplit";
 	public static final String REFERENCE_SSPLIT_PATH = REFERENCE_PATH + File.separator + "ssplit";
-	public static final String SSPLIT_DEFAULT_PROPS = "tokenize, ssplit";
 	
 	public static final String STANFORD_COREF_PATH = STANFORD_PATH + File.separator + "coref";
-	public static final String REFERENCE_REFERENCE_PATH = REFERENCE_PATH + File.separator + "coref";
-	public static final String COREF_DEFAULT_PROPS = "tokenize,ssplit,pos,lemma,ner,parse,depparse, coref";
+	public static final String REFERENCE_REFERENCE_PATH = REFERENCE_PATH + File.separator + "coref";;
 }

@@ -32,25 +32,26 @@ public class CoreSentencesComparator //implements AnnotationComparator<CoreSente
 		File[] referenceFolder = new File(Consts.REFERENCE_SSPLIT_PATH).listFiles();
 
 		// Je n'ai pas encore annoté la main les autres fichiers
-		for(int i = 0; i < 1/*referenceFolder.length*/; i++)
+		for(int i = 0; i < 2/*referenceFolder.length*/; i++)
 		{
 			System.out.println("Je compare " + stanfordFolder[i].getName() + " et " + referenceFolder[i].getName());
-			List<CoreMap> stanfordSentences = SsplitUtils.getSentencesFromFile(stanfordFolder[i]);
-			List<CoreMap> referenceSentences = SsplitUtils.getSentencesFromFile(referenceFolder[i]);
+			List<CoreSentence> stanfordSentences = SsplitUtils.getSentencesFromFile(stanfordFolder[i]);
+			List<CoreSentence> referenceSentences = SsplitUtils.getSentencesFromFile(referenceFolder[i]);
+			
 			compareFile(stanfordSentences, referenceSentences);
 		}
 		return this.stats;
 	}
 	
-	public void compareFile(List<CoreMap> stanfordSentences, List<CoreMap> referenceSentences) throws IOException
+	public void compareFile(List<CoreSentence> stanfordSentences, List<CoreSentence> referenceSentences) throws IOException
 	{
 		int tp = 0;
 		int fp = 0;
 		int fn = 0;
 		
-		for(CoreMap stanfordSentence : stanfordSentences)
+		for(CoreSentence stanfordSentence : stanfordSentences)
 		{
-			for(CoreMap referenceSentence : referenceSentences)
+			for(CoreSentence referenceSentence : referenceSentences)
 			{
 				String stext = stanfordSentence.toString();
 				String rtext = referenceSentence.toString();

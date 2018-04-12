@@ -3,6 +3,7 @@ package test;
 import edu.stanford.nlp.coref.data.CorefChain;
 import edu.stanford.nlp.coref.data.CorefChain.CorefMention;
 import edu.stanford.nlp.pipeline.*;
+import performance.coref.CorefUtils;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -15,7 +16,51 @@ import org.apache.commons.io.IOUtils;
 // pour ex�cuter ce test
 public class Test_coref
 {
-	public static void main(String[] args) throws IOException
+	public static void main(String[] args) throws IOException, ClassNotFoundException
+	{
+
+		TestCorefUtils();
+		//TestCorefStandAlone();
+	}
+	
+	public static void TestCorefUtils() throws IOException, ClassNotFoundException
+	{
+		String path = "corpus" + File.separator + "reference.txt";
+		File file = new File(path);
+		Annotation annotation = CorefUtils.getInitAnnotation(file);
+		Properties props = new Properties();
+		CorefAnnotator corefAnnotator = new CorefAnnotator(props);
+		corefAnnotator.annotate(annotation);
+	}
+	
+	public static void TestCorefStandAlone() throws IOException
+	{
+		String path = "corpus" + File.separator + "bnw_page1.txt";
+		FileInputStream is = new FileInputStream(path);     
+		String content = IOUtils.toString(is, "UTF-8");
+		Annotation annotation = new Annotation(content);
+		Properties propsbase = new Properties();
+		propsbase.setProperty("annotators", "tokenize,ssplit,pos,lemma,ner,parse,depparse");
+		StanfordCoreNLP pipeline = new StanfordCoreNLP(propsbase);
+		CoreDocument document = new CoreDocument(annotation);
+		pipeline.annotate(document);
+		
+		Properties props = new Properties();
+		//props.setProperty("coref.language", "en");
+		//props.setProperty("coref.algorithm", "statistical");
+		CorefAnnotator annotator = new CorefAnnotator(new Properties());
+		annotator.annotate(annotation);
+		
+		CoreDocument document2 = new CoreDocument(annotation);
+		Map<Integer, CorefChain> corefChains = document2.corefChains();	
+		for(Integer key : corefChains.keySet())
+		{
+			CorefChain chain = corefChains.get(key);
+			System.out.println(chain);
+		}
+	}
+	
+	public static void TestDivers() throws IOException
 	{
 		// Lecture du contenu d'un texte du corpus. Il faut t�l�charger et
 		// ajouter au path org.apache.commons.io.IOUtils;
@@ -52,12 +97,17 @@ public class Test_coref
 		System.out.println(corefChains);
 		System.out.println();
 		
-		CorefChain chain = corefChains.get(18);
+		/*CorefChain chain = corefChains.get(18);
 		System.out.println(chain);
 		
 		List<CorefMention> test = chain.getMentionsInTextualOrder();
 		for(int i = 0; i < test.size(); i++)
-			System.out.println("Mot : " + test.get(i) + "index : " + test.get(i).startIndex);
+			System.out.println("Mot : " + test.get(i) + "index : " + test.get(i).startIndex);*/
 		
-  }
+		for(Integer key : corefChains.keySet())
+		{
+			CorefChain chain = corefChains.get(key);
+			System.out.println(chain);
+		}
+	}
 }

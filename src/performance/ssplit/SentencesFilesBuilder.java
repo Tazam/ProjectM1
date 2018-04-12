@@ -32,8 +32,6 @@ public class SentencesFilesBuilder
 	// Créer les fichiers avec les propriétés de base de Stanford
 	public SentencesFilesBuilder()
 	{
-		Properties props = new Properties();
-		props.setProperty("annotators", Consts.SSPLIT_DEFAULT_PROPS);
 		this.sentencesSplitter = new WordsToSentencesAnnotator();
 		this.corpusFolder = new File(Consts.CORPUS_PATH);
 	}
