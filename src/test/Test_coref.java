@@ -2,6 +2,7 @@ package test;
 
 import edu.stanford.nlp.coref.data.CorefChain;
 import edu.stanford.nlp.coref.data.CorefChain.CorefMention;
+import edu.stanford.nlp.ling.CoreLabel;
 import edu.stanford.nlp.pipeline.*;
 import performance.coref.CorefUtils;
 
@@ -31,6 +32,13 @@ public class Test_coref
 		Properties props = new Properties();
 		CorefAnnotator corefAnnotator = new CorefAnnotator(props);
 		corefAnnotator.annotate(annotation);
+		
+		CoreDocument document = new CoreDocument(annotation);
+		List<CoreSentence> sentences = document.sentences();
+		Map<Integer, CorefChain> corefChains = document.corefChains();	
+		CoreEntityMention mention = sentences.get(2).entityMentions().get(0);
+		System.out.println("Mention : " + mention.toString() + " charoffset : " + mention.charOffsets());
+		
 	}
 	
 	public static void TestCorefStandAlone() throws IOException

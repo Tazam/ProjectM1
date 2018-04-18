@@ -20,24 +20,31 @@ import performance.Consts;
 public class CoreSentencesComparator //implements AnnotationComparator<CoreSentence>
 {
 	private BasicStats stats;
+	private Properties props;
 	
 	public CoreSentencesComparator()
 	{
 		stats = new BasicStats();
+		this.props = null;
+	}
+	
+	public CoreSentencesComparator(Properties props)
+	{
+		stats = new BasicStats();
+		this.props = props;
 	}
 	
 	public BasicStats compareFiles() throws IOException
 	{			
-		File[] stanfordFolder = new File(Consts.STANFORD_SSPLIT_PATH).listFiles();
+		File[] corpusFolder = new File(Consts.CORPUS_PATH).listFiles();
 		File[] referenceFolder = new File(Consts.REFERENCE_SSPLIT_PATH).listFiles();
 
 		// Je n'ai pas encore annoté la main les autres fichiers
-		for(int i = 0; i < 2/*referenceFolder.length*/; i++)
+		for(int i = 0; i < 1/*referenceFolder.length*/; i++)
 		{
-			System.out.println("Je compare " + stanfordFolder[i].getName() + " et " + referenceFolder[i].getName());
-			List<CoreSentence> stanfordSentences = SsplitUtils.getSentencesFromFile(stanfordFolder[i]);
-			List<CoreSentence> referenceSentences = SsplitUtils.getSentencesFromFile(referenceFolder[i]);
-			
+			System.out.println("Je compare " + corpusFolder[i].getName() + " et " + referenceFolder[i].getName());
+			List<CoreSentence> stanfordSentences = SsplitUtils.getStanfordSentences(corpusFolder[i], props);
+			List<CoreSentence> referenceSentences = SsplitUtils.getCustomSentences(referenceFolder[i]);
 			compareFile(stanfordSentences, referenceSentences);
 		}
 		return this.stats;
@@ -53,7 +60,7 @@ public class CoreSentencesComparator //implements AnnotationComparator<CoreSente
 		{
 			for(CoreSentence referenceSentence : referenceSentences)
 			{
-				String stext = stanfordSentence.toString();
+				String stext = stanfordSentence.toString().replace("\r\n" , " ");
 				String rtext = referenceSentence.toString();
 				if(stext.equals(rtext))
 				{

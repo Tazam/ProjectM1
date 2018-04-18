@@ -12,7 +12,6 @@ public final class Consts
 	public static final String REFERENCE_EXTENSION = "_reference.txt";
 	public static final String FORMAT = "UTF-8";
 	
-	public static final String STANFORD_SSPLIT_PATH = STANFORD_PATH + File.separator + "ssplit";
 	public static final String REFERENCE_SSPLIT_PATH = REFERENCE_PATH + File.separator + "ssplit";
 	
 	public static final String STANFORD_COREF_PATH = STANFORD_PATH + File.separator + "coref";

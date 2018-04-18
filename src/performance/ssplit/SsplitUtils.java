@@ -41,13 +41,7 @@ public class SsplitUtils
 		return annotation;
 	}
 	
-	// Prend un document annoté et retourne les phrases qui le constituent
-	// a modifier
-	public static List<CoreSentence> getSentencesFromFile(File file) throws IOException
-	{
-		return (new CoreDocument(getAnnotation(file)).sentences());
-	}
-	
+
 	public static List<Integer> countTokensPerLine(File file)
 	{
 		List<Integer> tokensPerLine = new ArrayList<>();
@@ -66,14 +60,14 @@ public class SsplitUtils
 	    return tokensPerLine;
 	}
 	
-	public static Annotation getAnnotation(File file) throws IOException
+	public static List<CoreSentence> getCustomSentences(File file) throws IOException
 	{
 		Annotation annotation = getInitAnnotation(file);
 		List<Integer> tokensPerLine = countTokensPerLine(file);
 		List<List<CoreLabel>> coreLabelsDoc = splitCoreLabels(tokensPerLine, annotation.get(TokensAnnotation.class));
 		WordsToSentencesAnnotatorCustom custom = new WordsToSentencesAnnotatorCustom();
 		custom.annotateCustom(annotation, coreLabelsDoc);
-		return annotation;
+		return (new CoreDocument(annotation).sentences());
 	}
 	
 	public static List<List<CoreLabel>> splitCoreLabels(List<Integer> tokensPerLine, List<CoreLabel> labels)
@@ -93,6 +87,7 @@ public class SsplitUtils
 	}
 	
 	// Le fichier est un fichier du corpus ! pas un Stanford ni un Référence !
+	// Renvoie l'annotation propre pour les annotateurs suivants
 	public static Annotation getCleanAnnotation(File file) throws IOException
 	{
 		Annotation annotation = getInitAnnotation(file);
@@ -107,5 +102,17 @@ public class SsplitUtils
 		WordsToSentencesAnnotatorCustom custom = new WordsToSentencesAnnotatorCustom();
 		custom.annotateCustom(annotation, coreLabelsDoc);
 		return annotation;
+	}
+	
+	public static List<CoreSentence> getStanfordSentences(File file, Properties props) throws IOException
+	{
+		Annotation annotation = getInitAnnotation(file);
+		WordsToSentencesAnnotator ssplit;
+		if(props == null)
+			ssplit = new WordsToSentencesAnnotator();
+		else
+			ssplit = new WordsToSentencesAnnotator(props);
+		ssplit.annotate(annotation);
+		return (new CoreDocument(annotation).sentences());
 	}
 }

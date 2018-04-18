@@ -175,15 +175,23 @@ public class Test_ssplit
 	
 	public static void TestCleanAnnotation() throws IOException
 	{
-		String path2 = "performance" + File.separator + "reference" + File.separator + "ssplit" + File.separator + "bnw_page1_reference.txt";
-		String path3 = "performance" + File.separator + "stanford" + File.separator + "ssplit" + File.separator + "bnw_page1_stanford.txt";
 		String path = "corpus" + File.separator + "bnw_page1.txt";
 		File file = new File(path);
-		Annotation annotation = SsplitUtils.getCleanAnnotation(file);
-		CoreDocument doc = new CoreDocument(annotation);
-		List<CoreSentence> sentences = doc.sentences();
-		for(int i = 0; i < sentences.size(); i ++)
-			System.out.println("Phrase : " + i + " " + sentences.get(i).toString());
+		String path2 = "performance" + File.separator + "reference" + File.separator + "ssplit" + File.separator + "bnw_page1_reference.txt";
+		File file2 = new File(path2);
+		
+		List<CoreSentence> sentencesStan = SsplitUtils.getStanfordSentences(file, null);
+		List<CoreSentence> sentencesRef = SsplitUtils.getCustomSentences(file2);
+		List<CoreSentence> sentencesClean = new CoreDocument(SsplitUtils.getCleanAnnotation(file)).sentences();
+		for(int i = 0; i < sentencesStan.size(); i ++)
+		{
+			System.out.println("PHRASE : " +i );
+			System.out.println("REF : " + sentencesRef.get(i).toString());
+			System.out.println("STAN : " + sentencesStan.get(i).toString().replaceAll("\r\n", " "));
+			System.out.println("CLEAN : " + sentencesClean.get(i).toString().replaceAll("\r\n", " "));
+		}
+
+
 	}
 }
 
