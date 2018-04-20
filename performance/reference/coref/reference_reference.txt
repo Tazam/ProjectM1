@@ -1,7 +1,0 @@
-<document>
-	<chain id = "0">
-		<mention pos ="1">
-			Joe
-		</mention>
-	</chain>
-<document>

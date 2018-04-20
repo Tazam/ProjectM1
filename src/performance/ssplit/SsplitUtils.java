@@ -62,11 +62,7 @@ public class SsplitUtils
 	
 	public static List<CoreSentence> getCustomSentences(File file) throws IOException
 	{
-		Annotation annotation = getInitAnnotation(file);
-		List<Integer> tokensPerLine = countTokensPerLine(file);
-		List<List<CoreLabel>> coreLabelsDoc = splitCoreLabels(tokensPerLine, annotation.get(TokensAnnotation.class));
-		WordsToSentencesAnnotatorCustom custom = new WordsToSentencesAnnotatorCustom();
-		custom.annotateCustom(annotation, coreLabelsDoc);
+		Annotation annotation = getCleanAnnotation(file);
 		return (new CoreDocument(annotation).sentences());
 	}
 	
@@ -93,7 +89,7 @@ public class SsplitUtils
 		Annotation annotation = getInitAnnotation(file);
 		
 		String fileName = FilenameUtils.removeExtension(file.getName());
-		String referencePath = Consts.REFERENCE_SSPLIT_PATH + File.separator + fileName + Consts.REFERENCE_EXTENSION;
+		String referencePath = Consts.SSPLIT_PATH + File.separator + fileName + Consts.REFERENCE_EXTENSION;
 		
 		File referenceFile = new File(referencePath);
 		

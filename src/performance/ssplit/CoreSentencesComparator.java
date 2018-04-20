@@ -37,14 +37,12 @@ public class CoreSentencesComparator //implements AnnotationComparator<CoreSente
 	public BasicStats compareFiles() throws IOException
 	{			
 		File[] corpusFolder = new File(Consts.CORPUS_PATH).listFiles();
-		File[] referenceFolder = new File(Consts.REFERENCE_SSPLIT_PATH).listFiles();
 
 		// Je n'ai pas encore annoté la main les autres fichiers
-		for(int i = 0; i < 1/*referenceFolder.length*/; i++)
+		for(int i = 0; i < 2/*referenceFolder.length*/; i++)
 		{
-			System.out.println("Je compare " + corpusFolder[i].getName() + " et " + referenceFolder[i].getName());
 			List<CoreSentence> stanfordSentences = SsplitUtils.getStanfordSentences(corpusFolder[i], props);
-			List<CoreSentence> referenceSentences = SsplitUtils.getCustomSentences(referenceFolder[i]);
+			List<CoreSentence> referenceSentences = SsplitUtils.getCustomSentences(corpusFolder[i]);
 			compareFile(stanfordSentences, referenceSentences);
 		}
 		return this.stats;
@@ -60,7 +58,7 @@ public class CoreSentencesComparator //implements AnnotationComparator<CoreSente
 		{
 			for(CoreSentence referenceSentence : referenceSentences)
 			{
-				String stext = stanfordSentence.toString().replace("\r\n" , " ");
+				String stext = stanfordSentence.toString();
 				String rtext = referenceSentence.toString();
 				if(stext.equals(rtext))
 				{

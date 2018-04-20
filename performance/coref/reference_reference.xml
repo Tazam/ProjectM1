@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<document>
+
+	<entity name ="Joe Smith">
+		<mention>
+			<sent>0</sent>
+			<startIndex>0</startIndex>
+			<endIndex>2</endIndex>
+			<text>Joe Smith</text>
+		</mention>
+		
+		<mention>
+			<sent>1</sent>
+			<startIndex>3</startIndex>
+			<endIndex>4</endIndex>
+			<text>he</text>
+		</mention>
+	</entity>
+	
+	<entity name ="California"> 
+		<mention>
+			<sent>0</sent>
+			<startIndex>5</startIndex>
+			<endIndex>6</endIndex>
+			<text>California</text>
+		</mention>
+	</entity>
+	
+	<entity name ="2017">
+		<mention>
+			<sent>1</sent>
+			<startIndex>1</startIndex>
+			<endIndex>2</endIndex>
+			<text>2017</text>
+		</mention>
+	</entity>
+	
+	<entity name="Paris">
+		<mention>
+			<sent>1</sent>
+			<startIndex>6</startIndex>
+			<endIndex>7</endIndex>
+			<text>Paris</text>
+		</mention>
+				
+	</entity>
+	
+	<entity name ="France">
+		
+		<mention>
+			<sent>1</sent>
+			<startIndex>8</startIndex>
+			<endIndex>9</endIndex>
+			<text>France</text>
+		</mention>
+				
+	</entity>
+</document>
