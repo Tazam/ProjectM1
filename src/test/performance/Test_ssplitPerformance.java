@@ -15,6 +15,6 @@ public class Test_ssplitPerformance
 		System.out.println(stats.toString());
 		System.out.println("Precision : " + stats.getPrecision());
 		System.out.println("Recall : " + stats.getRecall());
-		System.out.println("f-mesure : " + stats.getFMesure());
+		System.out.println("f-mesure : " + stats.getFMeasure());
 	}
 }

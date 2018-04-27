@@ -1,6 +1,6 @@
 package performance;
 
-public class BasicStats
+public class BasicStats implements Stats
 {
 	float truePositives;
 	float falsePositives;
@@ -30,7 +30,7 @@ public class BasicStats
 		return (truePositives/(truePositives + falsePositives)*100);
 	}
 	
-	public float getFMesure()
+	public float getFMeasure()
 	{
 		float p = getPrecision();
 		float r = getRecall();

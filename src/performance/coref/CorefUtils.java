@@ -90,6 +90,7 @@ public class CorefUtils
 		return annotation;
 	}
 	
+	// Pour m'aider à annoter manuellement, sera supprimée plus tard
 	public static void textAnnotationHelper(File file) throws IOException
 	{
 		Annotation annotation = SsplitUtils.getCleanAnnotation(file);
@@ -101,7 +102,7 @@ public class CorefUtils
 	}
 	
 	// renvoie une liste de listes de mentions. une sous-liste == une entité
-	public static List<List<Mention>> getMentionsFromFile(File file, Annotation annotation, List<CorefCluster> clusters) throws ClassNotFoundException, IOException
+	private static List<List<Mention>> getMentionsFromFile(File file, Annotation annotation) throws ClassNotFoundException, IOException
 	{
     	String fileName = FilenameUtils.removeExtension(file.getName());
 		String referencePath = Consts.COREF_PATH + File.separator + fileName + Consts.XML_REFERENCE_EXTENSION;
@@ -140,8 +141,6 @@ public class CorefUtils
 	    					 id ++;
 	    				 }
 	    			 }
-		    		 CorefCluster cluster = new CorefCluster(i);
-	    			 clusters.add(cluster);
 	    			 result.add(mentionList);
 	    		 }
 	    	 }
@@ -152,7 +151,7 @@ public class CorefUtils
 		return result;
 	}
 	
-	public static Map<Integer, CorefChain> buildCorefChains(List<List<CorefMention>> corefMentions, List<CorefCluster> clusters)
+	private static Map<Integer, CorefChain> buildCorefChains(List<List<CorefMention>> corefMentions)
 	{
 		Map<Integer, CorefChain> corefChains = new HashMap<>();
 		for(int i = 0; i < corefMentions.size(); i ++)
@@ -174,9 +173,10 @@ public class CorefUtils
 					IntPair pair = new IntPair(m.sentNum, m.headIndex);
 					map.put(pair, set);
 				}
+				// representative devra être la première entité référencée dans le fichier xml
 				representative = corefMentions.get(i).get(0);
-				CorefChain chain = new CorefChain(clusters.get(i).clusterID, map, representative);
-				corefChains.put(clusters.get(i).clusterID, chain);
+				CorefChain chain = new CorefChain(representative.corefClusterID, map, representative);
+				corefChains.put(representative.corefClusterID, chain);
 			}
 		}
 		return corefChains;
@@ -241,9 +241,8 @@ public class CorefUtils
 	{
 		//TODO a transférer dans getCleanAnnotation
 		Annotation annotation = getInitAnnotation(file);
-		List<CorefCluster> clusters = new ArrayList<>();
 		
-		List<List<Mention>> mentions = getMentionsFromFile(file, annotation, clusters);
+		List<List<Mention>> mentions = getMentionsFromFile(file, annotation);
 		
 		List<List<Mention>> mentionsSents = getMentionsSents(mentions, annotation);
 		for(List<Mention> mentionsSent : mentionsSents)
@@ -258,7 +257,7 @@ public class CorefUtils
 		
 		List<List<CorefMention>> corefMentions = buildCorefMentions(mentions);
 		
-		Map<Integer, CorefChain> corefChains = buildCorefChains(corefMentions, clusters);
+		Map<Integer, CorefChain> corefChains = buildCorefChains(corefMentions);
 		
 		if(corefCustom == null)
 			//TODO retirer les properties du constructeur, il n'y en a pas besoin
@@ -268,7 +267,7 @@ public class CorefUtils
 		return annotation;
 	}
 	
-	public static Mention buildMention(int id, int startIndex, int endIndex, int sent, Annotation annotation, int clusterID)
+	private static Mention buildMention(int id, int startIndex, int endIndex, int sent, Annotation annotation, int clusterID)
 	{
 		CoreMap sentence = annotation.get(SentencesAnnotation.class).get(sent);
 		List<CoreLabel> sentencesWords = sentence.get(TokensAnnotation.class);
@@ -279,7 +278,7 @@ public class CorefUtils
 		SemanticGraph enhancedDependencies = sentence.get(SemanticGraphCoreAnnotations.EnhancedDependenciesAnnotation.class);
 
 		Mention mention = new Mention(id, startIndex, endIndex, sentencesWords, basicDependencies, enhancedDependencies, mentionSpan);
-		//TODO s'assurer que cette partie ne fait pas doublon par rapport à corefMentionAnnotator
+
 		mention.corefClusterID = clusterID;
 		mention.headWord = mentionSpan.get(mentionSpan.size()-1);
 		mention.headIndex = sentencesWords.indexOf(mention.headWord);

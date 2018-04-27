@@ -28,10 +28,11 @@ public class Test_coref
 {
 	public static void main(String[] args) throws IOException, ClassNotFoundException
 	{
-		TestDivers();
+		//TestDivers();
 		//testBlob();
 		//TestCorefUtils();
 		//TestCorefStandAlone();
+		testCompareCorefDcoref();
 	}
 	
 	public static void TestCorefUtils() throws IOException, ClassNotFoundException
@@ -89,7 +90,7 @@ public class Test_coref
 		Properties props = new Properties();
 		props.setProperty("annotators", "tokenize,ssplit,pos,lemma,ner,parse,depparse, coref");
 		// Si on veut utiliser le mod�le "r�seau de neurones"
-		//props.setProperty("coref.algorithm", "neural");
+		props.setProperty("coref.algorithm", "neural");
 		StanfordCoreNLP pipeline = new StanfordCoreNLP(props);
 		CoreDocument document = new CoreDocument(content);
 		pipeline.annotate(document);
@@ -100,9 +101,12 @@ public class Test_coref
 
 		// Test de cor�f�rence entre deux mentions
 		CoreEntityMention originalEntityMention = sentence.entityMentions().get(4);;
+		CoreEntityMention test = null;
+		test.canonicalEntityMention();
 
 		Map<Integer, CorefChain> corefChains = document.corefChains();
 		
+		CorefChain test2;
 		CorefChain chain = corefChains.get(18);
 		System.out.println(corefChains);
 
@@ -204,10 +208,13 @@ public class Test_coref
 			System.out.println("Mot : " + test.get(i) + " sentence : " + test.get(i).sentNum + " startindex : " + test.get(i).startIndex + " endindex : " + test.get(i).endIndex);*/
 	}
 	
-	public void buildCorefChain(List<List<Mention>> mentions)
+	
+	public static void testCompareCorefDcoref() throws ClassNotFoundException, IOException
 	{
-		Map<Mention, IntTuple> position = new HashMap<>();
-		
-		
+		String path = "corpus" + File.separator + "reference.txt";
+		File file = new File(path);
+		Properties props = new Properties();
+		props.setProperty("coref.algorithm", "deterministic");
+		Map<Integer, CorefChain> dcorefChains = CorefUtils.getStanfordCorefChains(file, props);
 	}
 }
