@@ -10,7 +10,7 @@ public class Test_corefPerformance
 {
 	public static void main(String[] args) throws ClassNotFoundException, IOException
 	{
-		//testMUC();
+		testMUC();
 		testBCUBE();
 	}
 	

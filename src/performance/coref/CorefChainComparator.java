@@ -94,11 +94,7 @@ public class CorefChainComparator
 		return this.muc;
 	}
 	
-	//TODO a modifier la détection des TP :
-	// pour l'instant deux mentions se suivent chez Stanford et chez réf (algo ref mais problèmatique)
-	// objectif : deux mentions se suivent dans ref, on vérifie que chez stanford elles soient dans la même chaine
-	// idée => findMentionsInChains ne renvoie plus un tableau, on prend l'équivalent de i et i+1 ref, ces équivalents doivent 
-	// appartenir à la même chaîne.
+
 	private void compareFile_MUC(Map<Integer, CorefChain> stanfordCorefChains, Map<Integer, CorefChain> referenceCorefChains) throws IOException
 	{
 		int tp = 0;
@@ -118,11 +114,14 @@ public class CorefChainComparator
 				CorefMention currentReferenceMention = referenceMentions.get(i);
 				CorefMention nextReferenceMention = referenceMentions.get(i + 1);
 				
-				CorefMention[] stanfordEquivalent = findMentionInChains(currentReferenceMention, stanfordCorefChains);
-				
-				if(stanfordEquivalent[1].headIndex == nextReferenceMention.headIndex &&
-						stanfordEquivalent[1].sentNum == nextReferenceMention.sentNum)
-					tp ++;
+				CorefMention currentStanfordEquivalent = findMentionInChains(currentReferenceMention, stanfordCorefChains);
+				CorefMention nextStanfordEquivalent = findMentionInChains(nextReferenceMention, stanfordCorefChains);
+				if(currentStanfordEquivalent != null && nextStanfordEquivalent != null)
+				{
+					if(currentStanfordEquivalent.corefClusterID == nextStanfordEquivalent.corefClusterID)
+						tp ++;
+				}
+
 			}
 		}
 		
@@ -155,13 +154,10 @@ public class CorefChainComparator
 	}
 
 	// Parcours une map de chaînes de coref pour retrouver une mention
-	// Renvoie la mention trouvée et la suivante
 	// Dans la pratique, elle sert à retrouver une mention de stanford dans les chaînes de références ou vice versa
-	private CorefMention[] findMentionInChains(CorefMention mention, Map<Integer, CorefChain> corefChains) 
+	private CorefMention findMentionInChains(CorefMention mention, Map<Integer, CorefChain> corefChains) 
 	{
-		CorefMention[] result = new CorefMention[2];
-		result[0] = null;
-		result[1] = null;
+		CorefMention result = null;
 		
 		for(Integer key : corefChains.keySet())
 		{
@@ -173,11 +169,7 @@ public class CorefChainComparator
 				if(mention.headIndex == currentStanfordMention.headIndex 
 						&& mention.sentNum == currentStanfordMention.sentNum)
 				{
-					result[0] = currentStanfordMention;
-					if(i + 1 < stanfordMentions.size())
-						result[1] = stanfordMentions.get(i + 1);
-					else
-						result[1] = null;
+					result = currentStanfordMention;
 				}
 			}
 		}
@@ -196,7 +188,7 @@ public class CorefChainComparator
 		int refEqChains[] = new int[countMentions(chain)];
 		for(int i = 0; i < stanfordMentions.size(); i ++)
 		{
-			CorefMention eqMention = findMentionInChains(stanfordMentions.get(i), corefChains)[0];
+			CorefMention eqMention = findMentionInChains(stanfordMentions.get(i), corefChains);
 			if(eqMention != null)
 				refEqChains[i] = eqMention.corefClusterID;
 			else
@@ -208,7 +200,7 @@ public class CorefChainComparator
 			int refEqChain = refEqChains[i];
 			if(refEqChain == -1)
 			{
-				float x = ((float)1)/((float)refEqChains.length);
+				float x = ((float)0)/((float)refEqChains.length);
 				if(stat == Stat.PRECISION)
 					this.bcube.updatePrecision(x);
 				else
