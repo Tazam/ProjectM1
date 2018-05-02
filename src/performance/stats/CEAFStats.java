@@ -1,6 +1,10 @@
 package performance.stats;
 
-import performance.coref.CorefChainComparator.Similarity;
+// @author Axel Clerici
+
+// Classe représente les statistiques nécessaires au calcul de la mesure CEAF
+// pour Coref. Concrètement, cette mesure est calculée en associant une entité
+// de référence à une entité de Stanford en fonction de leur similarité.
 
 public class CEAFStats implements Stats
 {

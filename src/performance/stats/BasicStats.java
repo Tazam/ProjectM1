@@ -1,5 +1,11 @@
 package performance.stats;
 
+// @author Axel Clerici
+
+// Cette classe permet de calculer des performances d'annotateurs
+// de manière basique : vrais/faux positifs, faux négatifs
+// précision, rappel et f-mesure
+
 public class BasicStats implements Stats
 {
 	float truePositives;

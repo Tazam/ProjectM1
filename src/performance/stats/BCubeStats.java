@@ -1,5 +1,10 @@
 package performance.stats;
 
+// @author Axel Clerici
+
+// Classe représente les statistiques nécessaires au calcul de la mesure B^3
+// pour Coref.
+
 public class BCubeStats implements Stats
 {
 	private float precision;
