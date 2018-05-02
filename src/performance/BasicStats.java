@@ -22,12 +22,12 @@ public class BasicStats implements Stats
 	
 	public float getRecall()
 	{
-		return (truePositives/(truePositives + falseNegatives)*100);
+		return (truePositives/(truePositives + falseNegatives));
 	}
 	
 	public float getPrecision()
 	{
-		return (truePositives/(truePositives + falsePositives)*100);
+		return (truePositives/(truePositives + falsePositives));
 	}
 	
 	public float getFMeasure()

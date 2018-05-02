@@ -111,4 +111,9 @@ public class SsplitUtils
 		ssplit.annotate(annotation);
 		return (new CoreDocument(annotation).sentences());
 	}
+	
+	public static int getEndCharOffsets(CoreSentence sentence)
+	{
+		return sentence.charOffsets().second;
+	}
 }

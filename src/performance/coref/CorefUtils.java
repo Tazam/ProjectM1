@@ -6,8 +6,10 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Set;
 
 import org.apache.commons.io.FilenameUtils;
@@ -19,6 +21,7 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 import edu.stanford.nlp.semgraph.SemanticGraphCoreAnnotations;
+import edu.stanford.nlp.coref.CorefCoreAnnotations;
 import edu.stanford.nlp.coref.data.CorefChain;
 import edu.stanford.nlp.coref.data.CorefChain.CorefMention;
 import edu.stanford.nlp.coref.data.CorefCluster;
@@ -170,7 +173,7 @@ public class CorefUtils
 					Set<CorefMention> set = new HashSet<>();
 					set.add(m);
 				
-					IntPair pair = new IntPair(m.sentNum, m.headIndex);
+					IntPair pair = new IntPair(m.sentNum, m.startIndex);
 					map.put(pair, set);
 				}
 				// representative devra être la première entité référencée dans le fichier xml
@@ -186,7 +189,43 @@ public class CorefUtils
 	public static Map<Integer, CorefChain> getCustomCorefChains(File file) throws ClassNotFoundException, IOException
 	{
 		Annotation annotation = getCleanAnnotation(file);
-		return (new CoreDocument(annotation).corefChains());
+		Map<Integer, CorefChain> corefChains = new CoreDocument(annotation).corefChains();
+		// il n'est pas nécessaire de filtrer les personnes ici, on sait qu'on ne garde que
+		// les personnes dans le fichier de référence.
+		return (corefChains);
+	}
+	
+	public static Map<Integer, CorefChain> getStanfordCorefChains(File file, Properties props) throws IOException, ClassNotFoundException
+	{
+		Annotation annotation = getInitAnnotation(file);
+		if(coref == null)
+			coref = new CorefAnnotator(props);
+		coref.annotate(annotation);
+		Map<Integer, CorefChain> corefChains = new CoreDocument(annotation).corefChains();
+		filterPerson(corefChains, annotation);
+		return corefChains;
+	}
+	
+	
+	private static void filterPerson(Map<Integer, CorefChain> chains, Annotation annotation)
+	{
+		Iterator<Map.Entry<Integer, CorefChain>> iter = chains.entrySet().iterator();
+		List<CoreMap> sentences = annotation.get(SentencesAnnotation.class);
+		while(iter.hasNext())
+		{
+			CorefChain chain = iter.next().getValue();
+			
+			CorefMention representative = chain.getRepresentativeMention();
+			int sent = representative.sentNum -1;
+			int startIndex = representative.startIndex - 1;
+			CoreLabel token = sentences.get(sent).get(TokensAnnotation.class).get(startIndex);
+			String nerTag = token.ner();
+			if(!nerTag.equals("PERSON"))
+				iter.remove();
+		}
+		// Récupérer les tokens du representative
+		// check si ner == person
+		// si oui on garde, sinon on retire
 	}
 	
 	private static List<List<Mention>> getMentionsSents(List<List<Mention>> mentions, Annotation annotation) 
@@ -226,15 +265,6 @@ public class CorefUtils
 			}
 		}
 		return result;
-	}
-
-	public static Map<Integer, CorefChain> getStanfordCorefChains(File file, Properties props) throws IOException, ClassNotFoundException
-	{
-		Annotation annotation = getInitAnnotation(file);
-		if(coref == null)
-			coref = new CorefAnnotator(props);
-		coref.annotate(annotation);
-		return (new CoreDocument(annotation).corefChains());
 	}
 	
 	public static Annotation getCleanAnnotation(File file) throws ClassNotFoundException, IOException

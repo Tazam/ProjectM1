@@ -2,6 +2,7 @@ package performance.coref;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Properties;
@@ -20,6 +21,12 @@ public class CorefChainComparator
 	{
 		RECALL,
 		PRECISION;
+	}
+	
+	public enum Similarity
+	{
+		SIMPLE,
+		ADVANCED;
 	}
 	
 	private BCubeStats bcube;
@@ -44,6 +51,7 @@ public class CorefChainComparator
 		{
 			Map<Integer, CorefChain> stanfordCorefChains = CorefUtils.getStanfordCorefChains(corpusFolder[i], props);
 			Map<Integer, CorefChain> referenceCorefChains = CorefUtils.getCustomCorefChains(corpusFolder[i]);
+			//printMentions(stanfordCorefChains, referenceCorefChains);
 			compareFile_BCUBE(stanfordCorefChains, referenceCorefChains);
 		}
 		return this.bcube;
@@ -69,16 +77,105 @@ public class CorefChainComparator
 		
 	}
 	
-	public Stats compareFiles_CEAF() throws IOException
+	public Stats compareFiles_CEAF(Similarity function) throws IOException, ClassNotFoundException
 	{		
-		return null;
+		File[] corpusFolder = new File(Consts.CORPUS_PATH).listFiles();
+
+		// Je n'ai pas encore annoté la main les autres fichiers
+		for(int i = 0; i < 1/*referenceFolder.length*/; i++)
+		{
+			Map<Integer, CorefChain> stanfordCorefChains = CorefUtils.getStanfordCorefChains(corpusFolder[i], props);
+			Map<Integer, CorefChain> referenceCorefChains = CorefUtils.getCustomCorefChains(corpusFolder[i]);
+			compareFile_CEAF(stanfordCorefChains, referenceCorefChains, function);
+		}
+		return this.ceaf;
 	}
 	
-	private void compareFile_CEAF() throws IOException
+	private void compareFile_CEAF(Map<Integer, CorefChain> stanfordCorefChains, Map<Integer, CorefChain> referenceCorefChains, Similarity function) 
 	{
-		
+		// Map<Reference, Stanford>
+		Map<Integer, Integer> mapping = getMapping(stanfordCorefChains, referenceCorefChains, function);
+		float simSum = getSimilaritySum(mapping, function, stanfordCorefChains, referenceCorefChains);
+		updateCEAF(simSum, referenceCorefChains, stanfordCorefChains, function);
 	}
-	
+
+	private void updateCEAF(float simSum, Map<Integer, CorefChain> referenceCorefChains, Map<Integer, CorefChain> stanfordCorefChains, Similarity function) 
+	{
+		float p;
+		float r;
+		if(function == Similarity.SIMPLE)
+		{
+			int nbrReferenceMentions = countMentions(referenceCorefChains);
+			int nbrStanfordMentions = countMentions(stanfordCorefChains);
+			p = simSum /((float)nbrStanfordMentions);
+			r = simSum /((float)nbrReferenceMentions);
+		}
+		else
+		{
+			int nbrReferenceChains = countChains(referenceCorefChains);
+			int nbrStanfordChains = countChains(stanfordCorefChains);
+			p = simSum /((float) nbrStanfordChains);
+			r = simSum /((float) nbrReferenceChains);
+		}
+		ceaf.updatePrecision(p);
+		ceaf.updateRecall(r);
+	}
+
+	private float getSimilaritySum(Map<Integer, Integer> mapping, Similarity function, Map<Integer, CorefChain> stanfordCorefChains, Map<Integer, CorefChain> referenceCorefChains) 
+	{
+		float result = 0;
+		for(Integer key : mapping.keySet())
+		{
+			CorefChain referenceChain = referenceCorefChains.get(key);
+			CorefChain stanfordChain = stanfordCorefChains.get(mapping.get(key));
+			if(function == Similarity.SIMPLE)
+			{
+				System.out.println("map => " + getSimpleSimilarityScore(referenceChain, stanfordChain) + " ref : " + referenceChain + " stan : " + stanfordChain);
+				result += (float) getSimpleSimilarityScore(referenceChain, stanfordChain);
+			}
+			else
+			{
+				result += getAdvancedSimilarityScore(referenceChain, stanfordChain);
+				System.out.println("map => " + getAdvancedSimilarityScore(referenceChain, stanfordChain) + " ref : " + referenceChain + " stan : " + stanfordChain);
+			}
+
+		}
+		return result;
+	}
+
+	private float getAdvancedSimilarityScore(CorefChain referenceChain, CorefChain stanfordChain) 
+	{
+		float result = 0;
+		if(stanfordChain != null)
+		{
+			float mentions = (float)(countMentions(referenceChain) + countMentions(stanfordChain));
+			result = ((float)(2 * getSimpleSimilarityScore(referenceChain, stanfordChain))) / mentions;
+		}
+		return result;
+	}
+
+	private int getSimpleSimilarityScore(CorefChain referenceChain, CorefChain stanfordChain) 
+	{
+		int count = 0;
+		if(stanfordChain != null)
+		{
+			List<CorefMention> referenceMentions = referenceChain.getMentionsInTextualOrder();
+			List<CorefMention> stanfordMentions = stanfordChain.getMentionsInTextualOrder();
+			for(CorefMention referenceMention : referenceMentions)
+			{
+				for(CorefMention stanfordMention : stanfordMentions)
+				{
+					if(compareMentions(stanfordMention, referenceMention))
+					{
+						count ++;
+						break;
+					}
+				}
+			}
+		}
+		return count;
+	}
+
 	public Stats compareFiles_MUC() throws IOException, ClassNotFoundException
 	{		
 		File[] corpusFolder = new File(Consts.CORPUS_PATH).listFiles();
@@ -89,6 +186,7 @@ public class CorefChainComparator
 			System.out.println("Evaluation sur : " + corpusFolder[i].getName());
 			Map<Integer, CorefChain> stanfordCorefChains = CorefUtils.getStanfordCorefChains(corpusFolder[i], props);
 			Map<Integer, CorefChain> referenceCorefChains = CorefUtils.getCustomCorefChains(corpusFolder[i]);
+			//printMentions(stanfordCorefChains, referenceCorefChains);
 			compareFile_MUC(stanfordCorefChains, referenceCorefChains);
 		}
 		return this.muc;
@@ -101,8 +199,8 @@ public class CorefChainComparator
 		int fp = 0;
 		int fn = 0;
 		
-		int nbrStanfordMentions = countMentions(stanfordCorefChains);
-		int nbrReferenceMentions = countMentions(referenceCorefChains);
+		int nbrStanfordLinks = countLinks(stanfordCorefChains);
+		int nbrReferenceLinks = countLinks(referenceCorefChains);
 		
 		for(Integer key : referenceCorefChains.keySet())
 		{
@@ -119,16 +217,27 @@ public class CorefChainComparator
 				if(currentStanfordEquivalent != null && nextStanfordEquivalent != null)
 				{
 					if(currentStanfordEquivalent.corefClusterID == nextStanfordEquivalent.corefClusterID)
+					{
 						tp ++;
+					}
 				}
-
 			}
 		}
 		
-		fp = nbrStanfordMentions - tp;
-		fn = nbrReferenceMentions - tp;
+		fp = nbrStanfordLinks - tp;
+		fn = nbrReferenceLinks - tp;
 		
 		muc.updateStats(tp, fp, fn);
+	}
+	
+	private int countChains(Map<Integer, CorefChain> corefChains)
+	{
+		int count = 0;
+		for(Integer key : corefChains.keySet())
+		{
+			count += 1;
+		}
+		return count;
 	}
 	
 	private int countMentions(Map<Integer, CorefChain> corefChains) 
@@ -166,22 +275,13 @@ public class CorefChainComparator
 			for(int i = 0; i < stanfordMentions.size(); i ++)
 			{
 				CorefMention currentStanfordMention = stanfordMentions.get(i);
-				if(mention.headIndex == currentStanfordMention.headIndex 
-						&& mention.sentNum == currentStanfordMention.sentNum)
-				{
+				if(compareMentions(currentStanfordMention, mention))
 					result = currentStanfordMention;
-				}
 			}
-		}
-		
+		}	
 		return result;
 	}
 
-	public int getAvgFMeasure()
-	{
-		return 0;
-	}
-	
 	private void updateBCUBE(CorefChain chain, Map<Integer, CorefChain> corefChains, Stat stat)
 	{
 		List<CorefMention> stanfordMentions = chain.getMentionsInTextualOrder();
@@ -192,7 +292,9 @@ public class CorefChainComparator
 			if(eqMention != null)
 				refEqChains[i] = eqMention.corefClusterID;
 			else
+			{
 				refEqChains[i] = -1;
+			}
 		}
 		for(int i = 0; i < refEqChains.length; i ++)
 		{
@@ -222,4 +324,79 @@ public class CorefChainComparator
 		}
 	}
 	
+	private boolean compareMentions(CorefMention mention1, CorefMention mention2)
+	{
+		// Dans ce cas, les "intersections" de mentions sont considérées comme erreurs en totalité
+		if(mention1.startIndex == mention2.startIndex && mention1.sentNum == mention2.sentNum && mention1.endIndex == mention2.endIndex)
+			return true;
+		else
+			return false;
+	}
+	
+	private Map<Integer, Integer> getMapping(Map<Integer, CorefChain> stanfordCorefChains, Map<Integer, CorefChain> referenceCorefChains, Similarity function)
+	{
+		Map<Integer, Integer> mapping = new HashMap<>();
+		for(Integer key : stanfordCorefChains.keySet())
+		{
+			CorefChain stanfordChain = stanfordCorefChains.get(key);
+			float maxSimilarityScore = 0;
+			Integer bestKey = null;
+			
+			for(Integer key2 : referenceCorefChains.keySet())
+			{
+				float similarityScore = 0;
+				CorefChain referenceChain = referenceCorefChains.get(key2);
+				if(!mapping.containsValue(key2))
+				{
+					if(function == Similarity.SIMPLE)
+						similarityScore = getSimpleSimilarityScore(referenceChain, stanfordChain);
+					else
+						similarityScore = getAdvancedSimilarityScore(referenceChain, stanfordChain);
+					
+					if(similarityScore > maxSimilarityScore)
+					{
+						maxSimilarityScore = similarityScore;
+						bestKey = key2;
+					}
+				}
+			}
+			mapping.put(bestKey, key);
+		}
+		return mapping;
+	}
+	
+	private int countLinks(Map<Integer, CorefChain> corefChains)
+	{
+		int count = 0;
+		for(Integer key : corefChains.keySet())
+		{
+			CorefChain corefChain = corefChains.get(key);
+			count += countMentions(corefChain) -1;
+		}
+		return count;
+	}
+	
+	private void printMentions(Map<Integer, CorefChain> stanfordCorefChains, Map<Integer, CorefChain> referenceCorefChains)
+	{
+		for(Integer key : stanfordCorefChains.keySet())
+		{
+			CorefChain stanfordChain = stanfordCorefChains.get(key);
+			List<CorefMention> stanfordMentions = stanfordChain.getMentionsInTextualOrder();
+			for(CorefMention stanfordMention : stanfordMentions)
+				System.out.println(stanfordMention + " " + stanfordMention.startIndex + " " +stanfordMention.endIndex);
+		}
+		System.out.print("reference");
+		for(Integer key : referenceCorefChains.keySet())
+		{
+			CorefChain referenceChain = referenceCorefChains.get(key);
+			List<CorefMention> referenceMentions = referenceChain.getMentionsInTextualOrder();
+			for(CorefMention referenceMention : referenceMentions)
+				System.out.println(referenceMention + " " + referenceMention.startIndex + " " +referenceMention.endIndex);
+		}
+	}
+	
+	private int[] countChains()
+	{
+		return null;
+	}
 }

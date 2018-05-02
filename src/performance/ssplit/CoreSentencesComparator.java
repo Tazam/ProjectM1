@@ -39,7 +39,7 @@ public class CoreSentencesComparator //implements AnnotationComparator<CoreSente
 		File[] corpusFolder = new File(Consts.CORPUS_PATH).listFiles();
 
 		// Je n'ai pas encore annoté la main les autres fichiers
-		for(int i = 0; i < 2/*referenceFolder.length*/; i++)
+		for(int i = 0; i < corpusFolder.length; i++)
 		{
 			List<CoreSentence> stanfordSentences = SsplitUtils.getStanfordSentences(corpusFolder[i], props);
 			List<CoreSentence> referenceSentences = SsplitUtils.getCustomSentences(corpusFolder[i]);
@@ -58,9 +58,9 @@ public class CoreSentencesComparator //implements AnnotationComparator<CoreSente
 		{
 			for(CoreSentence referenceSentence : referenceSentences)
 			{
-				String stext = stanfordSentence.toString();
-				String rtext = referenceSentence.toString();
-				if(stext.equals(rtext))
+				int sEnd = SsplitUtils.getEndCharOffsets(stanfordSentence);
+				int rEnd =  SsplitUtils.getEndCharOffsets(referenceSentence);
+				if(sEnd == rEnd)
 				{
 					tp ++;
 					break;
