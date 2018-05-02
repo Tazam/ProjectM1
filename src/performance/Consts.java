@@ -1,7 +1,11 @@
 package performance;
 
+// @author Axel Clerici
+
+// Une classe qui contient quelques constantes permettant de simplifier
+// la recherche des différents fichiers dans l'arborescence du projet
+
 import java.io.File;
-import java.util.Properties;
 
 public final class Consts 
 {
