@@ -2,13 +2,8 @@ package test.performance;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Properties;
 
-import edu.stanford.nlp.coref.data.CorefChain;
-import edu.stanford.nlp.pipeline.Annotation;
-import edu.stanford.nlp.pipeline.CorefAnnotator;
 import performance.coref.CorefChainComparator;
 import performance.coref.CorefChainComparator.Similarity;
 import performance.stats.Stats;
@@ -50,8 +45,8 @@ public class Test_corefPerformance
 		System.out.println("Recall : " + stats4.getRecall());
 		System.out.println("f-mesure : " + stats4.getFMeasure());
 		
-		float avg = stats1.getFMeasure() + stats2.getFMeasure() + stats3.getFMeasure() /*+ stats4.getFMeasure()*/;
-		avg /= (float)3;
+		float avg = stats1.getFMeasure() + stats2.getFMeasure() + stats3.getFMeasure() + stats4.getFMeasure();
+		avg /= (float)4;
 		
 		System.out.println("f-measure average : " + avg);
 		
