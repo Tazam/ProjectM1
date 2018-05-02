@@ -10,10 +10,12 @@ import java.util.Properties;
 import edu.stanford.nlp.coref.data.CorefChain;
 import edu.stanford.nlp.coref.data.CorefChain.CorefMention;
 import edu.stanford.nlp.pipeline.CoreSentence;
-import performance.BasicStats;
 import performance.Consts;
-import performance.Stats;
 import performance.ssplit.SsplitUtils;
+import performance.stats.BCubeStats;
+import performance.stats.BasicStats;
+import performance.stats.CEAFStats;
+import performance.stats.Stats;
 
 public class CorefChainComparator 
 {

@@ -2,8 +2,8 @@ package test.performance;
 
 import java.io.IOException;
 
-import performance.BasicStats;
 import performance.ssplit.CoreSentencesComparator;
+import performance.stats.BasicStats;
 
 public class Test_ssplitPerformance 
 {

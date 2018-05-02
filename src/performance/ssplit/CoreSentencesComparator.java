@@ -12,8 +12,8 @@ import java.io.IOException;
 import edu.stanford.nlp.ling.CoreAnnotations.SentencesAnnotation;
 import edu.stanford.nlp.pipeline.*;
 import edu.stanford.nlp.util.CoreMap;
-import performance.BasicStats;
 import performance.Consts;
+import performance.stats.BasicStats;
 
 // Cette classe permet de comparer les r�sultats obtenus par l'annotateur ssplit de StanfordNLP
 // avec une r�f�rence qui correspond aux m�me textes annot�s manuellement

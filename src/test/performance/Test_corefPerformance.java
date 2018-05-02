@@ -9,9 +9,9 @@ import java.util.Properties;
 import edu.stanford.nlp.coref.data.CorefChain;
 import edu.stanford.nlp.pipeline.Annotation;
 import edu.stanford.nlp.pipeline.CorefAnnotator;
-import performance.Stats;
 import performance.coref.CorefChainComparator;
 import performance.coref.CorefChainComparator.Similarity;
+import performance.stats.Stats;
 import performance.coref.CorefUtils;
 
 public class Test_corefPerformance 
@@ -22,8 +22,8 @@ public class Test_corefPerformance
 		CorefUtils.textAnnotationHelper(file);
 		
 		Properties props = new Properties();
-		props.setProperty("coref.algorithm", "neural");
-		//props.setProperty("coref.algorithm", "statistical");
+		//props.setProperty("coref.algorithm", "neural");
+		props.setProperty("coref.algorithm", "statistical");
 		CorefChainComparator comparator = new CorefChainComparator(props);
 	
 		System.out.println("MUC :");

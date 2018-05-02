@@ -1,4 +1,4 @@
-package performance;
+package performance.stats;
 
 public class BasicStats implements Stats
 {

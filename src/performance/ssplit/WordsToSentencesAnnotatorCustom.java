@@ -18,10 +18,11 @@ import edu.stanford.nlp.util.CoreMap;
 import edu.stanford.nlp.util.Generics;
 import edu.stanford.nlp.util.logging.Redwood;
 
-
+// @author Axel Clerici
 // Cette classe est la copie quasi-exacte de la classe WordsToSentencesAnnotator de Stanford NLP 
 // La fonction annotate est légèrement modifiée pour permettre d'annoter en lui précisant un découpage
 // en phrases custom. 
+// Les lignes modifiées sont :  195 et 219
 
 
 
@@ -190,6 +191,7 @@ public class WordsToSentencesAnnotatorCustom implements Annotator  {
    * and then treating those empty lists as empty lines.  We don't
    * actually include empty sentences in the annotation, though.
    */
+  // On passe en argument notre List<List<CoreLabel>> personnalisée
   public void annotateCustom(Annotation annotation, List<List<CoreLabel>> coreLabelsDoc) {
     if (VERBOSE) {
       log.info("Sentence splitting ... " + annotation);
@@ -214,6 +216,9 @@ public class WordsToSentencesAnnotatorCustom implements Annotator  {
     // keep track of current section to assign sentences to sections
     int currSectionIndex = 0;
     List<CoreMap> sections = annotation.get(CoreAnnotations.SectionsAnnotation.class);
+    
+    // On remplace wts.process(tokens) par notre list<list<corelabel>
+    // for (List<CoreLabel> sentenceTokens: wts.process(tokens))
    for (List<CoreLabel> sentenceTokens: coreLabelsDoc) {
       if (countLineNumbers) {
         ++lineNumber;

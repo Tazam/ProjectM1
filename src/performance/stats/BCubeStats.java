@@ -1,6 +1,4 @@
-package performance.coref;
-
-import performance.Stats;
+package performance.stats;
 
 public class BCubeStats implements Stats
 {

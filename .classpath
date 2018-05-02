@@ -17,5 +17,6 @@
 	</classpathentry>
 	<classpathentry kind="lib" path="../stanford-corenlp-full-2018-01-31/stanford-corenlp-3.9.0-models.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Poisson Blob/git/stanford-corenlp-full-2018-01-31/stanford-corenlp-3.9.0-javadoc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Poisson Blob/git/stanford-corenlp-full-2018-01-31/ejml-0.23.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

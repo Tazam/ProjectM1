@@ -1,6 +1,5 @@
-package performance.coref;
+package performance.stats;
 
-import performance.Stats;
 import performance.coref.CorefChainComparator.Similarity;
 
 public class CEAFStats implements Stats
