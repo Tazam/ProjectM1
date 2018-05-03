@@ -47,6 +47,7 @@ public class CorefChainComparator
 		this.props = props;
 	}
 	
+	// Permet de réaliser une comparaison MUC sur l'ensemble du corpus
 	public Stats compareFiles_MUC() throws IOException, ClassNotFoundException
 	{		
 		File[] corpusFolder = new File(Consts.CORPUS_PATH).listFiles();
@@ -61,7 +62,7 @@ public class CorefChainComparator
 		return this.muc;
 	}
 	
-
+	// Permet de réaliser une comparaison MUC sur un texte du corpus
 	private void compareFile_MUC(Map<Integer, CorefChain> stanfordCorefChains, Map<Integer, CorefChain> referenceCorefChains) throws IOException
 	{
 		int tp = 0;
@@ -77,12 +78,16 @@ public class CorefChainComparator
 			List<CorefMention> referenceMentions = referenceChain.getMentionsInTextualOrder();
 			for(int i = 0; i < referenceMentions.size() - 1; i ++)
 			{
-				// on récupère la mention actuelle et la suivante
+				// On s'intéresse ici aux liens entre mentions :
+				// on récupère donc une mention et sa suivante dans les références,
+				// et on cherche à les retrouver côté stanford
 				CorefMention currentReferenceMention = referenceMentions.get(i);
 				CorefMention nextReferenceMention = referenceMentions.get(i + 1);
 				
 				CorefMention currentStanfordEquivalent = findMentionInChains(currentReferenceMention, stanfordCorefChains);
 				CorefMention nextStanfordEquivalent = findMentionInChains(nextReferenceMention, stanfordCorefChains);
+				
+				// Si on les retrouve côté Stanford, on vérifie qu'elles appartiennent à la même chaîne de coréférence
 				if(currentStanfordEquivalent != null && nextStanfordEquivalent != null)
 				{
 					if(currentStanfordEquivalent.corefClusterID == nextStanfordEquivalent.corefClusterID)
@@ -99,6 +104,7 @@ public class CorefChainComparator
 		muc.updateStats(tp, fp, fn);
 	}
 	
+	// Permet de réaliser une comparaison BCUBE sur l'ensemble du corpus
 	public Stats compareFiles_BCUBE() throws IOException, ClassNotFoundException
 	{		
 		File[] corpusFolder = new File(Consts.CORPUS_PATH).listFiles();
@@ -112,6 +118,7 @@ public class CorefChainComparator
 		return this.bcube;
 	}
 	
+	// Permet de réaliser une comparaison BCUBE sur un texte du corpus
 	private void compareFile_BCUBE(Map<Integer, CorefChain> stanfordCorefChains, Map<Integer, CorefChain> referenceCorefChains) throws IOException
 	{
 		this.bcube.updateMentions(countMentions(stanfordCorefChains), countMentions(referenceCorefChains));
@@ -131,13 +138,19 @@ public class CorefChainComparator
 		}
 	}
 	
+	// Fonction qui met à jour la précision ou le rappel pour les stats de bcube
+	// chain est une chaîne de coréférence et corefChains est l'ensemble des chaînes du côté opposé de celui de chain
+	// par exemple, chain est une chaîne de Stanford, alors corefChains est l'ensemble des chaînes de Référence
 	private void updateBCUBE(CorefChain chain, Map<Integer, CorefChain> corefChains, Stat stat)
 	{
-		List<CorefMention> stanfordMentions = chain.getMentionsInTextualOrder();
+		// Dans un premier temps, on cherche l'équivalent des mentions de chain dans corefChains
+		// et on consigne les ID des clusters dans un tableau. Si une mention n'existe pas dans corefChains
+		// on consigne -1 dans le tableau.
+		List<CorefMention> mentions = chain.getMentionsInTextualOrder();
 		int refEqChains[] = new int[countMentions(chain)];
-		for(int i = 0; i < stanfordMentions.size(); i ++)
+		for(int i = 0; i < mentions.size(); i ++)
 		{
-			CorefMention eqMention = findMentionInChains(stanfordMentions.get(i), corefChains);
+			CorefMention eqMention = findMentionInChains(mentions.get(i), corefChains);
 			if(eqMention != null)
 				refEqChains[i] = eqMention.corefClusterID;
 			else
@@ -145,13 +158,17 @@ public class CorefChainComparator
 				refEqChains[i] = -1;
 			}
 		}
+		
+		// Ensuite, on fait la moyenne pour chaque mentions du nombre de mentions appartenant à la même chaîne
+		// (ID contenus dans le tableau).
 		for(int i = 0; i < refEqChains.length; i ++)
 		{
 			int count = 0;
 			int refEqChain = refEqChains[i];
+			// cas où la mention n'existe pas de l'autre côté
 			if(refEqChain == -1)
 			{
-				float x = ((float)0)/((float)refEqChains.length);
+				float x = ((float)0);
 				if(stat == Stat.PRECISION)
 					this.bcube.updatePrecision(x);
 				else
@@ -173,12 +190,12 @@ public class CorefChainComparator
 		}
 	}
 	
+	// Fonctions permettant de réaliser une comparaison CEAF sur l'ensemble du corpus
 	public Stats compareFiles_CEAF(Similarity function) throws IOException, ClassNotFoundException
 	{		
 		File[] corpusFolder = new File(Consts.CORPUS_PATH).listFiles();
 
-		// Je n'ai pas encore annoté la main les autres fichiers
-		for(int i = 0; i < 1/*referenceFolder.length*/; i++)
+		for(int i = 0; i < corpusFolder.length; i++)
 		{
 			Map<Integer, CorefChain> stanfordCorefChains = CorefUtils.getStanfordCorefChains(corpusFolder[i], props);
 			Map<Integer, CorefChain> referenceCorefChains = CorefUtils.getCustomCorefChains(corpusFolder[i]);
@@ -187,6 +204,7 @@ public class CorefChainComparator
 		return this.ceaf;
 	}
 	
+	// Permet de réaliser une comparaison CEAF sur un fichier du corpus
 	private void compareFile_CEAF(Map<Integer, CorefChain> stanfordCorefChains, Map<Integer, CorefChain> referenceCorefChains, Similarity function) 
 	{
 		// Map<Reference, Stanford>
@@ -217,6 +235,7 @@ public class CorefChainComparator
 		ceaf.updateRecall(r);
 	}
 
+	// Retourne la somme des similarités pour l'ensemble des chaînes mappées dans mapping
 	private float getSimilaritySum(Map<Integer, Integer> mapping, Similarity function, Map<Integer, CorefChain> stanfordCorefChains, Map<Integer, CorefChain> referenceCorefChains) 
 	{
 		float result = 0;
