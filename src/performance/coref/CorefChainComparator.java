@@ -2,9 +2,12 @@ package performance.coref;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Properties;
 
 import edu.stanford.nlp.coref.data.CorefChain;
@@ -57,6 +60,7 @@ public class CorefChainComparator
 			System.out.println("Evaluation sur : " + corpusFolder[i].getName());
 			Map<Integer, CorefChain> stanfordCorefChains = CorefUtils.getStanfordCorefChains(corpusFolder[i], props);
 			Map<Integer, CorefChain> referenceCorefChains = CorefUtils.getCustomCorefChains(corpusFolder[i]);
+			
 			compareFile_MUC(stanfordCorefChains, referenceCorefChains);
 		}
 		return this.muc;
@@ -209,6 +213,7 @@ public class CorefChainComparator
 	{
 		// Map<Reference, Stanford>
 		Map<Integer, Integer> mapping = getMapping(stanfordCorefChains, referenceCorefChains, function);
+		System.out.println(mapping);
 		float simSum = getSimilaritySum(mapping, function, stanfordCorefChains, referenceCorefChains);
 		updateCEAF(simSum, referenceCorefChains, stanfordCorefChains, function);
 	}
@@ -360,39 +365,71 @@ public class CorefChainComparator
 	private Map<Integer, Integer> getMapping(Map<Integer, CorefChain> stanfordCorefChains, Map<Integer, CorefChain> referenceCorefChains, Similarity function)
 	{
 		Map<Integer, Integer> mapping = new HashMap<>();
-		for(Integer key : referenceCorefChains.keySet())
+		Map<Integer, Map<Integer, Float>> allSimilarities = getAllSimilarities(stanfordCorefChains, referenceCorefChains, function);
+
+		for(Integer key : allSimilarities.keySet())
 		{
-			// Pour chaque chaîne de Stanford, on va chercher la chaîne de référence
-			// pour laquelle le score de similarité entre les deux chaînes est le plus élevé
-			CorefChain referenceChain = referenceCorefChains.get(key);
-			float maxSimilarityScore = 0;
-			Integer bestKey = null;
-			
-			for(Integer key2 : stanfordCorefChains.keySet())
-			{
-				float similarityScore = 0;
-				CorefChain stanfordChain = stanfordCorefChains.get(key2);
-				// on vérifie que la chaîne de référence actuelle n'est pas déjà présente dans la map
-				if(!mapping.containsValue(key2))
-				{
-					if(function == Similarity.SIMPLE)
-						similarityScore = getSimpleSimilarityScore(referenceChain, stanfordChain);
-					else
-						similarityScore = getAdvancedSimilarityScore(referenceChain, stanfordChain);
-					// un score plus intéressant est trouvé : on met de côté la clé correspondant
-					// à la chaîne de référence
-					if(similarityScore > maxSimilarityScore)
-					{
-						maxSimilarityScore = similarityScore;
-						bestKey = key2;
-					}
-				}
-			}
-			mapping.put(key, bestKey);
+			Map<Integer, Float> entry = MapUtils.sortByValue(allSimilarities.get(key));
+			allSimilarities.put(key, entry);
 		}
+		
+		for(Integer key : referenceCorefChains.keySet())
+			mapping.put(key, getBestMatch(key, allSimilarities, mapping));
+		
 		return mapping;
 	}
-	
+
+	private Integer getBestMatch(Integer key, Map<Integer, Map<Integer, Float>> allSimilarities, Map<Integer, Integer> mapping) 
+	{
+		Integer bestMatch = null;
+		Map<Integer, Float> similarities = allSimilarities.get(key);
+		for(Integer key2 : similarities.keySet())
+		{
+			if(similarities.get(key2) == 0)
+				break;
+			
+			if(!mapping.containsValue(key2) && !betterMatch(key2, similarities.get(key2), allSimilarities))
+				bestMatch = key2;
+		}
+		return bestMatch;
+	}
+
+	private boolean betterMatch(Integer key2, Float score, Map<Integer, Map<Integer, Float>> allSimilarities) 
+	{
+		for(Integer i : allSimilarities.keySet())
+		{
+			for(Integer j : allSimilarities.get(i).keySet())
+			{
+				if(j == key2 && allSimilarities.get(i).get(j) > score)
+					return true;
+			}
+		}
+		return false;
+	}
+
+	private Map<Integer, Map<Integer, Float>> getAllSimilarities(Map<Integer, CorefChain> stanfordCorefChains,
+			Map<Integer, CorefChain> referenceCorefChains, Similarity function) 
+	{
+		Map<Integer, Map<Integer, Float>> allSimilarities = new HashMap<>();
+		for(Integer key : referenceCorefChains.keySet())
+		{
+			Map<Integer, Float> similarities = new HashMap<>();
+			for(Integer key2 : stanfordCorefChains.keySet())
+			{
+
+				float similarity;
+				if(function == Similarity.SIMPLE)
+					similarity = getSimpleSimilarityScore(referenceCorefChains.get(key), stanfordCorefChains.get(key2));
+				else
+					similarity = getAdvancedSimilarityScore(referenceCorefChains.get(key), stanfordCorefChains.get(key2));
+				
+				similarities.put(key2, similarity);
+			}
+			allSimilarities.put(key, similarities);
+		}
+		return allSimilarities;
+	}
+
 	// Permet de compter le nombre de liens entre les mentions.
 	private int countLinks(Map<Integer, CorefChain> corefChains)
 	{

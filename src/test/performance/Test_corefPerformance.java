@@ -13,7 +13,7 @@ public class Test_corefPerformance
 {
 	public static void main(String[] args) throws ClassNotFoundException, IOException
 	{
-		File file = new File("corpus\\reference.txt");
+		File file = new File("corpus\\hyperion_page9.txt");
 		CorefUtils.textAnnotationHelper(file);
 		
 		Properties props = new Properties();

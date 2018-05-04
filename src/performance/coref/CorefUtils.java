@@ -277,10 +277,21 @@ public class CorefUtils
 			CorefMention representative = chain.getRepresentativeMention();
 			int sent = representative.sentNum -1;
 			int startIndex = representative.startIndex - 1;
-			CoreLabel token = sentences.get(sent).get(TokensAnnotation.class).get(startIndex);
-			String nerTag = token.ner();
-			if(!nerTag.equals("PERSON"))
+			int endIndex = representative.endIndex - 1;
+			boolean person = false;
+			for(int i = startIndex; i < endIndex; i++)
+			{
+				CoreLabel token = sentences.get(sent).get(TokensAnnotation.class).get(i);
+				String nerTag = token.ner();
+				if(nerTag.equals("PERSON"))
+				{
+					person = true;
+					break;
+				}
+			}
+			if(person == false)
 				iter.remove();
+
 		}
 	}
 	
@@ -332,9 +343,9 @@ public class CorefUtils
 	{
 		Annotation annotation = SsplitUtils.getCleanAnnotation(file);
 		List<CoreMap> sentences = annotation.get(SentencesAnnotation.class);
-		for(CoreMap sentence : sentences)
+		for(int i = 0; i < sentences.size(); i ++)
 		{
-			System.out.println(sentence.get(TokensAnnotation.class));
+			System.out.println(i + "==> " + sentences.get(i).get(TokensAnnotation.class));
 		}
 	}
 }
