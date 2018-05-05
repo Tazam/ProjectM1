@@ -15,9 +15,10 @@ public class Test_corefPerformance
 	{
 		File file = new File("corpus\\hyperion_page9.txt");
 		CorefUtils.textAnnotationHelper(file);
-		
+
 		Properties props = new Properties();
 		//props.setProperty("coref.algorithm", "neural");
+		//props.setProperty("coref.maxMentionDistance", "1");
 		props.setProperty("coref.algorithm", "statistical");
 		CorefChainComparator comparator = new CorefChainComparator(props);
 	

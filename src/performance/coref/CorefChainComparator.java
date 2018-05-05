@@ -38,14 +38,16 @@ public class CorefChainComparator
 	}
 	
 	private BCubeStats bcube;
-	private CEAFStats ceaf;
+	private CEAFStats ceafS;
+	private CEAFStats ceafA;
 	private BasicStats muc;
 	private Properties props;
 	
 	public CorefChainComparator(Properties props)
 	{
 		this.bcube = new BCubeStats();
-		this.ceaf = new CEAFStats();
+		this.ceafS = new CEAFStats();
+		this.ceafA = new CEAFStats();
 		this.muc = new BasicStats();
 		this.props = props;
 	}
@@ -60,7 +62,7 @@ public class CorefChainComparator
 			System.out.println("Evaluation sur : " + corpusFolder[i].getName());
 			Map<Integer, CorefChain> stanfordCorefChains = CorefUtils.getStanfordCorefChains(corpusFolder[i], props);
 			Map<Integer, CorefChain> referenceCorefChains = CorefUtils.getCustomCorefChains(corpusFolder[i]);
-			
+			System.out.println(stanfordCorefChains);
 			compareFile_MUC(stanfordCorefChains, referenceCorefChains);
 		}
 		return this.muc;
@@ -205,7 +207,10 @@ public class CorefChainComparator
 			Map<Integer, CorefChain> referenceCorefChains = CorefUtils.getCustomCorefChains(corpusFolder[i]);
 			compareFile_CEAF(stanfordCorefChains, referenceCorefChains, function);
 		}
-		return this.ceaf;
+		if(function == Similarity.SIMPLE)
+			return this.ceafS;
+		else
+			return this.ceafA;
 	}
 	
 	// Permet de réaliser une comparaison CEAF sur un fichier du corpus
@@ -220,24 +225,22 @@ public class CorefChainComparator
 
 	private void updateCEAF(float simSum, Map<Integer, CorefChain> referenceCorefChains, Map<Integer, CorefChain> stanfordCorefChains, Similarity function) 
 	{
-		float p;
-		float r;
 		if(function == Similarity.SIMPLE)
 		{
 			int nbrReferenceMentions = countMentions(referenceCorefChains);
 			int nbrStanfordMentions = countMentions(stanfordCorefChains);
-			p = simSum /((float)nbrStanfordMentions);
-			r = simSum /((float)nbrReferenceMentions);
+			ceafS.updatePrecision((float)nbrStanfordMentions);
+			ceafS.updateRecall((float)nbrReferenceMentions);
+			ceafS.updateSimilarity(simSum);
 		}
 		else
 		{
-			int nbrReferenceChains = countChains(referenceCorefChains);
-			int nbrStanfordChains = countChains(stanfordCorefChains);
-			p = simSum /((float) nbrStanfordChains);
-			r = simSum /((float) nbrReferenceChains);
+			int nbrReferenceChains = referenceCorefChains.size();
+			int nbrStanfordChains = stanfordCorefChains.size();
+			ceafA.updatePrecision((float)nbrStanfordChains);
+			ceafA.updateRecall((float)nbrReferenceChains);
+			ceafA.updateSimilarity(simSum);
 		}
-		ceaf.updatePrecision(p);
-		ceaf.updateRecall(r);
 	}
 
 	// Retourne la somme des similarités pour l'ensemble des chaînes mappées dans mapping
@@ -294,18 +297,7 @@ public class CorefChainComparator
 		}
 		return count;
 	}
-	
-	// compte le nombre de chaînes de coréférence dans un ensemble
-	private int countChains(Map<Integer, CorefChain> corefChains)
-	{
-		int count = 0;
-		for(Integer key : corefChains.keySet())
-		{
-			count += 1;
-		}
-		return count;
-	}
-	
+		
 	// compte le nombre de mentions dans un ensemble de chaînes de corédérence
 	private int countMentions(Map<Integer, CorefChain> corefChains) 
 	{
@@ -379,7 +371,7 @@ public class CorefChainComparator
 		return mapping;
 	}
 
-	private Integer getBestMatch(Integer key, Map<Integer, Map<Integer, Float>> allSimilarities, Map<Integer, Integer> mapping) 
+	private Integer getBestMatch(Integer key, Map<Integer, Map<Integer, Float>> allSimilarities, Map<Integer, Integer> mapping) 	
 	{
 		Integer bestMatch = null;
 		Map<Integer, Float> similarities = allSimilarities.get(key);
@@ -389,7 +381,11 @@ public class CorefChainComparator
 				break;
 			
 			if(!mapping.containsValue(key2) && !betterMatch(key2, similarities.get(key2), allSimilarities))
+			{
 				bestMatch = key2;
+				break;
+			}
+			
 		}
 		return bestMatch;
 	}

@@ -11,22 +11,27 @@ public class CEAFStats implements Stats
 	private float precision;
 	private float recall;
 	
+	private float similarity;
+	private float pDivisor;
+	private float rDivisor;
+	
 	public CEAFStats()
 	{
 		this.precision = 0;
 		this.recall = 0;
+		this.similarity = 0;
 	}
 	
 	@Override
 	public float getRecall() 
 	{
-		return this.recall;
+		return similarity/rDivisor;
 	}
 
 	@Override
 	public float getPrecision() 
 	{
-		return this.precision;
+		return similarity/pDivisor;
 	}
 
 	@Override
@@ -37,13 +42,18 @@ public class CEAFStats implements Stats
 		return (2 * ((p * r)/(p + r)));
 	}
 
-	public void updatePrecision(float p)
+	public void updatePrecision(float d)
 	{
-		this.precision = p;
+		this.pDivisor += d;
 	}
 	
-	public void updateRecall(float r)
+	public void updateRecall(float d)
 	{
-		this.recall = r;
+		this.rDivisor += d;
+	}
+	
+	public void updateSimilarity(float s)
+	{
+		this.similarity += s;
 	}
 }

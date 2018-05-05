@@ -22,8 +22,8 @@ public class BCubeStats implements Stats
 	
 	public void updateMentions(int nbrStanfordMentions, int nbrReferenceMentions)
 	{
-		this.nbrReferenceMentions = nbrReferenceMentions;
-		this.nbrStanfordMentions = nbrStanfordMentions;
+		this.nbrReferenceMentions += nbrReferenceMentions;
+		this.nbrStanfordMentions += nbrStanfordMentions;
 	}
 	
 	public void updateRecall(float n)

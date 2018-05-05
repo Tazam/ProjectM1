@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<document>
+
+	<entity name ="The Shrike">
+	<mention>
+			<sent>6</sent>
+			<startIndex>0</startIndex>
+			<endIndex>2</endIndex>
+			<text>The Shrike</text>
+		</mention>
+		
+		<mention>
+			<sent>0</sent>
+			<startIndex>0</startIndex>
+			<endIndex>3</endIndex>
+			<text>The third figure</text>
+		</mention>
+		
+		<mention>
+			<sent>0</sent>
+			<startIndex>11</startIndex>
+			<endIndex>12</endIndex>
+			<text>its</text>
+		</mention>
+		
+		<mention>
+			<sent>1</sent>
+			<startIndex>11</startIndex>
+			<endIndex>13</endIndex>
+			<text>The Shrike</text>
+		</mention>
+		
+		<mention>
+			<sent>6</sent>
+			<startIndex>9</startIndex>
+			<endIndex>10</endIndex>
+			<text>its</text>
+		</mention>
+		
+		<mention>
+			<sent>8</sent>
+			<startIndex>6</startIndex>
+			<endIndex>7</endIndex>
+			<text>you</text>
+		</mention>
+		
+		<mention>
+			<sent>9</sent>
+			<startIndex>0</startIndex>
+			<endIndex>2</endIndex>
+			<text>The Shrike</text>
+		</mention>
+		
+		<mention>
+			<sent>9</sent>
+			<startIndex>5</startIndex>
+			<endIndex>6</endIndex>
+			<text>its</text>
+		</mention>
+		
+		<mention>
+			<sent>11</sent>
+			<startIndex>13</startIndex>
+			<endIndex>17</endIndex>
+			<text>the apparition from hell</text>
+		</mention>
+		
+		<mention>
+			<sent>13</sent>
+			<startIndex>0</startIndex>
+			<endIndex>1</endIndex>
+			<text>He</text>
+		</mention>
+		
+		<mention>
+			<sent>15</sent>
+			<startIndex>5</startIndex>
+			<endIndex>6</endIndex>
+			<text>his</text>
+		</mention>
+		
+		<mention>
+			<sent>15</sent>
+			<startIndex>13</startIndex>
+			<endIndex>14</endIndex>
+			<text>he</text>
+		</mention>
+		
+		<mention>
+			<sent>16</sent>
+			<startIndex>0</startIndex>
+			<endIndex>2</endIndex>
+			<text>The Shrike</text>
+		</mention>
+		
+		<mention>
+			<sent>20</sent>
+			<startIndex>7</startIndex>
+			<endIndex>9</endIndex>
+			<text>The Shrike</text>
+		</mention>
+		
+		<mention>
+			<sent>23</sent>
+			<startIndex>0</startIndex>
+			<endIndex>2</endIndex>
+			<text>The Shrike</text>
+		</mention>
+		
+		<mention>
+			<sent>23</sent>
+			<startIndex>13</startIndex>
+			<endIndex>14</endIndex>
+			<text>his</text>
+		</mention>
+		
+		<mention>
+			<sent>14</sent>
+			<startIndex>17</startIndex>
+			<endIndex>18</endIndex>
+			<text>he</text>
+		</mention>
+		
+		<mention>
+			<sent>15</sent>
+			<startIndex>21</startIndex>
+			<endIndex>22</endIndex>
+			<text>his</text>
+		</mention>
+		
+		<mention>
+			<sent>1</sent>
+			<startIndex>14</startIndex>
+			<endIndex>15</endIndex>
+			<text>its</text>
+		</mention>
+		
+		<mention>
+			<sent>0</sent>
+			<startIndex>23</startIndex>
+			<endIndex>24</endIndex>
+			<text>it</text>
+		</mention>
+		
+		<mention>
+			<sent>0</sent>
+			<startIndex>37</startIndex>
+			<endIndex>38</endIndex>
+			<text>it</text>
+		</mention>
+	</entity>
+	
+	<entity name ="King Billy">
+		<mention>
+			<sent>0</sent>
+			<startIndex>29</startIndex>
+			<endIndex>31</endIndex>
+			<text>King Billy</text>
+		</mention>
+		
+		<mention>
+			<sent>2</sent>
+			<startIndex>0</startIndex>
+			<endIndex>2</endIndex>
+			<text>King Billy</text>
+		</mention>
+		
+		<mention>
+			<sent>7</sent>
+			<startIndex>5</startIndex>
+			<endIndex>7</endIndex>
+			<text>King Billy</text>
+		</mention>
+		
+		<mention>
+			<sent>11</sent>
+			<startIndex>10</startIndex>
+			<endIndex>12</endIndex>
+			<text>King Billy</text>
+		</mention>
+		
+		<mention>
+			<sent>12</sent>
+			<startIndex>9</startIndex>
+			<endIndex>11</endIndex>
+			<text>Billy's</text>
+		</mention>
+		
+		<mention>
+			<sent>14</sent>
+			<startIndex>2</startIndex>
+			<endIndex>5</endIndex>
+			<text>the aging king</text>
+		</mention>
+		
+		<mention>
+			<sent>16</sent>
+			<startIndex>3</startIndex>
+			<endIndex>4</endIndex>
+			<text>him</text>
+		</mention>
+		
+		<mention>
+			<sent>17</sent>
+			<startIndex>5</startIndex>
+			<endIndex>6</endIndex>
+			<text>Billy</text>
+		</mention>
+		
+		<mention>
+			<sent>17</sent>
+			<startIndex>8</startIndex>
+			<endIndex>9</endIndex>
+			<text>his</text>
+		</mention>
+		
+		<mention>
+			<sent>20</sent>
+			<startIndex>4</startIndex>
+			<endIndex>5</endIndex>
+			<text>he</text>
+		</mention>
+		
+		<mention>
+			<sent>20</sent>
+			<startIndex>14</startIndex>
+			<endIndex>15</endIndex>
+			<text>he</text>
+		</mention>
+		
+		<mention>
+			<sent>20</sent>
+			<startIndex>24</startIndex>
+			<endIndex>25</endIndex>
+			<text>he</text>
+		</mention>
+		
+		<mention>
+			<sent>23</sent>
+			<startIndex>8</startIndex>
+			<endIndex>10</endIndex>
+			<text>King Billy</text>
+		</mention>
+		
+		<mention>
+			<sent>24</sent>
+			<startIndex>0</startIndex>
+			<endIndex>1</endIndex>
+			<text>Billy</text>
+		</mention>
+		
+		<mention>
+			<sent>24</sent>
+			<startIndex>12</startIndex>
+			<endIndex>13</endIndex>
+			<text>his</text>
+		</mention>
+		
+		<mention>
+			<sent>27</sent>
+			<startIndex>6</startIndex>
+			<endIndex>8</endIndex>
+			<text>King Billy</text>
+		</mention>
+
+	</entity>
+	
+	<entity name="Martin">
+	
+		<mention>
+			<sent>28</sent>
+			<startIndex>1</startIndex>
+			<endIndex>2</endIndex>
+			<text>Martin</text>
+		</mention>
+	
+		<mention>
+			<sent>0</sent>
+			<startIndex>16</startIndex>
+			<endIndex>17</endIndex>
+			<text>my</text>
+		</mention>
+		
+		<mention>
+			<sent>0</sent>
+			<startIndex>32</startIndex>
+			<endIndex>33</endIndex>
+			<text>I</text>
+		</mention>
+		
+		<mention>
+			<sent>5</sent>
+			<startIndex>0</startIndex>
+			<endIndex>1</endIndex>
+			<text>I</text>
+		</mention>
+		
+		<mention>
+			<sent>11</sent>
+			<startIndex>5</startIndex>
+			<endIndex>6</endIndex>
+			<text>I</text>
+		</mention>
+		
+		<mention>
+			<sent>11</sent>
+			<startIndex>17</startIndex>
+			<endIndex>18</endIndex>
+			<text>I</text>
+		</mention>
+		
+		<mention>
+			<sent>12</sent>
+			<startIndex>0</startIndex>
+			<endIndex>1</endIndex>
+			<text>I</text>
+		</mention>
+		
+		<mention>
+			<sent>14</sent>
+			<startIndex>11</startIndex>
+			<endIndex>12</endIndex>
+			<text>me</text>
+		</mention>
+		
+		<mention>
+			<sent>15</sent>
+			<startIndex>17</startIndex>
+			<endIndex>18</endIndex>
+			<text>my</text>
+		</mention>
+		
+		<mention>
+			<sent>19</sent>
+			<startIndex>0</startIndex>
+			<endIndex>1</endIndex>
+			<text>I</text>
+		</mention>
+		
+		<mention>
+			<sent>20</sent>
+			<startIndex>2</startIndex>
+			<endIndex>3</endIndex>
+			<text>I</text>
+		</mention>
+		
+		<mention>
+			<sent>20</sent>
+			<startIndex>12</startIndex>
+			<endIndex>13</endIndex>
+			<text>I</text>
+		</mention>
+		
+		<mention>
+			<sent>20</sent>
+			<startIndex>21</startIndex>
+			<endIndex>22</endIndex>
+			<text>I</text>
+		</mention>
+		
+		<mention>
+			<sent>22</sent>
+			<startIndex>0</startIndex>
+			<endIndex>1</endIndex>
+			<text>I</text>
+		</mention>
+		
+		<mention>
+			<sent>25</sent>
+			<startIndex>0</startIndex>
+			<endIndex>1</endIndex>
+			<text>I</text>
+		</mention>
+		
+		<mention>
+			<sent>25</sent>
+			<startIndex>9</startIndex>
+			<endIndex>10</endIndex>
+			<text>I</text>
+		</mention>
+		
+		<mention>
+			<sent>26</sent>
+			<startIndex>4</startIndex>
+			<endIndex>5</endIndex>
+			<text>I</text>
+		</mention>
+				
+	</entity>
+</document>
