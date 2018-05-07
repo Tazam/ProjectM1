@@ -396,4 +396,15 @@ public void annotate(Annotation annotation) {
 	// TODO Auto-generated method stub
 	
 }
+
+
+/**
+ * @param annotation
+ * @author Schmidt Gaëtan
+ */
+public void annotateCustom(Annotation annotation) {
+	this.annotate(annotation);
+	// TODO Auto-generated method stub
+	
+}
 }
