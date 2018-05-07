@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<document>
+	<entity name="Het Masteen">
+		<mention>
+			<sent>0</sent>
+			<startIndex>7</startIndex>
+			<endIndex>9</endIndex>
+			<text>Het Masteen</text>
+		</mention>
+		
+		<mention>
+			<sent>13</sent>
+			<startIndex>12</startIndex>
+			<endIndex>16</endIndex>
+			<text>the two meter Her Masteen</text>
+		</mention>
+	</entity>
+	
+	<entity name="The Consul">
+		<mention>
+			<sent>1</sent>
+			<startIndex>1</startIndex>
+			<endIndex>3</endIndex>
+			<text>The Consul</text>
+		</mention>
+		
+		<mention>
+			<sent>1</sent>
+			<startIndex>19</startIndex>
+			<endIndex>20</endIndex>
+			<text>he</text>
+		</mention>
+		
+		<mention>
+			<sent>1</sent>
+			<startIndex>21</startIndex>
+			<endIndex>22</endIndex>
+			<text>his</text>
+		</mention>
+		
+		<mention>
+			<sent>2</sent>
+			<startIndex>1</startIndex>
+			<endIndex>4</endIndex>
+			<text>the Consul's</text>
+		</mention>
+		
+		<mention>
+			<sent>3</sent>
+			<startIndex>3</startIndex>
+			<endIndex>5</endIndex>
+			<text>The Consul</text>
+		</mention>
+		
+		<mention>
+			<sent>3</sent>
+			<startIndex>19</startIndex>
+			<endIndex>20</endIndex>
+			<text>he</text>
+		</mention>
+		
+		<mention>
+			<sent>3</sent>
+			<startIndex>27</startIndex>
+			<endIndex>28</endIndex>
+			<text>he</text>
+		</mention>
+		
+		<mention>
+			<sent>3</sent>
+			<startIndex>34</startIndex>
+			<endIndex>35</endIndex>
+			<text>his</text>
+		</mention>
+		
+		<mention>
+			<sent>4</sent>
+			<startIndex>8</startIndex>
+			<endIndex>9</endIndex>
+			<text>he</text>
+		</mention>
+				
+		<mention>
+			<sent>5</sent>
+			<startIndex>7</startIndex>
+			<endIndex>10</endIndex>
+			<text>the Consul's</text>
+		</mention>
+		
+		<mention>
+			<sent>6</sent>
+			<startIndex>0</startIndex>
+			<endIndex>2</endIndex>
+			<text>The Consul</text>
+		</mention>
+		
+		<mention>
+			<sent>6</sent>
+			<startIndex>53</startIndex>
+			<endIndex>54</endIndex>
+			<text>he</text>
+		</mention>
+		
+		<mention>
+			<sent>6</sent>
+			<startIndex>55</startIndex>
+			<endIndex>56</endIndex>
+			<text>he</text>
+		</mention>
+		
+		<mention>
+			<sent>7</sent>
+			<startIndex>2</startIndex>
+			<endIndex>4</endIndex>
+			<text>The Consul</text>
+		</mention>
+		
+		<mention>
+			<sent>9</sent>
+			<startIndex>0</startIndex>
+			<endIndex>2</endIndex>
+			<text>The Consul</text>
+		</mention>
+		
+		<mention>
+			<sent>9</sent>
+			<startIndex>20</startIndex>
+			<endIndex>21</endIndex>
+			<text>he</text>
+		</mention>
+		
+		<mention>
+			<sent>12</sent>
+			<startIndex>1</startIndex>
+			<endIndex>4</endIndex>
+			<text>the Consul's</text>
+		</mention>
+		
+	</entity>
+	
+	<entity name="Lenar Hoyt">
+		<mention>
+			<sent>2</sent>
+			<startIndex>6</startIndex>
+			<endIndex>20</endIndex>
+			<text>Father Lenar Hoyt,a priest of the old-style Christian sect known as the Catholic</text>
+		</mention>
+		
+		<mention>
+			<sent>4</sent>
+			<startIndex>5</startIndex>
+			<endIndex>7</endIndex>
+			<text>Hoyt's</text>
+		</mention>
+		
+		<mention>
+			<sent>5</sent>
+			<startIndex>0</startIndex>
+			<endIndex>2</endIndex>
+			<text>Lenar Hoyt</text>
+		</mention>
+		
+		<mention>
+			<sent>5</sent>
+			<startIndex>15</startIndex>
+			<endIndex>16</endIndex>
+			<text>his</text>
+		</mention>
+		
+		<mention>
+			<sent>5</sent>
+			<startIndex>26</startIndex>
+			<endIndex>28</endIndex>
+			<text>the man</text>
+		</mention>
+		
+		<mention>
+			<sent>6</sent>
+			<startIndex>59</startIndex>
+			<endIndex>67</endIndex>
+			<text>a man who had been ill for years</text>
+		</mention>
+		
+		<mention>
+			<sent>7</sent>
+			<startIndex>22</startIndex>
+			<endIndex>24</endIndex>
+			<text>the man</text>
+		</mention>
+		
+		<mention>
+			<sent>7</sent>
+			<startIndex>50</startIndex>
+			<endIndex>52</endIndex>
+			<text>Lenar Hoyt</text>
+		</mention>
+		
+		<mention>
+			<sent>8</sent>
+			<startIndex>2</startIndex>
+			<endIndex>4</endIndex>
+			<text>the priest</text>
+		</mention>
+		
+		<mention>
+			<sent>13</sent>
+			<startIndex>7</startIndex>
+			<endIndex>10</endIndex>
+			<text>Father Hoyt's</text>
+		</mention>
+		
+		<mention>
+			<sent>14</sent>
+			<startIndex>4</startIndex>
+			<endIndex>5</endIndex>
+			<text>Hoyt's</text>
+		</mention>
+		
+		<mention>
+			<sent>18</sent>
+			<startIndex>3</startIndex>
+			<endIndex>6</endIndex>
+			<text>Father Hoyt's</text>
+		</mention>
+		
+	</entity>
+
+	<entity name="Another Priest">
+		<mention>
+			<sent>4</sent>
+			<startIndex>10</startIndex>
+			<endIndex>19</endIndex>
+			<text>another priest, one who had disappeared on Hyperion</text>
+		</mention>
+		
+		<mention>
+			<sent>4</sent>
+			<startIndex>21</startIndex>
+			<endIndex>22</endIndex>
+			<text>his</text>
+		</mention>
+	</entity>
+	
+	<entity name="Fedmanh Kassad">
+	
+		<mention>
+			<sent>11</sent>
+			<startIndex>4</startIndex>
+			<endIndex>14</endIndex>
+			<text>Colonel Fedmanh Kassad, the so-called Butcher of South Bressia</text>
+		</mention>
+		
+		<mention>
+			<sent>8</sent>
+			<startIndex>5</startIndex>
+			<endIndex>18</endIndex>
+			<text>a man whose had been familiar to most citizens of the Hegemony</text>
+		</mention>
+			
+		<mention>
+			<sent>12</sent>
+			<startIndex>20</startIndex>
+			<endIndex>21</endIndex>
+			<text>Kassad</text>
+		</mention>
+		
+		<mention>
+			<sent>13</sent>
+			<startIndex>0</startIndex>
+			<endIndex>3</endIndex>
+			<text>Colonel Fedmanh Kassad</text>
+		</mention>
+		
+		<mention>
+			<sent>15</sent>
+			<startIndex>8</startIndex>
+			<endIndex>9</endIndex>
+			<text>Kassad</text>
+		</mention>
+		
+		<mention>
+			<sent>16</sent>
+			<startIndex>0</startIndex>
+			<endIndex>3</endIndex>
+			<text>The Colonel's</text>
+		</mention>
+		
+		<mention>
+			<sent>17</sent>
+			<startIndex>0</startIndex>
+			<endIndex>1</endIndex>
+			<text>His</text>
+		</mention>
+		
+		<mention>
+			<sent>19</sent>
+			<startIndex>6</startIndex>
+			<endIndex>7</endIndex>
+			<text>his</text>
+		</mention>
+		
+		<mention>
+			<sent>19</sent>
+			<startIndex>14</startIndex>
+			<endIndex>15</endIndex>
+			<text>his</text>
+		</mention>
+		
+	</entity>
+</document>

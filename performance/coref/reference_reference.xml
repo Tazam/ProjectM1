@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<document>
+
+	<entity name ="Joe Smith">
+		<mention>
+			<sent>0</sent>
+			<startIndex>0</startIndex>
+			<endIndex>2</endIndex>
+			<text>Joe Smith</text>
+		</mention>
+		
+		<mention>
+			<sent>1</sent>
+			<startIndex>3</startIndex>
+			<endIndex>4</endIndex>
+			<text>he</text>
+		</mention>
+		
+		<mention>
+			<sent>2</sent>
+			<startIndex>0</startIndex>
+			<endIndex>1</endIndex>
+			<text>His</text>
+		</mention>
+		
+		<mention>
+			<sent>3</sent>
+			<startIndex>9</startIndex>
+			<endIndex>10</endIndex>
+			<text>Joe</text>
+		</mention>
+		
+		<mention>
+			<sent>4</sent>
+			<startIndex>0</startIndex>
+			<endIndex>1</endIndex>
+			<text>He</text>
+		</mention>
+		
+		<mention>
+			<sent>4</sent>
+			<startIndex>5</startIndex>
+			<endIndex>6</endIndex>
+			<text>his</text>
+		</mention>
+		
+		<mention>
+			<sent>5</sent>
+			<startIndex>3</startIndex>
+			<endIndex>5</endIndex>
+			<text>Joe's</text>
+		</mention>
+	</entity>
+	
+	<entity name="Jane Smith">
+		<mention>
+			<sent>4</sent>
+			<startIndex>5</startIndex>
+			<endIndex>9</endIndex>
+			<text>his sister Jane Smith</text>
+		</mention>
+		
+		<mention>
+			<sent>5</sent>
+			<startIndex>7</startIndex>
+			<endIndex>8</endIndex>
+			<text>Jane</text>
+		</mention>
+		
+		<mention>
+			<sent>5</sent>
+			<startIndex>9</startIndex>
+			<endIndex>10</endIndex>
+			<text>she</text>
+		</mention>
+	</entity>
+	
+
+	
+</document>
