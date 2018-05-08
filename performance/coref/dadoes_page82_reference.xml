@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<document>
+	<entity name="Horace the dead cat">
+		<mention>
+			<sent>0</sent>
+			<startIndex>27</startIndex>
+			<endIndex>28</endIndex>
+			<text>Horace</text>
+		</mention>
+		
+		<mention>
+			<sent>2</sent>
+			<startIndex>8</startIndex>
+			<endIndex>9</endIndex>
+			<text>Horace</text>
+		</mention>
+			<sent>3</sent>
+			<startIndex>2</startIndex>
+			<endIndex>3</endIndex>
+			<text>Horace</text>
+			
+		<mention>
+			<sent>23</sent>
+			<startIndex>3</startIndex>
+			<endIndex>6</endIndex>
+			<text>the dead Horace</text>
+		</mention>
+		<mention>
+			<sent>25</sent>
+			<startIndex>8</startIndex>
+			<endIndex>9</endIndex>
+			<text>it</text>
+		</mention>
+	</entity>
+	
+	<entity name="Mr Pilsen">
+	
+		<mention>
+			<sent>3</sent>
+			<startIndex>11</startIndex>
+			<endIndex>12</endIndex>
+			<text>Ed</text>
+		</mention>
+		<mention>
+			<sent>1</sent>
+			<startIndex>5</startIndex>
+			<endIndex>7</endIndex>
+			<text>my husband</text>
+		</mention>
+		
+		<mention>
+			<sent>1</sent>
+			<startIndex>14</startIndex>
+			<endIndex>15</endIndex>
+			<text>he</text>
+		</mention>
+		
+		<mention>
+			<sent>2</sent>
+			<startIndex>3</startIndex>
+			<endIndex>4</endIndex>
+			<text>he</text>
+		</mention>
+		
+		<mention>
+			<sent>2</sent>
+			<startIndex>3</startIndex>
+			<endIndex>4</endIndex>
+			<text>he</text>
+		</mention>
+
+		<mention>
+			<sent>2</sent>
+			<startIndex>10</startIndex>
+			<endIndex>11</endIndex>
+			<text>he</text>
+		</mention>
+
+		<mention>
+			<sent>9</sent>
+			<startIndex>9</startIndex>
+			<endIndex>11</endIndex>
+			<text>your husband</text>
+		</mention>
+
+		<mention>
+			<sent>11</sent>
+			<startIndex>1</startIndex>
+			<endIndex>2</endIndex>
+			<text>He</text>
+		</mention>
+
+	</entity>
+	
+	<entity name="Mrs Pilsen">
+		<mention>
+			<sent>27</sent>
+			<startIndex>19</startIndex>
+			<endIndex>21</endIndex>
+			<text>Mrs. Pilsen </text>
+		</mention>
+		
+		<mention>
+			<sent>0</sent>
+			<startIndex>0</startIndex>
+			<endIndex>1</endIndex>
+			<text>I</text>
+		</mention>
+		<mention>
+			<sent>0</sent>
+			<startIndex>2</startIndex>
+			<endIndex>3</endIndex>
+			<text>I</text>
+		</mention>
+		
+		<mention>
+			<sent>1</sent>
+			<startIndex>0</startIndex>
+			<endIndex>1</endIndex>
+			<text>I</text>
+		</mention>
+		
+		<mention>
+			<sent>1</sent>
+			<startIndex>5</startIndex>
+			<endIndex>6</endIndex>
+			<text>my</text>
+		</mention>
+		
+		<mention>
+			<sent>1</sent>
+			<startIndex>10</startIndex>
+			<endIndex>11</endIndex>
+			<text>I</text>
+		</mention>
+		
+		<mention>
+			<sent>3</sent>
+			<startIndex>10</startIndex>
+			<endIndex>11</endIndex>
+			<text>me </text>
+		</mention>
+
+		<mention>
+			<sent>5</sent>
+			<startIndex>4</startIndex>
+			<endIndex>5</endIndex>
+			<text>I </text>
+		</mention>
+
+		<mention>
+			<sent>7</sent>
+			<startIndex>0</startIndex>
+			<endIndex>1</endIndex>
+			<text>She </text>
+		</mention>
+
+		<mention>
+			<sent>7</sent>
+			<startIndex>3</startIndex>
+			<endIndex>4</endIndex>
+			<text>her </text>
+		</mention>
+
+		<mention>
+			<sent>9</sent>
+			<startIndex>9</startIndex>
+			<endIndex>10</endIndex>
+			<text>your </text>
+		</mention>
+
+		<mention>
+			<sent>13</sent>
+			<startIndex>4</startIndex>
+			<endIndex>5</endIndex>
+			<text>she </text>
+		</mention>
+		
+	</entity>
+	<entity name ="Milt">
+		<mention>
+			<sent>8</sent>
+			<startIndex>8</startIndex>
+			<endIndex>9</endIndex>
+			<text>Milt</text>
+		</mention>
+	
+		<mention>
+			<sent>0</sent>
+			<startIndex>18</startIndex>
+			<endIndex>19</endIndex>
+			<text>you</text>
+		</mention>
+		
+		<mention>
+			<sent>3</sent>
+			<startIndex>8</startIndex>
+			<endIndex>9</endIndex>
+			<text>you </text>
+		</mention>
+
+		<mention>
+			<sent>5</sent>
+			<startIndex>7</startIndex>
+			<endIndex>8</endIndex>
+			<text>you </text>
+		</mention>
+
+		<mention>
+			<sent>10</sent>
+			<startIndex>0</startIndex>
+			<endIndex>1</endIndex>
+			<text>He </text>
+		</mention>
+
+		<mention>
+			<sent>11</sent>
+			<startIndex>6</startIndex>
+			<endIndex>7</endIndex>
+			<text>he </text>
+		</mention>
+
+		<mention>
+			<sent>16</sent>
+			<startIndex>0</startIndex>
+			<endIndex>1</endIndex>
+			<text>You </text>
+		</mention>
+		
+		<mention>
+			<sent>20</sent>
+			<startIndex>2</startIndex>
+			<endIndex>3</endIndex>
+			<text>Milt </text>
+		</mention>
+
+		<mention>
+			<sent>21</sent>
+			<startIndex>7</startIndex>
+			<endIndex>8</endIndex>
+			<text>Milt </text>
+		</mention>
+
+		<mention>
+			<sent>23</sent>
+			<startIndex>0</startIndex>
+			<endIndex>1</endIndex>
+			<text>He </text>
+		</mention>
+
+		<mention>
+			<sent>24</sent>
+			<startIndex>1</startIndex>
+			<endIndex>2</endIndex>
+			<text>I </text>
+		</mention>
+
+		<mention>
+			<sent>25</sent>
+			<startIndex>0</startIndex>
+			<endIndex>1</endIndex>
+			<text>I </text>
+		</mention>
+
+		<mention>
+			<sent>26</sent>
+			<startIndex>1</startIndex>
+			<endIndex>2</endIndex>
+			<text>I </text>
+		</mention>
+
+		<mention>
+			<sent>25</sent>
+			<startIndex>13</startIndex>
+			<endIndex>14</endIndex>
+			<text>I </text>
+		</mention>
+
+		<mention>
+			<sent>25</sent>
+			<startIndex>19</startIndex>
+			<endIndex>20</endIndex>
+			<text>myself </text>
+		</mention>
+	</entity>
+	
+	<entity name="Han Sloat">
+		<mention>
+			<sent>11</sent>
+			<startIndex>9</startIndex>
+			<endIndex>11</endIndex>
+			<text>Mr. Sloat</text>
+		</mention>
+
+		<mention>
+			<sent>14</sent>
+			<startIndex>10</startIndex>
+			<endIndex>11</endIndex>
+			<text>Sloat</text>
+		</mention>
+
+		<mention>
+			<sent>15</sent>
+			<startIndex>0</startIndex>
+			<endIndex>1</endIndex>
+			<text>I</text>
+		</mention>
+
+		<mention>
+			<sent>17</sent>
+			<startIndex>0</startIndex>
+			<endIndex>1</endIndex>
+			<text>He</text>
+		</mention>
+
+		<mention>
+			<sent>24</sent>
+			<startIndex>10</startIndex>
+			<endIndex>11</endIndex>
+			<text>Han</text>
+		</mention>
+
+		<mention>
+			<sent>26</sent>
+			<startIndex>3</startIndex>
+			<endIndex>4</endIndex>
+			<text>I</text>
+		</mention>
+
+		<mention>
+			<sent>26</sent>
+			<startIndex>12</startIndex>
+			<endIndex>14</endIndex>
+			<text>Mr. Sloat</text>
+		</mention>
+	</entity>
+	<entity name="Isidore">
+		<mention>
+			<sent>17</sent>
+			<startIndex>2</startIndex>
+			<endIndex>4</endIndex>
+			<text>John Isidore</text>
+		</mention>
+
+		<mention>
+			<sent>18</sent>
+			<startIndex>4</startIndex>
+			<endIndex>5</endIndex>
+			<text>you</text>
+		</mention>
+
+		<mention>
+			<sent>18</sent>
+			<startIndex>12</startIndex>
+			<endIndex>13</endIndex>
+			<text>Isidore</text>
+		</mention>
+
+		<mention>
+			<sent>19</sent>
+			<startIndex>0</startIndex>
+			<endIndex>1</endIndex>
+			<text>You</text>
+		</mention>
+
+		<mention>
+			<sent>21</sent>
+			<startIndex>1</startIndex>
+			<endIndex>2</endIndex>
+			<text>He</text>
+		</mention>
+
+		<mention>
+			<sent>26</sent>
+			<startIndex>6</startIndex>
+			<endIndex>7</endIndex>
+			<text>Isidore</text>
+		</mention>
+
+		<mention>
+			<sent>27</sent>
+			<startIndex>1</startIndex>
+			<endIndex>2</endIndex>
+			<text>He</text>
+		</mention>
+
+		<mention>
+			<sent>27</sent>
+			<startIndex>6</startIndex>
+			<endIndex>7</endIndex>
+			<text>he</text>
+		</mention>
+	</entity>
+</document>

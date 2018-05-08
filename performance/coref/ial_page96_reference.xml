@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<document>
+	<entity>
+		<mention name="Robert Neville">
+			<sent>21</sent>
+			<startIndex>25</startIndex>
+			<endIndex>27</endIndex>
+			<text>Robert Neville</text>
+		</mention>
+		
+		<mention>
+			<sent>0</sent>
+			<startIndex>4</startIndex>
+			<endIndex>5</endIndex>
+			<text>he</text>
+		</mention>
+		
+		<mention>
+			<sent>1</sent>
+			<startIndex>1</startIndex>
+			<endIndex>2</endIndex>
+			<text>himself</text>
+		</mention>
+		
+		<mention>
+			<sent>1</sent>
+			<startIndex>3</startIndex>
+			<endIndex>4</endIndex>
+			<text>he</text>
+		</mention>
+		
+		<mention>
+			<sent>1</sent>
+			<startIndex>5</startIndex>
+			<endIndex>6</endIndex>
+			<text>himself</text>
+		</mention>
+		
+		<mention>
+			<sent>2</sent>
+			<startIndex>0</startIndex>
+			<endIndex>1</endIndex>
+			<text>He</text>
+		</mention>
+		
+		<mention>
+			<sent>2</sent>
+			<startIndex>4</startIndex>
+			<endIndex>5</endIndex>
+			<text>himself</text>
+		</mention>
+		
+		<mention>
+			<sent>2</sent>
+			<startIndex>13</startIndex>
+			<endIndex>14</endIndex>
+			<text>his</text>
+		</mention>
+		
+		<mention>
+			<sent>3</sent>
+			<startIndex>4</startIndex>
+			<endIndex>5</endIndex>
+			<text>he</text>
+		</mention>
+		
+		<mention>
+			<sent>3</sent>
+			<startIndex>8</startIndex>
+			<endIndex>9</endIndex>
+			<text>his</text>
+		</mention>
+		
+		<mention>
+			<sent>4</sent>
+			<startIndex>3</startIndex>
+			<endIndex>4</endIndex>
+			<text>he</text>
+		</mention>
+		
+		<mention>
+			<sent>4</sent>
+			<startIndex>10</startIndex>
+			<endIndex>11</endIndex>
+			<text>his</text>
+		</mention>
+		
+		<mention>
+			<sent>4</sent>
+			<startIndex>13</startIndex>
+			<endIndex>14</endIndex>
+			<text>he</text>
+		</mention>
+		
+		<mention>
+			<sent>4</sent>
+			<startIndex>21</startIndex>
+			<endIndex>22</endIndex>
+			<text>he</text>
+		</mention>
+		
+		<mention>
+			<sent>5</sent>
+			<startIndex>0</startIndex>
+			<endIndex>1</endIndex>
+			<text>He</text>
+		</mention>
+		
+		<mention>
+			<sent>8</sent>
+			<startIndex>0</startIndex>
+			<endIndex>1</endIndex>
+			<text>He</text>
+		</mention>
+		
+		<mention>
+			<sent>8</sent>
+			<startIndex>7</startIndex>
+			<endIndex>8</endIndex>
+			<text>his</text>
+		</mention>
+		
+		<mention>
+			<sent>8</sent>
+			<startIndex>17</startIndex>
+			<endIndex>18</endIndex>
+			<text>his</text>
+		</mention>
+		
+		<mention>
+			<sent>9</sent>
+			<startIndex>3</startIndex>
+			<endIndex>4</endIndex>
+			<text>him</text>
+		</mention>
+		
+		<mention>
+			<sent>12</sent>
+			<startIndex>6</startIndex>
+			<endIndex>7</endIndex>
+			<text>him</text>
+		</mention>
+		
+		<mention>
+			<sent>13</sent>
+			<startIndex>0</startIndex>
+			<endIndex>1</endIndex>
+			<text>He</text>
+		</mention>
+		
+		<mention>
+			<sent>14</sent>
+			<startIndex>2</startIndex>
+			<endIndex>3</endIndex>
+			<text>he</text>
+		</mention>
+		
+		<mention>
+			<sent>14</sent>
+			<startIndex>5</startIndex>
+			<endIndex>6</endIndex>
+			<text>I</text>
+		</mention>
+		
+		<mention>
+			<sent>16</sent>
+			<startIndex>6</startIndex>
+			<endIndex>7</endIndex>
+			<text>he</text>
+		</mention>
+		
+		<mention>
+			<sent>16</sent>
+			<startIndex>20</startIndex>
+			<endIndex>21</endIndex>
+			<text>he</text>
+		</mention>
+		
+		<mention>
+			<sent>16</sent>
+			<startIndex>27</startIndex>
+			<endIndex>28</endIndex>
+			<text>him</text>
+		</mention>
+		
+		<mention>
+			<sent>17</sent>
+			<startIndex>2</startIndex>
+			<endIndex>3</endIndex>
+			<text>he</text>
+		</mention>
+		
+		<mention>
+			<sent>18</sent>
+			<startIndex>0</startIndex>
+			<endIndex>1</endIndex>
+			<text>He</text>
+		</mention>
+		
+		<mention>
+			<sent>18</sent>
+			<startIndex>11</startIndex>
+			<endIndex>12</endIndex>
+			<text>his</text>
+		</mention>
+		
+		<mention>
+			<sent>19</sent>
+			<startIndex>1</startIndex>
+			<endIndex>2</endIndex>
+			<text>he</text>
+		</mention>
+		
+		<mention>
+			<sent>20</sent>
+			<startIndex>0</startIndex>
+			<endIndex>1</endIndex>
+			<text>His</text>
+		</mention>
+		
+		<mention>
+			<sent>22</sent>
+			<startIndex>0</startIndex>
+			<endIndex>1</endIndex>
+			<text>He</text>
+		</mention>
+		
+		<mention>
+			<sent>22</sent>
+			<startIndex>2</startIndex>
+			<endIndex>3</endIndex>
+			<text>he</text>
+		</mention>
+		
+		<mention>
+			<sent>22</sent>
+			<startIndex>9</startIndex>
+			<endIndex>10</endIndex>
+			<text>he</text>
+		</mention>
+		
+		<mention>
+			<sent>22</sent>
+			<startIndex>17</startIndex>
+			<endIndex>18</endIndex>
+			<text>he</text>
+		</mention>
+		
+		<mention>
+			<sent>23</sent>
+			<startIndex>10</startIndex>
+			<endIndex>11</endIndex>
+			<text>him</text>
+		</mention>
+		
+		<mention>
+			<sent>23</sent>
+			<startIndex>13</startIndex>
+			<endIndex>14</endIndex>
+			<text>his</text>
+		</mention>
+		
+		<mention>
+			<sent>24</sent>
+			<startIndex>4</startIndex>
+			<endIndex>5</endIndex>
+			<text>his</text>
+		</mention>
+		
+		<mention>
+			<sent>25</sent>
+			<startIndex>0</startIndex>
+			<endIndex>1</endIndex>
+			<text>He</text>
+		</mention>
+		
+		<mention>
+			<sent>25</sent>
+			<startIndex>8</startIndex>
+			<endIndex>9</endIndex>
+			<text>he</text>
+		</mention>
+		
+		<mention>
+			<sent>26</sent>
+			<startIndex>3</startIndex>
+			<endIndex>4</endIndex>
+			<text>he</text>
+		</mention>
+		
+		<mention>
+			<sent>26</sent>
+			<startIndex>11</startIndex>
+			<endIndex>12</endIndex>
+			<text>his</text>
+		</mention>
+		
+		<mention>
+			<sent>29</sent>
+			<startIndex>0</startIndex>
+			<endIndex>1</endIndex>
+			<text>I</text>
+		</mention>
+	</entity>
+</document>

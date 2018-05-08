@@ -43,6 +43,9 @@ public class CorefChainComparator
 	private BasicStats muc;
 	private Properties props;
 	
+	private List<Map<Integer, CorefChain>> stanfordChains;
+	private List<Map<Integer, CorefChain>> referenceChains;
+	
 	public CorefChainComparator(Properties props)
 	{
 		this.bcube = new BCubeStats();
@@ -50,6 +53,9 @@ public class CorefChainComparator
 		this.ceafA = new CEAFStats();
 		this.muc = new BasicStats();
 		this.props = props;
+		
+		this.stanfordChains = new ArrayList<>();
+		this.referenceChains = new ArrayList<>();
 	}
 	
 	// Permet de réaliser une comparaison MUC sur l'ensemble du corpus
@@ -59,15 +65,15 @@ public class CorefChainComparator
 
 		for(int i = 0; i < corpusFolder.length; i++)
 		{
-			System.out.println("Evaluation sur : " + corpusFolder[i].getName());
-			Map<Integer, CorefChain> stanfordCorefChains = CorefUtils.getStanfordCorefChains(corpusFolder[i], props);
-			Map<Integer, CorefChain> referenceCorefChains = CorefUtils.getCustomCorefChains(corpusFolder[i]);
-			System.out.println(stanfordCorefChains);
-			compareFile_MUC(stanfordCorefChains, referenceCorefChains);
+			System.out.println("Evaluation  MUC sur : " + corpusFolder[i].getName());
+			Map<Integer, CorefChain> stanfordCorefChain = getStanfordChains(corpusFolder, i);
+			Map<Integer, CorefChain> referenceCorefChain = getReferenceChains(corpusFolder, i);
+			
+			compareFile_MUC(stanfordCorefChain, referenceCorefChain);
 		}
 		return this.muc;
 	}
-	
+
 	// Permet de réaliser une comparaison MUC sur un texte du corpus
 	private void compareFile_MUC(Map<Integer, CorefChain> stanfordCorefChains, Map<Integer, CorefChain> referenceCorefChains) throws IOException
 	{
@@ -117,8 +123,9 @@ public class CorefChainComparator
 
 		for(int i = 0; i < corpusFolder.length; i++)
 		{
-			Map<Integer, CorefChain> stanfordCorefChains = CorefUtils.getStanfordCorefChains(corpusFolder[i], props);
-			Map<Integer, CorefChain> referenceCorefChains = CorefUtils.getCustomCorefChains(corpusFolder[i]);
+			System.out.println("Evaluation BCUBE sur : " + corpusFolder[i].getName());
+			Map<Integer, CorefChain> stanfordCorefChains = getStanfordChains(corpusFolder, i);
+			Map<Integer, CorefChain> referenceCorefChains = getReferenceChains(corpusFolder, i);
 			compareFile_BCUBE(stanfordCorefChains, referenceCorefChains);
 		}
 		return this.bcube;
@@ -203,8 +210,9 @@ public class CorefChainComparator
 
 		for(int i = 0; i < corpusFolder.length; i++)
 		{
-			Map<Integer, CorefChain> stanfordCorefChains = CorefUtils.getStanfordCorefChains(corpusFolder[i], props);
-			Map<Integer, CorefChain> referenceCorefChains = CorefUtils.getCustomCorefChains(corpusFolder[i]);
+			System.out.println("Evaluation CEAF " + function + " sur : " + corpusFolder[i].getName());
+			Map<Integer, CorefChain> stanfordCorefChains = getStanfordChains(corpusFolder, i);
+			Map<Integer, CorefChain> referenceCorefChains = getReferenceChains(corpusFolder, i);
 			compareFile_CEAF(stanfordCorefChains, referenceCorefChains, function);
 		}
 		if(function == Similarity.SIMPLE)
@@ -218,7 +226,6 @@ public class CorefChainComparator
 	{
 		// Map<Reference, Stanford>
 		Map<Integer, Integer> mapping = getMapping(stanfordCorefChains, referenceCorefChains, function);
-		System.out.println(mapping);
 		float simSum = getSimilaritySum(mapping, function, stanfordCorefChains, referenceCorefChains);
 		updateCEAF(simSum, referenceCorefChains, stanfordCorefChains, function);
 	}
@@ -253,13 +260,13 @@ public class CorefChainComparator
 			CorefChain stanfordChain = stanfordCorefChains.get(mapping.get(key));
 			if(function == Similarity.SIMPLE)
 			{
-				System.out.println("map => " + getSimpleSimilarityScore(referenceChain, stanfordChain) + " ref : " + referenceChain + " stan : " + stanfordChain);
+				//System.out.println("map => " + getSimpleSimilarityScore(referenceChain, stanfordChain) + " ref : " + referenceChain + " stan : " + stanfordChain);
 				result += (float) getSimpleSimilarityScore(referenceChain, stanfordChain);
 			}
 			else
 			{
 				result += getAdvancedSimilarityScore(referenceChain, stanfordChain);
-				System.out.println("map => " + getAdvancedSimilarityScore(referenceChain, stanfordChain) + " ref : " + referenceChain + " stan : " + stanfordChain);
+				//System.out.println("map => " + getAdvancedSimilarityScore(referenceChain, stanfordChain) + " ref : " + referenceChain + " stan : " + stanfordChain);
 			}
 		}
 		return result;
@@ -456,5 +463,23 @@ public class CorefChainComparator
 			for(CorefMention referenceMention : referenceMentions)
 				System.out.println(referenceMention + " " + referenceMention.startIndex + " " +referenceMention.endIndex);
 		}
+	}
+	
+	private Map<Integer, CorefChain> getStanfordChains(File[] corpusFolder, int i) throws ClassNotFoundException, IOException 
+	{
+		if(this.stanfordChains.size() != corpusFolder.length)
+		{
+			this.stanfordChains.add(CorefUtils.getStanfordCorefChains(corpusFolder[i], props));
+		}
+		return stanfordChains.get(i);
+	}
+	
+	private Map<Integer, CorefChain> getReferenceChains(File[] corpusFolder, int i) throws ClassNotFoundException, IOException 
+	{
+		if(this.referenceChains.size() != corpusFolder.length)
+		{
+			this.referenceChains.add(CorefUtils.getCustomCorefChains(corpusFolder[i]));
+		}
+		return referenceChains.get(i);
 	}
 }

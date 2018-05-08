@@ -37,7 +37,7 @@ public class Test_coref
 	
 	public static void TestCorefUtils() throws IOException, ClassNotFoundException
 	{
-		String path = "corpus" + File.separator + "reference.txt";
+		String path = "corpus" + File.separator + "hyperion_page378.txt";
 		File file = new File(path);
 		Annotation annotation = CorefUtils.getInitAnnotation(file);
 		Properties props = new Properties();
@@ -46,9 +46,6 @@ public class Test_coref
 		
 		CoreDocument document = new CoreDocument(annotation);
 		List<CoreSentence> sentences = document.sentences();
-		Map<Integer, CorefChain> corefChains = document.corefChains();	
-		CoreEntityMention mention = sentences.get(2).entityMentions().get(0);
-		System.out.println("Mention : " + mention.toString() + " charoffset : " + mention.charOffsets());
 		
 	}
 	

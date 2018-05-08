@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<document>
+	<entity name="Martin Silenus">
+		<mention>
+			<sent>0</sent>
+			<startIndex>0</startIndex>
+			<endIndex>1</endIndex>
+			<text>Silenus</text>
+		</mention>
+		
+		<mention>
+			<sent>10</sent>
+			<startIndex>12</startIndex>
+			<endIndex>14</endIndex>
+			<text>Silenus's</text>
+		</mention>
+		
+		<mention>
+			<sent>17</sent>
+			<startIndex>8</startIndex>
+			<endIndex>10</endIndex>
+			<text>Martin Silenus</text>
+		</mention>
+		
+		<mention>
+			<sent>18</sent>
+			<startIndex>4</startIndex>
+			<endIndex>6</endIndex>
+			<text>the poet</text>
+		</mention>
+		
+		<mention>
+			<sent>19</sent>
+			<startIndex>7</startIndex>
+			<endIndex>8</endIndex>
+			<text>Silenus</text>
+		</mention>
+		
+		<mention>
+			<sent>20</sent>
+			<startIndex>1</startIndex>
+			<endIndex>2</endIndex>
+			<text>I</text>
+		</mention>
+		
+		<mention>
+			<sent>21</sent>
+			<startIndex>3</startIndex>
+			<endIndex>4</endIndex>
+			<text>you</text>
+		</mention>
+		
+		<mention>
+			<sent>23</sent>
+			<startIndex>6</startIndex>
+			<endIndex>7</endIndex>
+			<text>Silenus</text>
+		</mention>
+		
+		<mention>
+			<sent>48</sent>
+			<startIndex>1</startIndex>
+			<endIndex>2</endIndex>
+			<text>I</text>
+		</mention>
+		
+		<mention>
+			<sent>48</sent>
+			<startIndex>12</startIndex>
+			<endIndex>13</endIndex>
+			<text>Silenus</text>
+		</mention>
+	</entity>
+	
+	<entity name = "Sol Weintraub">
+		<mention>
+			<sent>2</sent>
+			<startIndex>8</startIndex>
+			<endIndex>10</endIndex>
+			<text>Sol Weintraub</text>
+		</mention>
+		
+		<mention>
+			<sent>10</sent>
+			<startIndex>22</startIndex>
+			<endIndex>24</endIndex>
+			<text>Sol Weintraub</text>
+		</mention>
+		
+		<mention>
+			<sent>11</sent>
+			<startIndex>25</startIndex>
+			<endIndex>27</endIndex>
+			<text>her father</text>
+		</mention>
+	</entity>
+	
+		<entity name="The Consul">
+		<mention>
+			<sent>3</sent>
+			<startIndex>5</startIndex>
+			<endIndex>7</endIndex>
+			<text>The Consul</text>
+		</mention>
+		
+		<mention>
+			<sent>4</sent>
+			<startIndex>0</startIndex>
+			<endIndex>1</endIndex>
+			<text>he</text>
+		</mention>
+		
+		<mention>
+			<sent>5</sent>
+			<startIndex>0</startIndex>
+			<endIndex>1</endIndex>
+			<text>He</text>
+		</mention>
+		
+		<mention>
+			<sent>5</sent>
+			<startIndex>2</startIndex>
+			<endIndex>3</endIndex>
+			<text>his</text>
+		</mention>
+		
+		<mention>
+			<sent>15</sent>
+			<startIndex>0</startIndex>
+			<endIndex>2</endIndex>
+			<text>The Consul</text>
+		</mention>
+		
+		<mention>
+			<sent>15</sent>
+			<startIndex>3</startIndex>
+			<endIndex>4</endIndex>
+			<text>his</text>
+		</mention>
+		
+		<mention>
+			<sent>16</sent>
+			<startIndex>1</startIndex>
+			<endIndex>2</endIndex>
+			<text>I</text>
+		</mention>
+		
+		<mention>
+			<sent>17</sent>
+			<startIndex>1</startIndex>
+			<endIndex>2</endIndex>
+			<text>You</text>
+		</mention>
+		
+		<mention>
+			<sent>18</sent>
+			<startIndex>0</startIndex>
+			<endIndex>2</endIndex>
+			<text>The Consul</text>
+		</mention>
+		
+		<mention>
+			<sent>23</sent>
+			<startIndex>1</startIndex>
+			<endIndex>2</endIndex>
+			<text>his</text>
+		</mention>
+		
+		<mention>
+			<sent>24</sent>
+			<startIndex>14</startIndex>
+			<endIndex>17</endIndex>
+			<text>our Consul Friend</text>
+		</mention>
+		
+		<mention>
+			<sent>24</sent>
+			<startIndex>18</startIndex>
+			<endIndex>19</endIndex>
+			<text>his</text>
+		</mention>
+		
+		<mention>
+			<sent>24</sent>
+			<startIndex>36</startIndex>
+			<endIndex>37</endIndex>
+			<text>your</text>
+		</mention>
+		
+		<mention>
+			<sent>30</sent>
+			<startIndex>2</startIndex>
+			<endIndex>3</endIndex>
+			<text>he</text>
+		</mention>
+		
+		<mention>
+			<sent>33</sent>
+			<startIndex>0</startIndex>
+			<endIndex>2</endIndex>
+			<text>The Consul</text>
+		</mention>
+		
+		<mention>
+			<sent>33</sent>
+			<startIndex>3</startIndex>
+			<endIndex>4</endIndex>
+			<text>his</text>
+		</mention>
+		
+		<mention>
+			<sent>37</sent>
+			<startIndex>3</startIndex>
+			<endIndex>5</endIndex>
+			<text>The Consul</text>
+		</mention>
+		
+		<mention>
+			<sent>40</sent>
+			<startIndex>7</startIndex>
+			<endIndex>9</endIndex>
+			<text>the Consul</text>
+		</mention>
+		
+		<mention>
+			<sent>41</sent>
+			<startIndex>3</startIndex>
+			<endIndex>6</endIndex>
+			<text>the diplomat's</text>
+		</mention>
+		
+		<mention>
+			<sent>44</sent>
+			<startIndex>0</startIndex>
+			<endIndex>2</endIndex>
+			<text>The Consul</text>
+		</mention>
+	</entity>
+	
+	<entity name="Lenar Hoyt">
+		<mention>
+			<sent>12</sent>
+			<startIndex>0</startIndex>
+			<endIndex>2</endIndex>
+			<text>Lenar Hoyt</text>
+		</mention>
+		
+		<mention>
+			<sent>5</sent>
+			<startIndex>16</startIndex>
+			<endIndex>18</endIndex>
+			<text>Father Hoyt</text>
+		</mention>
+			
+		<mention>
+			<sent>12</sent>
+			<startIndex>7</startIndex>
+			<endIndex>8</endIndex>
+			<text>his</text>
+		</mention>
+		
+		<mention>
+			<sent>13</sent>
+			<startIndex>5</startIndex>
+			<endIndex>6</endIndex>
+			<text>you</text>
+		</mention>
+		
+		<mention>
+			<sent>21</sent>
+			<startIndex>9</startIndex>
+			<endIndex>11</endIndex>
+			<text>Father Hoyt</text>
+		</mention>
+		
+		<mention>
+			<sent>24</sent>
+			<startIndex>2</startIndex>
+			<endIndex>3</endIndex>
+			<text>you</text>
+		</mention>
+		
+		<mention>
+			<sent>51</sent>
+			<startIndex>11</startIndex>
+			<endIndex>12</endIndex>
+			<text>Hoyt</text>
+		</mention>
+	</entity>
+	
+	<entity name="Kassad">
+		<mention>
+			<sent>6</sent>
+			<startIndex>5</startIndex>
+			<endIndex>6</endIndex>
+			<text>Kassad</text>
+		</mention>
+		
+		<mention>
+			<sent>26</sent>
+			<startIndex>0</startIndex>
+			<endIndex>1</endIndex>
+			<text>Kassad</text>
+		</mention>
+		
+		<mention>
+			<sent>26</sent>
+			<startIndex>7</startIndex>
+			<endIndex>8</endIndex>
+			<text>he</text>
+		</mention>
+		
+		<mention>
+			<sent>34</sent>
+			<startIndex>11</startIndex>
+			<endIndex>12</endIndex>
+			<text>Kassad</text>
+		</mention>
+		
+		<mention>
+			<sent>46</sent>
+			<startIndex>6</startIndex>
+			<endIndex>7</endIndex>
+			<text>Kassad</text>
+		</mention>
+		
+		<mention>
+			<sent>47</sent>
+			<startIndex>0</startIndex>
+			<endIndex>1</endIndex>
+			<text>He</text>
+		</mention>
+		
+		<mention>
+			<sent>47</sent>
+			<startIndex>5</startIndex>
+			<endIndex>6</endIndex>
+			<text>his</text>
+		</mention>
+		
+		<mention>
+			<sent>47</sent>
+			<startIndex>12</startIndex>
+			<endIndex>13</endIndex>
+			<text>his</text>
+		</mention>
+		
+		<mention>
+			<sent>48</sent>
+			<startIndex>14</startIndex>
+			<endIndex>16</endIndex>
+			<text>the Colonel</text>
+		</mention>
+	</entity>
+	
+	<entity name="Rachel">
+		<mention>
+			<sent>11</sent>
+			<startIndex>0</startIndex>
+			<endIndex>1</endIndex>
+			<text>Rachel</text>
+		</mention>
+		
+		<mention>
+			<sent>11</sent>
+			<startIndex>10</startIndex>
+			<endIndex>11</endIndex>
+			<text>she</text>
+		</mention>
+		
+		<mention>
+			<sent>11</sent>
+			<startIndex>12</startIndex>
+			<endIndex>13</endIndex>
+			<text>her</text>
+		</mention>
+		
+		<mention>
+			<sent>11</sent>
+			<startIndex>19</startIndex>
+			<endIndex>20</endIndex>
+			<text>her</text>
+		</mention>
+		
+		<mention>
+			<sent>11</sent>
+			<startIndex>25</startIndex>
+			<endIndex>26</endIndex>
+			<text>her</text>
+		</mention>
+	</entity>
+
+	<entity name="Brawne Lamia">
+		<mention>
+			<sent>13</sent>
+			<startIndex>10</startIndex>
+			<endIndex>12</endIndex>
+			<text>Brawne Lamia</text>
+		</mention>
+		
+		<mention>
+			<sent>13</sent>
+			<startIndex>1</startIndex>
+			<endIndex>2</endIndex>
+			<text>I</text>
+		</mention>
+		
+		<mention>
+			<sent>31</sent>
+			<startIndex>2</startIndex>
+			<endIndex>3</endIndex>
+			<text>Lamia</text>
+		</mention>
+		
+		<mention>
+			<sent>33</sent>
+			<startIndex>6</startIndex>
+			<endIndex>7</endIndex>
+			<text>her</text>
+		</mention>
+		
+		<mention>
+			<sent>35</sent>
+			<startIndex>0</startIndex>
+			<endIndex>2</endIndex>
+			<text>Brawne Lamia</text>
+		</mention>
+		
+		<mention>
+			<sent>37</sent>
+			<startIndex>1</startIndex>
+			<endIndex>2</endIndex>
+			<text>I</text>
+		</mention>
+		
+		<mention>
+			<sent>37</sent>
+			<startIndex>7</startIndex>
+			<endIndex>8</endIndex>
+			<text>I</text>
+		</mention>
+		
+		<mention>
+			<sent>38</sent>
+			<startIndex>0</startIndex>
+			<endIndex>1</endIndex>
+			<text>I</text>
+		</mention>
+		
+		<mention>
+			<sent>38</sent>
+			<startIndex>5</startIndex>
+			<endIndex>6</endIndex>
+			<text>I</text>
+		</mention>
+		
+		<mention>
+			<sent>38</sent>
+			<startIndex>13</startIndex>
+			<endIndex>14</endIndex>
+			<text>I</text>
+		</mention>
+		
+		<mention>
+			<sent>39</sent>
+			<startIndex>32</startIndex>
+			<endIndex>33</endIndex>
+			<text>I</text>
+		</mention>
+		
+		<mention>
+			<sent>41</sent>
+			<startIndex>0</startIndex>
+			<endIndex>2</endIndex>
+			<text>Brawne Lamia</text>
+		</mention>
+		
+		<mention>
+			<sent>50</sent>
+			<startIndex>6</startIndex>
+			<endIndex>7</endIndex>
+			<text>Lamia</text>
+		</mention>
+	</entity>
+	
+	<entity name="Het Masteen">
+		<mention>
+			<sent>36</sent>
+			<startIndex>2</startIndex>
+			<endIndex>3</endIndex>
+			<text>Masteen</text>
+		</mention>
+		
+		<mention>
+			<sent>24</sent>
+			<startIndex>4</startIndex>
+			<endIndex>13</endIndex>
+			<text>our dear departed Voice of the Bush Het Masteen</text>
+		</mention>
+	</entity>
+	
+</document>

@@ -40,6 +40,7 @@ import performance.Consts;
 import performance.coref.customannotators.CorefAnnotatorCustom;
 import performance.ssplit.SsplitUtils;
 import java.util.Properties;
+import java.util.Scanner;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -230,6 +231,8 @@ public class CorefUtils
 		Mention mention = new Mention(id, startIndex, endIndex, sentencesWords, basicDependencies, enhancedDependencies, mentionSpan);
 
 		mention.corefClusterID = clusterID;
+		if(mentionSpan.size() == 0)
+			System.out.println(startIndex +"-" +endIndex + "errrrrrrrrrrrrrrrrrrorrrrrrrrrrrrrrrrrrrr");
 		mention.headWord = mentionSpan.get(mentionSpan.size()-1);
 		mention.headIndex = sentencesWords.indexOf(mention.headWord);
 		mention.sentNum = sent;
@@ -283,7 +286,7 @@ public class CorefUtils
 			{
 				CoreLabel token = sentences.get(sent).get(TokensAnnotation.class).get(i);
 				String nerTag = token.ner();
-				if(nerTag.equals("PERSON"))
+				if(nerTag.equals("PERSON") || nerTag.equals("TITLE"))
 				{
 					person = true;
 					break;
@@ -336,16 +339,5 @@ public class CorefUtils
 			}
 		}
 		return result;
-	}
-	
-	// Pour m'aider à annoter manuellement, sera supprimée plus tard
-	public static void textAnnotationHelper(File file) throws IOException
-	{
-		Annotation annotation = SsplitUtils.getCleanAnnotation(file);
-		List<CoreMap> sentences = annotation.get(SentencesAnnotation.class);
-		for(int i = 0; i < sentences.size(); i ++)
-		{
-			System.out.println(i + "==> " + sentences.get(i).get(TokensAnnotation.class));
-		}
 	}
 }
