@@ -13,7 +13,7 @@ public class Test_pos
 {
 	public static void main(String[] args) throws IOException 
 	{
-		// Lecture du contenu d'un texte du corpus. Il faut télécharger et
+		// Lecture du contenu d'un texte du corpus. Il faut tï¿½lï¿½charger et
 		// ajouter au path org.apache.commons.io.IOUtils;
 		String path = "corpus" + File.separator + "reference.txt";
 		FileInputStream is = new FileInputStream(path);     
@@ -28,7 +28,7 @@ public class Test_pos
 		// On retrouve les natures grammaticales des tokens dans
 		// la classe CoreSentence.
 		CoreSentence firstSentence = document.sentences().get(0);
-		List<String> posTags = firstSentence.posTags();
+		List<String> posTags = firstSentence.posTags(); // problme
 		System.out.println("Example: pos tags");
 		System.out.println(posTags);
 		System.out.println();

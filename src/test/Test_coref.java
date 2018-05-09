@@ -99,7 +99,7 @@ public class Test_coref
 		// Test de cor�f�rence entre deux mentions
 		CoreEntityMention originalEntityMention = sentence.entityMentions().get(4);;
 		CoreEntityMention test = null;
-		test.canonicalEntityMention();
+		//test.canonicalEntityMention();
 
 		Map<Integer, CorefChain> corefChains = document.corefChains();
 		
