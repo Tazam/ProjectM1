@@ -102,12 +102,10 @@ public class Graph {
 		buffer.newLine();
 		buffer.write("<graph edgedefault=\"undirected\">");
 		buffer.newLine();
-		buffer.write("<key id=\"keyNode\" for node attr.name=\"characterName\" attr.type=\"string\">");
-		buffer.newLine();
-		buffer.write("<default>John Doe</default>");
+		buffer.write("<key id=\"keyNode\" for=\"node\" attr.name=\"characterName\" attr.type=\"string\">");
 		buffer.newLine();
 		buffer.write("</key>");
-		buffer.write("<key id=\"keyEdge\" for edge attr.name=\"weight\" attr.type=\"float\"/>");
+		buffer.write("<key id=\"keyEdge\" for=\"edge\" attr.name=\"weight\" attr.type=\"float\"/>");
 		buffer.newLine();
 		buffer.write("<graph id=\""+this.name+"\" edgedefault=\"undirected\">");
 		buffer.newLine();

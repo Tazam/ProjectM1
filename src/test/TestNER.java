@@ -17,6 +17,7 @@ import edu.stanford.nlp.pipeline.CoreDocument;
 import edu.stanford.nlp.pipeline.CoreSentence;
 import edu.stanford.nlp.pipeline.StanfordCoreNLP;
 import edu.stanford.nlp.util.CoreMap;
+import performance.ner.NERUtils;
 
 /**
  * @author Schmidt Gaëtan
@@ -25,6 +26,7 @@ import edu.stanford.nlp.util.CoreMap;
 public class TestNER {
 	//NamedEntityTagAnnotation.class
 	public static void main(String[] args) throws IOException {
+		/*
 		String text="Joe Smith was born in California. " +
 			      "In 2017, he went to Paris, France in the summer. " +
 			      "His flight left at 3:00pm on July 10th, 2017. " +
@@ -51,6 +53,14 @@ public class TestNER {
 				System.out.println(t.word());
 				System.out.println(t.ner());
 			}
+		}*/
+		
+		
+		try {
+			NERUtils.test();
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 	    }
 	

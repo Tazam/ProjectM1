@@ -6,6 +6,7 @@ import java.io.FileInputStream;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Properties;
@@ -21,6 +22,7 @@ import edu.stanford.nlp.pipeline.CoreSentence;
 import edu.stanford.nlp.pipeline.TokenizerAnnotator;
 import edu.stanford.nlp.pipeline.WordsToSentencesAnnotator;
 import performance.Consts;
+import performance.ner.TokenNerCustom;
 
 // @author Axel Clerici
 // Cette classe contient les différentes méthodes nécessaires à la création des phrases,
@@ -138,4 +140,5 @@ public class SsplitUtils
 	{
 		return sentence.charOffsets().second;
 	}
+	
 }
