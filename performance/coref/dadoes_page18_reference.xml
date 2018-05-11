@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<document>
+	<entity name="John Isidore">
+		<mention>
+			<sent>4</sent>
+			<startIndex>15</startIndex>
+			<endIndex>17</endIndex>
+			<text>John Isidore</text>
+		</mention>
+		
+		<mention>
+			<sent>0</sent>
+			<startIndex>0</startIndex>
+			<endIndex>1</endIndex>
+			<text>I</text>
+		</mention>
+		
+		<mention>
+			<sent>0</sent>
+			<startIndex>3</startIndex>
+			<endIndex>4</endIndex>
+			<text>I</text>
+		</mention>
+		
+		<mention>
+			<sent>0</sent>
+			<startIndex>9</startIndex>
+			<endIndex>10</endIndex>
+			<text>Isidore</text>
+		</mention>
+		
+		<mention>
+			<sent>0</sent>
+			<startIndex>12</startIndex>
+			<endIndex>13</endIndex>
+			<text>he</text>
+		</mention>
+		
+		<mention>
+			<sent>1</sent>
+			<startIndex>0</startIndex>
+			<endIndex>1</endIndex>
+			<text>He</text>
+		</mention>
+		
+		<mention>
+			<sent>1</sent>
+			<startIndex>9</startIndex>
+			<endIndex>10</endIndex>
+			<text>he</text>
+		</mention>
+		
+		<mention>
+			<sent>3</sent>
+			<startIndex>1</startIndex>
+			<endIndex>2</endIndex>
+			<text>his</text>
+		</mention>
+		
+		<mention>
+			<sent>3</sent>
+			<startIndex>41</startIndex>
+			<endIndex>42</endIndex>
+			<text>Isidore</text>
+		</mention>
+		
+		<mention>
+			<sent>4</sent>
+			<startIndex>15</startIndex>
+			<endIndex>17</endIndex>
+			<text>John Isidore</text>
+		</mention>
+		
+		<mention>
+			<sent>6</sent>
+			<startIndex>17</startIndex>
+			<endIndex>18</endIndex>
+			<text>I</text>
+		</mention>
+		
+		<mention>
+			<sent>6</sent>
+			<startIndex>20</startIndex>
+			<endIndex>21</endIndex>
+			<text>I</text>
+		</mention>
+		
+		<mention>
+			<sent>11</sent>
+			<startIndex>0</startIndex>
+			<endIndex>1</endIndex>
+			<text>I</text>
+		</mention>
+		
+		<mention>
+			<sent>15</sent>
+			<startIndex>1</startIndex>
+			<endIndex>2</endIndex>
+			<text>himself</text>
+		</mention>
+		
+		<mention>
+			<sent>15</sent>
+			<startIndex>2</startIndex>
+			<endIndex>4</endIndex>
+			<text>John Isidore</text>
+		</mention>
+		
+		<mention>
+			<sent>15</sent>
+			<startIndex>13</startIndex>
+			<endIndex>14</endIndex>
+			<text>me</text>
+		</mention>
+		
+		<mention>
+			<sent>15</sent>
+			<startIndex>18</startIndex>
+			<endIndex>19</endIndex>
+			<text>my</text>
+		</mention>
+		
+		<mention>
+			<sent>16</sent>
+			<startIndex>0</startIndex>
+			<endIndex>1</endIndex>
+			<text>He</text>
+		</mention>
+		
+		<mention>
+			<sent>16</sent>
+			<startIndex>21</startIndex>
+			<endIndex>22</endIndex>
+			<text>he</text>
+		</mention>
+	</entity>
+	
+	
+	<entity name="Mrs Maggie Klugman">
+		<mention>
+			<sent>4</sent>
+			<startIndex>5</startIndex>
+			<endIndex>8</endIndex>
+			<text>Mrs Maggie Klugman</text>
+		</mention>
+		<mention>
+			<sent>5</sent>
+			<startIndex>7</startIndex>
+			<endIndex>9</endIndex>
+			<text>Mrs Klugman</text>
+		</mention>
+		<mention>
+			<sent>4</sent>
+			<startIndex>5</startIndex>
+			<endIndex>8</endIndex>
+			<text>Mrs Maggie Klugman</text>
+		</mention>
+		<mention>
+			<sent>5</sent>
+			<startIndex>7</startIndex>
+			<endIndex>9</endIndex>
+			<text>Mrs Klugman</text>
+		</mention>
+		
+		<mention>
+			<sent>5</sent>
+			<startIndex>23</startIndex>
+			<endIndex>25</endIndex>
+			<text>Mrs Klugman</text>
+		</mention>
+		
+		<mention>
+			<sent>5</sent>
+			<startIndex>28</startIndex>
+			<endIndex>29</endIndex>
+			<text>you</text>
+		</mention>
+		
+		<mention>
+			<sent>5</sent>
+			<startIndex>30</startIndex>
+			<endIndex>31</endIndex>
+			<text>your</text>
+		</mention>
+		
+		<mention>
+			<sent>5</sent>
+			<startIndex>37</startIndex>
+			<endIndex>38</endIndex>
+			<text>your</text>
+		</mention>
+		
+		<mention>
+			<sent>6</sent>
+			<startIndex>5</startIndex>
+			<endIndex>13</endIndex>
+			<text>a tired dry middle-aged female</text>
+		</mention>
+		
+		<mention>
+			<sent>6</sent>
+			<startIndex>17</startIndex>
+			<endIndex>18</endIndex>
+			<text>I</text>
+		</mention>
+		
+		<mention>
+			<sent>6</sent>
+			<startIndex>20</startIndex>
+			<endIndex>21</endIndex>
+			<text>I</text>
+		</mention>
+		
+		<mention>
+			<sent>6</sent>
+			<startIndex>22</startIndex>
+			<endIndex>23</endIndex>
+			<text>my</text>
+		</mention>
+		
+		<mention>
+			<sent>7</sent>
+			<startIndex>4</startIndex>
+			<endIndex>6</endIndex>
+			<text>Mrs Klugman</text>
+		</mention>
+		
+		<mention>
+			<sent>8</sent>
+			<startIndex>4</startIndex>
+			<endIndex>15</endIndex>
+			<text>Mrs Klugman, now of New New York, Mars</text>
+		</mention>
+		
+		<mention>
+			<sent>11</sent>
+			<startIndex>0</startIndex>
+			<endIndex>1</endIndex>
+			<text>I</text>
+		</mention>
+		
+		<mention>
+			<sent>12</sent>
+			<startIndex>5</startIndex>
+			<endIndex>7</endIndex>
+			<text>Mrs Klugman</text>
+		</mention>
+		
+		<mention>
+			<sent>12</sent>
+			<startIndex>14</startIndex>
+			<endIndex>15</endIndex>
+			<text>you</text>
+		</mention>
+		
+		<mention>
+			<sent>12</sent>
+			<startIndex>19</startIndex>
+			<endIndex>20</endIndex>
+			<text>yourself</text>
+		</mention>
+		
+		<mention>
+			<sent>13</sent>
+			<startIndex>3</startIndex>
+			<endIndex>4</endIndex>
+			<text>my</text>
+		</mention>
+		
+		<mention>
+			<sent>13</sent>
+			<startIndex>6</startIndex>
+			<endIndex>7</endIndex>
+			<text>myself</text>
+		</mention>
+		
+	</entity>
+</document>

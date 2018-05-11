@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<document>
+	<entity name="the dog">
+		<mention>
+			<sent>0</sent>
+			<startIndex>0</startIndex>
+			<endIndex>2</endIndex>
+			<text>The dog</text>
+		</mention>
+		
+		<mention>
+			<sent>0</sent>
+			<startIndex>7</startIndex>
+			<endIndex>8</endIndex>
+			<text>its</text>
+		</mention>
+		
+		<mention>
+			<sent>0</sent>
+			<startIndex>13</startIndex>
+			<endIndex>14</endIndex>
+			<text>its</text>
+		</mention>
+		
+		<mention>
+			<sent>1</sent>
+			<startIndex>6</startIndex>
+			<endIndex>7</endIndex>
+			<text>its</text>
+		</mention>
+		
+		<mention>
+			<sent>1</sent>
+			<startIndex>15</startIndex>
+			<endIndex>16</endIndex>
+			<text>it</text>
+		</mention>
+		
+		<mention>
+			<sent>1</sent>
+			<startIndex>10</startIndex>
+			<endIndex>11</endIndex>
+			<text>it</text>
+		</mention>
+		
+		<mention>
+			<sent>2</sent>
+			<startIndex>7</startIndex>
+			<endIndex>8</endIndex>
+			<text>fella</text>
+		</mention>
+		
+		<mention>
+			<sent>3</sent>
+			<startIndex>5</startIndex>
+			<endIndex>6</endIndex>
+			<text>you</text>
+		</mention>
+		
+		<mention>
+			<sent>6</sent>
+			<startIndex>3</startIndex>
+			<endIndex>4</endIndex>
+			<text>boy</text>
+		</mention>
+		
+		<mention>
+			<sent>12</sent>
+			<startIndex>5</startIndex>
+			<endIndex>6</endIndex>
+			<text>you</text>
+		</mention>
+		
+		<mention>
+			<sent>15</sent>
+			<startIndex>5</startIndex>
+			<endIndex>8</endIndex>
+			<text>the dog's</text>
+		</mention>
+		
+		<mention>
+			<sent>19</sent>
+			<startIndex>5</startIndex>
+			<endIndex>6</endIndex>
+			<text>you</text>
+		</mention>
+		
+		<mention>
+			<sent>20</sent>
+			<startIndex>1</startIndex>
+			<endIndex>3</endIndex>
+			<text>the dog</text>
+		</mention>
+		
+		<mention>
+			<sent>20</sent>
+			<startIndex>13</startIndex>
+			<endIndex>14</endIndex>
+			<text>its</text>
+		</mention>
+		
+		<mention>
+			<sent>21</sent>
+			<startIndex>3</startIndex>
+			<endIndex>4</endIndex>
+			<text>its</text>
+		</mention>
+		
+		<mention>
+			<sent>21</sent>
+			<startIndex>12</startIndex>
+			<endIndex>13</endIndex>
+			<text>its</text>
+		</mention>
+		
+		<mention>
+			<sent>22</sent>
+			<startIndex>3</startIndex>
+			<endIndex>6</endIndex>
+			<text>a good boy</text>
+		</mention>
+		
+		<mention>
+			<sent>23</sent>
+			<startIndex>1</startIndex>
+			<endIndex>3</endIndex>
+			<text>Good dog</text>
+		</mention>
+		
+		<mention>
+			<sent>24</sent>
+			<startIndex>5</startIndex>
+			<endIndex>6</endIndex>
+			<text>you</text>
+		</mention>
+		
+		<mention>
+			<sent>25</sent>
+			<startIndex>3</startIndex>
+			<endIndex>4</endIndex>
+			<text>you</text>
+		</mention>
+		
+		<mention>
+			<sent>26</sent>
+			<startIndex>0</startIndex>
+			<endIndex>1</endIndex>
+			<text>you</text>
+		</mention>
+		
+		<mention>
+			<sent>26</sent>
+			<startIndex>5</startIndex>
+			<endIndex>6</endIndex>
+			<text>you</text>
+		</mention>
+		
+		<mention>
+			<sent>26</sent>
+			<startIndex>7</startIndex>
+			<endIndex>8</endIndex>
+			<text>fella</text>
+		</mention>
+		
+		<mention>
+			<sent>26</sent>
+			<startIndex>10</startIndex>
+			<endIndex>11</endIndex>
+			<text>you</text>
+		</mention>
+		
+		<mention>
+			<sent>28</sent>
+			<startIndex>0</startIndex>
+			<endIndex>1</endIndex>
+			<text>you</text>
+		</mention>
+		
+		<mention>
+			<sent>28</sent>
+			<startIndex>2</startIndex>
+			<endIndex>4</endIndex>
+			<text>my dog</text>
+		</mention>
+		
+		<mention>
+			<sent>29</sent>
+			<startIndex>11</startIndex>
+			<endIndex>13</endIndex>
+			<text>the dog</text>
+		</mention>
+		
+		<mention>
+			<sent>30</sent>
+			<startIndex>1</startIndex>
+			<endIndex>2</endIndex>
+			<text>you</text>
+		</mention>
+		
+		<mention>
+			<sent>30</sent>
+			<startIndex>3</startIndex>
+			<endIndex>6</endIndex>
+			<text>a good dog</text>
+		</mention>
+		
+		<mention>
+			<sent>30</sent>
+			<startIndex>7</startIndex>
+			<endIndex>10</endIndex>
+			<text>a good dog</text>
+		</mention>
+		
+		<mention>
+			<sent>32</sent>
+			<startIndex>7</startIndex>
+			<endIndex>9</endIndex>
+			<text>the dog</text>
+		</mention>
+		
+		<mention>
+			<sent>33</sent>
+			<startIndex>3</startIndex>
+			<endIndex>4</endIndex>
+			<text>it</text>
+		</mention>
+		
+		<mention>
+			<sent>33</sent>
+			<startIndex>13</startIndex>
+			<endIndex>14</endIndex>
+			<text>it</text>
+		</mention>
+		
+		<mention>
+			<sent>33</sent>
+			<startIndex>16</startIndex>
+			<endIndex>17</endIndex>
+			<text>it</text>
+		</mention>
+		
+		<mention>
+			<sent>34</sent>
+			<startIndex>8</startIndex>
+			<endIndex>11</endIndex>
+			<text>the blanket-covered dog</text>
+		</mention>
+		
+		<mention>
+			<sent>35</sent>
+			<startIndex>6</startIndex>
+			<endIndex>8</endIndex>
+			<text>the dog</text>
+		</mention>
+		
+		<mention>
+			<sent>36</sent>
+			<startIndex>0</startIndex>
+			<endIndex>2</endIndex>
+			<text>The dog</text>
+		</mention>
+		
+		<mention>
+			<sent>37</sent>
+			<startIndex>15</startIndex>
+			<endIndex>18</endIndex>
+			<text>the dog's</text>
+		</mention>
+		
+		<mention>
+			<sent>38</sent>
+			<startIndex>4</startIndex>
+			<endIndex>5</endIndex>
+			<text>it</text>
+		</mention>
+		
+		<mention>
+			<sent>39</sent>
+			<startIndex>5</startIndex>
+			<endIndex>6</endIndex>
+			<text>it</text>
+		</mention>
+		
+		<mention>
+			<sent>40</sent>
+			<startIndex>4</startIndex>
+			<endIndex>6</endIndex>
+			<text>the dog</text>
+		</mention>
+		
+		<mention>
+			<sent>41</sent>
+			<startIndex>1</startIndex>
+			<endIndex>2</endIndex>
+			<text>you</text>
+		</mention>
+		
+		<mention>
+			<sent>43</sent>
+			<startIndex>0</startIndex>
+			<endIndex>2</endIndex>
+			<text>The dog</text>
+		</mention>
+		
+		<mention>
+			<sent>43</sent>
+			<startIndex>14</startIndex>
+			<endIndex>15</endIndex>
+			<text>its</text>
+		</mention>
+		
+		<mention>
+			<sent>43</sent>
+			<startIndex>7</startIndex>
+			<endIndex>8</endIndex>
+			<text>its</text>
+		</mention>
+		
+		<mention>
+			<sent>46</sent>
+			<startIndex>3</startIndex>
+			<endIndex>5</endIndex>
+			<text>the dog</text>
+		</mention>
+		
+	</entity>
+	
+	<entity name="Robert Neville">
+		<mention>
+			<sent>1</sent>
+			<startIndex>0</startIndex>
+			<endIndex>1</endIndex>
+			<text>Neville</text>
+		</mention>
+		
+		<mention>
+			<sent>0</sent>
+			<startIndex>5</startIndex>
+			<endIndex>6</endIndex>
+			<text>him</text>
+		</mention>
+		
+		<mention>
+			<sent>1</sent>
+			<startIndex>2</startIndex>
+			<endIndex>3</endIndex>
+			<text>his</text>
+		</mention>
+		
+		<mention>
+			<sent>14</sent>
+			<startIndex>0</startIndex>
+			<endIndex>1</endIndex>
+			<text>he</text>
+		</mention>
+		
+		<mention>
+			<sent>14</sent>
+			<startIndex>10</startIndex>
+			<endIndex>11</endIndex>
+			<text>his</text>
+		</mention>
+		
+		<mention>
+			<sent>16</sent>
+			<startIndex>4</startIndex>
+			<endIndex>6</endIndex>
+			<text>Neville's</text>
+		</mention>
+		
+		<mention>
+			<sent>20</sent>
+			<startIndex>6</startIndex>
+			<endIndex>7</endIndex>
+			<text>his</text>
+		</mention>
+		
+		<mention>
+			<sent>21</sent>
+			<startIndex>0</startIndex>
+			<endIndex>1</endIndex>
+			<text>Neville</text>
+		</mention>
+		
+		<mention>
+			<sent>21</sent>
+			<startIndex>8</startIndex>
+			<endIndex>9</endIndex>
+			<text>his</text>
+		</mention>
+		
+		<mention>
+			<sent>22</sent>
+			<startIndex>8</startIndex>
+			<endIndex>9</endIndex>
+			<text>he</text>
+		</mention>
+		
+		<mention>
+			<sent>24</sent>
+			<startIndex>0</startIndex>
+			<endIndex>1</endIndex>
+			<text>I</text>
+		</mention>
+		
+		<mention>
+			<sent>28</sent>
+			<startIndex>2</startIndex>
+			<endIndex>3</endIndex>
+			<text>my</text>
+		</mention>
+		
+		<mention>
+			<sent>29</sent>
+			<startIndex>1</startIndex>
+			<endIndex>2</endIndex>
+			<text>he</text>
+		</mention>
+		
+		<mention>
+			<sent>31</sent>
+			<startIndex>0</startIndex>
+			<endIndex>1</endIndex>
+			<text>He</text>
+		</mention>
+		
+		<mention>
+			<sent>32</sent>
+			<startIndex>4</startIndex>
+			<endIndex>5</endIndex>
+			<text>he</text>
+		</mention>
+		
+		<mention>
+			<sent>33</sent>
+			<startIndex>10</startIndex>
+			<endIndex>11</endIndex>
+			<text>Neville</text>
+		</mention>
+		
+		<mention>
+			<sent>34</sent>
+			<startIndex>0</startIndex>
+			<endIndex>1</endIndex>
+			<text>He</text>
+		</mention>
+		
+		<mention>
+			<sent>34</sent>
+			<startIndex>4</startIndex>
+			<endIndex>5</endIndex>
+			<text>his</text>
+		</mention>
+		
+		<mention>
+			<sent>34</sent>
+			<startIndex>12</startIndex>
+			<endIndex>13</endIndex>
+			<text>his</text>
+		</mention>
+		
+		<mention>
+			<sent>35</sent>
+			<startIndex>0</startIndex>
+			<endIndex>1</endIndex>
+			<text>He</text>
+		</mention>
+		
+		<mention>
+			<sent>35</sent>
+			<startIndex>5</startIndex>
+			<endIndex>6</endIndex>
+			<text>his</text>
+		</mention>
+		
+		<mention>
+			<sent>37</sent>
+			<startIndex>7</startIndex>
+			<endIndex>8</endIndex>
+			<text>Neville</text>
+		</mention>
+		
+		<mention>
+			<sent>38</sent>
+			<startIndex>8</startIndex>
+			<endIndex>9</endIndex>
+			<text>his</text>
+		</mention>
+		
+		<mention>
+			<sent>39</sent>
+			<startIndex>1</startIndex>
+			<endIndex>2</endIndex>
+			<text>he</text>
+		</mention>
+		
+		<mention>
+			<sent>39</sent>
+			<startIndex>12</startIndex>
+			<endIndex>13</endIndex>
+			<text>his</text>
+		</mention>
+		
+		<mention>
+			<sent>39</sent>
+			<startIndex>20</startIndex>
+			<endIndex>21</endIndex>
+			<text>he</text>
+		</mention>
+		
+		<mention>
+			<sent>39</sent>
+			<startIndex>23</startIndex>
+			<endIndex>24</endIndex>
+			<text>his</text>
+		</mention>
+		
+		<mention>
+			<sent>40</sent>
+			<startIndex>0</startIndex>
+			<endIndex>1</endIndex>
+			<text>He</text>
+		</mention>
+		
+		<mention>
+			<sent>40</sent>
+			<startIndex>7</startIndex>
+			<endIndex>8</endIndex>
+			<text>his</text>
+		</mention>
+		
+		<mention>
+			<sent>41</sent>
+			<startIndex>9</startIndex>
+			<endIndex>10</endIndex>
+			<text>he</text>
+		</mention>
+		
+		<mention>
+			<sent>43</sent>
+			<startIndex>5</startIndex>
+			<endIndex>6</endIndex>
+			<text></text>
+		</mention>
+		
+		<mention>
+			<sent>43</sent>
+			<startIndex>27</startIndex>
+			<endIndex>29</endIndex>
+			<text>Neville's</text>
+		</mention>
+		
+		<mention>
+			<sent>44</sent>
+			<startIndex>3</startIndex>
+			<endIndex>5</endIndex>
+			<text>Neville's</text>
+		</mention>
+		
+		<mention>
+			<sent>45</sent>
+			<startIndex>0</startIndex>
+			<endIndex>1</endIndex>
+			<text>He</text>
+		</mention>
+		
+		<mention>
+			<sent>45</sent>
+			<startIndex>9</startIndex>
+			<endIndex>10</endIndex>
+			<text>his</text>
+		</mention>
+	</entity>
+</document>
