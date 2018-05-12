@@ -52,7 +52,7 @@ public class CorefAnnotatorCustom extends TextAnnotationCreator implements Annot
 
   private boolean performMentionDetection ;
   // Modification
-  private CorefMentionAnnotatorCustom mentionAnnotator;
+  private CorefMentionAnnotatorCustom mentionAnnotatorCustom;
 
   private final Properties props;
 
@@ -79,7 +79,7 @@ public class CorefAnnotatorCustom extends TextAnnotationCreator implements Annot
     // unless custom mention detection is set, just use the default coref mention detector
     performMentionDetection = !PropertiesUtils.getBool(props, "coref.useCustomMentionDetection", false);
     if (performMentionDetection)
-      mentionAnnotator = new CorefMentionAnnotatorCustom(props);
+      mentionAnnotatorCustom = new CorefMentionAnnotatorCustom(props);
   }
 
   // flip which granularity of ner tag is primary
@@ -144,11 +144,12 @@ public class CorefAnnotatorCustom extends TextAnnotationCreator implements Annot
     return bestCoreferentEntityMention;
   }
 
-  public void annotateCustom(Annotation annotation, List<List<Mention>> customMentions,  Map<Integer, CorefChain> test){
+  public void annotateCustom(Annotation annotation, List<List<Mention>> customMentions,  Map<Integer, CorefChain> corefChains)
+  {
     // check if mention detection should be performed by this annotator
     if (performMentionDetection)
     {
-      mentionAnnotator.annotateCustom(annotation, customMentions);
+      mentionAnnotatorCustom.annotateCustom(annotation, customMentions);
     }
     // temporarily set the primary named entity tag to the coarse tag
     setNamedEntityTagGranularity(annotation, "coarse");
@@ -161,9 +162,9 @@ public class CorefAnnotatorCustom extends TextAnnotationCreator implements Annot
       if (hasSpeakerAnnotations(annotation)) {
         annotation.set(CoreAnnotations.UseMarkedDiscourseAnnotation.class, true);
       }
-      // test
+      // On remplace les mentions détectées par Stanford par celles passées en paramètres
       //corefSystem.annotate(annotation);
-      annotation.set(CorefCoreAnnotations.CorefChainAnnotation.class, test);
+      annotation.set(CorefCoreAnnotations.CorefChainAnnotation.class, corefChains);
     } catch (RuntimeException e) {
       throw e;
     } catch (Exception e) {
@@ -256,7 +257,7 @@ public class CorefAnnotatorCustom extends TextAnnotationCreator implements Annot
   public void annotate(Annotation annotation){
     // check if mention detection should be performed by this annotator
     if (performMentionDetection)
-      mentionAnnotator.annotate(annotation);
+      mentionAnnotatorCustom.annotate(annotation);
     // temporarily set the primary named entity tag to the coarse tag
     setNamedEntityTagGranularity(annotation, "coarse");
     try {

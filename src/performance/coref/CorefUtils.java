@@ -1,6 +1,7 @@
 package performance.coref;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -11,6 +12,7 @@ import java.util.Map;
 import java.util.Set;
 
 import org.apache.commons.io.FilenameUtils;
+import org.apache.commons.io.IOUtils;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -32,6 +34,8 @@ import edu.stanford.nlp.pipeline.MorphaAnnotator;
 import edu.stanford.nlp.pipeline.NERCombinerAnnotator;
 import edu.stanford.nlp.pipeline.POSTaggerAnnotator;
 import edu.stanford.nlp.pipeline.ParserAnnotator;
+import edu.stanford.nlp.pipeline.TokenizerAnnotator;
+import edu.stanford.nlp.pipeline.WordsToSentencesAnnotator;
 import edu.stanford.nlp.semgraph.SemanticGraph;
 import edu.stanford.nlp.util.CoreMap;
 import edu.stanford.nlp.util.IntPair;
@@ -40,7 +44,6 @@ import performance.Consts;
 import performance.coref.customannotators.CorefAnnotatorCustom;
 import performance.ssplit.SsplitUtils;
 import java.util.Properties;
-import java.util.Scanner;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -57,8 +60,8 @@ public class CorefUtils
 	// Pour ne pas avoir à créer des annotateur pour chaque fichier du corpus
 	private static boolean initAnnotators = true;
 	
-	// Ce paquet d'annotateur n'est ici que temporairement. Il sera enlevé lors
-	// de l'intégration de l'annotateur ner propre.
+	private static TokenizerAnnotator tokenizer = null;
+	private static WordsToSentencesAnnotator ssplit = null;
 	private static POSTaggerAnnotator pos = null;
 	private static MorphaAnnotator lemma = null;
 	private static NERCombinerAnnotator ner = null;
@@ -101,6 +104,32 @@ public class CorefUtils
 		return annotation;
 	}
 	
+	public static Annotation getDefaultAnnotation(File file) throws IOException, ClassNotFoundException
+	{
+		if(initAnnotators == true)
+		{
+			initAnnotators = false;
+			
+			tokenizer = new TokenizerAnnotator();
+			ssplit = new WordsToSentencesAnnotator();
+			pos = new POSTaggerAnnotator();
+			lemma = new MorphaAnnotator();
+			ner = new NERCombinerAnnotator(false);
+			parser = new ParserAnnotator(false, -1);
+			deparser = new DependencyParseAnnotator();
+		}
+		FileInputStream is = new FileInputStream(file);     
+		String content = IOUtils.toString(is, "UTF-8");
+		Annotation annotation = new Annotation(content);
+		tokenizer.annotate(annotation);
+		ssplit.annotate(annotation);
+		pos.annotate(annotation);
+		lemma.annotate(annotation);
+		ner.annotate(annotation);
+		
+		return annotation;
+	}
+	
 	// Renvoie l'annotation propre d'un texte du corpus. Cette annotation est annotée par
 	// les annotateurs customs pour coref.
 	public static Annotation getCleanAnnotation(File file) throws ClassNotFoundException, IOException
@@ -140,9 +169,13 @@ public class CorefUtils
 	
 	// Renvoie les chaînes de coréférence générées par l'annotateur de Stanford
 	// mais filtre pour ne garder que les chaînes qui représentent des personnes
-	public static Map<Integer, CorefChain> getStanfordCorefChains(File file, Properties props) throws IOException, ClassNotFoundException
+	public static Map<Integer, CorefChain> getStanfordCorefChains(File file, Properties props, boolean cleaned) throws IOException, ClassNotFoundException
 	{
-		Annotation annotation = getInitAnnotation(file);
+		Annotation annotation;
+		if(cleaned == true)
+			annotation = getInitAnnotation(file);
+		else
+			annotation = getDefaultAnnotation(file);
 		if(coref == null)
 			coref = new CorefAnnotator(props);
 		coref.annotate(annotation);
@@ -231,8 +264,6 @@ public class CorefUtils
 		Mention mention = new Mention(id, startIndex, endIndex, sentencesWords, basicDependencies, enhancedDependencies, mentionSpan);
 
 		mention.corefClusterID = clusterID;
-		if(mentionSpan.size() == 0)
-			System.out.println(startIndex +"-" +endIndex + "errrrrrrrrrrrrrrrrrrorrrrrrrrrrrrrrrrrrrr");
 		mention.headWord = mentionSpan.get(mentionSpan.size()-1);
 		mention.headIndex = sentencesWords.indexOf(mention.headWord);
 		mention.sentNum = sent;

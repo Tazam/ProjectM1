@@ -254,4 +254,100 @@
 			<text>Mercer</text>
 		</mention>
 	</entity>
+	<entity name ="a donkey">
+		<mention>
+			<sent>2</sent>
+			<startIndex>0</startIndex>
+			<endIndex>2</endIndex>
+			<text>A donkey</text>
+		</mention>
+		<mention>
+			<sent>2</sent>
+			<startIndex>17</startIndex>
+			<endIndex>18</endIndex>
+			<text>it</text>
+		</mention>
+		<mention>
+			<sent>4</sent>
+			<startIndex>5</startIndex>
+			<endIndex>15</endIndex>
+			<text>the donkey-one of the creatures which he loved the most</text>
+		</mention>
+		<mention>
+			<sent>5</sent>
+			<startIndex>15</startIndex>
+			<endIndex>18</endIndex>
+			<text>the donkey 's</text>
+		</mention>
+		<mention>
+			<sent>4</sent>
+			<startIndex>26</startIndex>
+			<endIndex>29</endIndex>
+			<text>the donkey's</text>
+		</mention>
+	</entity>
+		<entity name ="the crow">
+		<mention>
+			<sent>5</sent>
+			<startIndex>8</startIndex>
+			<endIndex>10</endIndex>
+			<text>the crow</text>
+		</mention>
+		<mention>
+			<sent>4</sent>
+			<startIndex>16</startIndex>
+			<endIndex>20</endIndex>
+			<text>a shiny blue crow</text>
+		</mention>
+	</entity>
+	<entity name ="the spider">
+		<mention>
+			<sent>22</sent>
+			<startIndex>0</startIndex>
+			<endIndex>3</endIndex>
+			<text>The mutilated spider</text>
+		</mention>
+		<mention>
+			<sent>21</sent>
+			<startIndex>8</startIndex>
+			<endIndex>9</endIndex>
+			<text>it</text>
+		</mention>
+		<mention>
+			<sent>21</sent>
+			<startIndex>10</startIndex>
+			<endIndex>11</endIndex>
+			<text>it</text>
+		</mention>
+		<mention>
+			<sent>22</sent>
+			<startIndex>5</startIndex>
+			<endIndex>6</endIndex>
+			<text>itself</text>
+		</mention>
+		<mention>
+			<sent>22</sent>
+			<startIndex>8</startIndex>
+			<endIndex>9</endIndex>
+			<text>its</text>
+		</mention>
+		<mention>
+			<sent>23</sent>
+			<startIndex>10</startIndex>
+			<endIndex>12</endIndex>
+			<text>the spider</text>
+		</mention>
+		<mention>
+			<sent>22</sent>
+			<startIndex>14</startIndex>
+			<endIndex>15</endIndex>
+			<text>it</text>
+		</mention>
+		<mention>
+			<sent>22</sent>
+			<startIndex>18</startIndex>
+			<endIndex>19</endIndex>
+			<text>it</text>
+		</mention>
+	</entity>
 </document>

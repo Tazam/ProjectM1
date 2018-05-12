@@ -18,8 +18,11 @@ public class Test_corefPerformance
 		props.setProperty("coref.maxMentionDistance", "100");
 		//props.setProperty("coref.algorithm", "statistical");
 		CorefChainComparator comparator = new CorefChainComparator(props);
+		
+		File file = new File("corpus\\dadoes_page82.txt");
+		AnnotationHelper.textAnnotationHelper(file);
 	
-		Stats stats1 = comparator.compareFiles_MUC();
+		/*Stats stats1 = comparator.compareFiles_MUC();
 		Stats stats2 = comparator.compareFiles_BCUBE();
 		Stats stats3 = comparator.compareFiles_CEAF(Similarity.SIMPLE);
 		Stats stats4 = comparator.compareFiles_CEAF(Similarity.ADVANCED);
@@ -46,7 +49,7 @@ public class Test_corefPerformance
 		System.out.println("Recall : " + stats4.getRecall());
 		System.out.println("f-mesure : " + stats4.getFMeasure());
 				
-		System.out.println("f-measure average : " + avg);
+		System.out.println("f-measure average : " + avg);*/
 		
 	}
 }
