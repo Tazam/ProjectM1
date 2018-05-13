@@ -26,6 +26,18 @@
 			<text>the dead Horace</text>
 		</mention>
 		<mention>
+			<sent>24</sent>
+			<startIndex>4</startIndex>
+			<endIndex>5</endIndex>
+			<text>this</text>
+		</mention>
+		<mention>
+			<sent>24</sent>
+			<startIndex>26</startIndex>
+			<endIndex>27</endIndex>
+			<text>it</text>
+		</mention>
+		<mention>
 			<sent>25</sent>
 			<startIndex>8</startIndex>
 			<endIndex>9</endIndex>

@@ -29,15 +29,12 @@ public class AnnotationHelper
 			String entity = reader.nextLine();
 			while(true)
 			{
-				System.out.println("phrase : ");
 				int p = reader.nextInt();
 				if(p == -1)
 				{
 					break;
 				}
-				System.out.println("start : ");
 				int d = reader.nextInt();
-				System.out.println("end : ");
 				int f = reader.nextInt();
 					
 				List<CoreLabel> span = sentences.get(p).get(TokensAnnotation.class).subList(d, f);
@@ -54,7 +51,7 @@ public class AnnotationHelper
 				debuts.add(d);
 				fins.add(f);
 				textes.add(t);
-				}
+			}
 			printMentions(phrases, debuts, fins, textes, entity);
 	}
 
@@ -62,6 +59,7 @@ public class AnnotationHelper
 	{
 		Annotation annotation = SsplitUtils.getCleanAnnotation(file);
 		List<CoreMap> sentences = annotation.get(SentencesAnnotation.class);
+		System.out.println(file.getName());
 		for(int i = 0; i < sentences.size(); i ++)
 		{
 			System.out.println(i + "==> " + sentences.get(i).get(TokensAnnotation.class));

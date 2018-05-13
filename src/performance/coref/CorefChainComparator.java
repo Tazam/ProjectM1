@@ -59,14 +59,14 @@ public class CorefChainComparator
 	}
 	
 	// Permet de réaliser une comparaison MUC sur l'ensemble du corpus
-	public Stats compareFiles_MUC() throws IOException, ClassNotFoundException
+	public Stats compareFiles_MUC(boolean cleaned) throws IOException, ClassNotFoundException
 	{		
 		File[] corpusFolder = new File(Consts.CORPUS_PATH).listFiles();
 
 		for(int i = 0; i < corpusFolder.length; i++)
 		{
 			System.out.println("Evaluation  MUC sur : " + corpusFolder[i].getName());
-			Map<Integer, CorefChain> stanfordCorefChain = getStanfordChains(corpusFolder, i);
+			Map<Integer, CorefChain> stanfordCorefChain = getStanfordChains(corpusFolder, i, cleaned);
 			Map<Integer, CorefChain> referenceCorefChain = getReferenceChains(corpusFolder, i);
 			
 			compareFile_MUC(stanfordCorefChain, referenceCorefChain);
@@ -117,14 +117,14 @@ public class CorefChainComparator
 	}
 	
 	// Permet de réaliser une comparaison BCUBE sur l'ensemble du corpus
-	public Stats compareFiles_BCUBE() throws IOException, ClassNotFoundException
+	public Stats compareFiles_BCUBE(boolean cleaned) throws IOException, ClassNotFoundException
 	{		
 		File[] corpusFolder = new File(Consts.CORPUS_PATH).listFiles();
 
 		for(int i = 0; i < corpusFolder.length; i++)
 		{
 			System.out.println("Evaluation BCUBE sur : " + corpusFolder[i].getName());
-			Map<Integer, CorefChain> stanfordCorefChains = getStanfordChains(corpusFolder, i);
+			Map<Integer, CorefChain> stanfordCorefChains = getStanfordChains(corpusFolder, i, cleaned);
 			Map<Integer, CorefChain> referenceCorefChains = getReferenceChains(corpusFolder, i);
 			compareFile_BCUBE(stanfordCorefChains, referenceCorefChains);
 		}
@@ -204,14 +204,14 @@ public class CorefChainComparator
 	}
 	
 	// Fonctions permettant de réaliser une comparaison CEAF sur l'ensemble du corpus
-	public Stats compareFiles_CEAF(Similarity function) throws IOException, ClassNotFoundException
+	public Stats compareFiles_CEAF(Similarity function, boolean cleaned) throws IOException, ClassNotFoundException
 	{		
 		File[] corpusFolder = new File(Consts.CORPUS_PATH).listFiles();
 
 		for(int i = 0; i < corpusFolder.length; i++)
 		{
 			System.out.println("Evaluation CEAF " + function + " sur : " + corpusFolder[i].getName());
-			Map<Integer, CorefChain> stanfordCorefChains = getStanfordChains(corpusFolder, i);
+			Map<Integer, CorefChain> stanfordCorefChains = getStanfordChains(corpusFolder, i, cleaned);
 			Map<Integer, CorefChain> referenceCorefChains = getReferenceChains(corpusFolder, i);
 			compareFile_CEAF(stanfordCorefChains, referenceCorefChains, function);
 		}
@@ -465,11 +465,11 @@ public class CorefChainComparator
 		}
 	}
 	
-	private Map<Integer, CorefChain> getStanfordChains(File[] corpusFolder, int i) throws ClassNotFoundException, IOException 
+	private Map<Integer, CorefChain> getStanfordChains(File[] corpusFolder, int i, boolean cleaned) throws ClassNotFoundException, IOException 
 	{
 		if(this.stanfordChains.size() != corpusFolder.length)
 		{
-			this.stanfordChains.add(CorefUtils.getStanfordCorefChains(corpusFolder[i], props));
+			this.stanfordChains.add(CorefUtils.getStanfordCorefChains(corpusFolder[i], props, cleaned));
 		}
 		return stanfordChains.get(i);
 	}

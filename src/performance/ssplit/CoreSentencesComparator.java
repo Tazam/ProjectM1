@@ -8,7 +8,9 @@ import java.io.IOException;
 
 import edu.stanford.nlp.pipeline.*;
 import performance.Consts;
+import performance.ssplit.SsplitUtils;
 import performance.stats.BasicStats;
+import test.performance.AnnotationHelper;
 
 //@author Axel Clerici
 
@@ -43,6 +45,7 @@ public class CoreSentencesComparator
 			// Pour chaque fichier, on récupère les phrases de références, celles de stanford, et on les compare
 			List<CoreSentence> stanfordSentences = SsplitUtils.getStanfordSentences(corpusFolder[i], props);
 			List<CoreSentence> referenceSentences = SsplitUtils.getCustomSentences(corpusFolder[i]);
+			AnnotationHelper.helperPrint(corpusFolder[i]);
 			compareFile(stanfordSentences, referenceSentences);
 		}
 		return this.stats;
