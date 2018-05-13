@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<document>
+	<entity name="sentence_1">
+		<character>
+			<text>Joe</text>
+			<sent>1</sent>
+			<position>1</position>
+		</character>
+		<character>
+			<text>Smith</text>
+			<sent>1</sent>
+			<position>2</position>
+		</character>
+	</entity>
+	
+	<entity name="sentence_4">
+		<character>
+			<text>Joe</text>
+			<sent>4</sent>
+			<position>10</position>
+		</character>
+	</entity>
+	
+	<entity name="sentence_5">
+		<character>
+			<text>Jane</text>
+			<sent>5</sent>
+			<position>8</position>
+		</character>
+		<character>
+			<text>Smith</text>
+			<sent>5</sent>
+			<position>9</position>
+		</character>
+	</entity>
+	
+	<entity name="sentence_6">
+		<character>
+			<text>Joe</text>
+			<sent>6</sent>
+			<position>4</position>
+		</character>
+		<character>
+			<text>Jane</text>
+			<sent>6</sent>
+			<position>8</position>
+		</character>
+	</entity>
+	
+	<entity name="sentence_7">
+		<character>
+			<text>Marc</text>
+			<sent>7</sent>
+			<position>1</position>
+		</character>
+	</entity>
+</document>

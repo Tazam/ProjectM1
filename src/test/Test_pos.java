@@ -28,9 +28,9 @@ public class Test_pos
 		// On retrouve les natures grammaticales des tokens dans
 		// la classe CoreSentence.
 		CoreSentence firstSentence = document.sentences().get(0);
-		List<String> posTags = firstSentence.posTags(); // problme
+		//List<String> posTags = firstSentence.posTags(); // problme
 		System.out.println("Example: pos tags");
-		System.out.println(posTags);
+		//System.out.println(posTags);
 		System.out.println();
   }
 
