@@ -28,32 +28,33 @@ public class QuoteUtils {
 			      "Marc said, 'I'm the bigger butterfly in this world !!!!!!!!!!!!' ";
 		
 		 Properties props = new Properties();
-		    // set the list of annotators to run
-		    props.setProperty("annotators", "tokenize,ssplit,pos,lemma,ner,depparse,coref");
+		 // set the list of annotators to run
+		 props.setProperty("annotators", "tokenize,ssplit,pos,lemma,ner,depparse,coref");
 		    
 		 // build pipeline
-		    StanfordCoreNLP pipeline = new StanfordCoreNLP(props);
-		    // create a document object
-		    CoreDocument document = new CoreDocument(text);
-		    // annnotate the document
-		    pipeline.annotate(document);
+		 StanfordCoreNLP pipeline = new StanfordCoreNLP(props);
+		 // create a document object
+		 CoreDocument document = new CoreDocument(text);
+		 // annnotate the document
+		 pipeline.annotate(document);
 		    
-		    // OUTPUT
-		    PrintWriter out = new PrintWriter("output.txt");
-			PrintWriter xmlOut = new PrintWriter("outpuc.xml");
-			 // create annotation object for output
-		    Annotation annotation = new Annotation(text);
+		 // OUTPUT
+		 PrintWriter out = new PrintWriter("output.txt");
+		 PrintWriter xmlOut = new PrintWriter("outpuc.xml");
+		 // create annotation object for output
+		 Annotation annotation = new Annotation(text);
+		   
+		 props.setProperty("annotators", "tokenize,ssplit,pos,lemma,ner,depparse,coref,quote");
 		    
-		    Properties props1 = new Properties();
-		    QuoteAnnotatorCustom quoteC = new QuoteAnnotatorCustom("name", props1 ,false);
-		    quoteC.annotateCustom(annotation);
+		 QuoteAnnotatorCustom quoteC = new QuoteAnnotatorCustom(props);
+		 quoteC.annotateCustom(annotation);
 		    
-		    // annotate the annotation
-		    pipeline.annotate(annotation);
+		 // annotate the annotation
+		 pipeline.annotate(annotation);
 		    
-		    // print result on a file
-		    pipeline.prettyPrint(annotation, out );
-		    pipeline.prettyPrint(annotation, xmlOut);
+		 // print result on a file
+		 pipeline.prettyPrint(annotation, out );
+		 pipeline.prettyPrint(annotation, xmlOut);
 					
 		    
 	}

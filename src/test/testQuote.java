@@ -121,6 +121,7 @@ public class testQuote {
 	    System.out.println("Example: original speaker of quote");
 	    System.out.println(quote.speaker().get());
 	    System.out.println();
+	    
 
 	    // canonical speaker of quote
 	    System.out.println("Example: canonical speaker of quote");
