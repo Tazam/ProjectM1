@@ -115,6 +115,8 @@ public class testQuote {
 	    System.out.println("Example: quote");
 	    System.out.println(quote.text());
 	    System.out.println();
+	    
+	    System.out.println("charoffset 1: "+quote.quoteCharOffsets().first.toString()+" second : "+quote.quoteCharOffsets().second.toString());
 
 	    // original speaker of quote
 	    // note that quote.speaker() returns an Optional

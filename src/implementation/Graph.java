@@ -100,7 +100,7 @@ public class Graph {
 		buffer.newLine();
 		buffer.write("<graphml>");
 		buffer.newLine();
-		buffer.write("<graph edgedefault=\"undirected\">");
+		//buffer.write("<graph edgedefault=\"undirected\">");
 		buffer.newLine();
 		buffer.write("<key id=\"keyNode\" for=\"node\" attr.name=\"characterName\" attr.type=\"string\">");
 		buffer.newLine();

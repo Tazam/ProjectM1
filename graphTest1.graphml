@@ -2,151 +2,109 @@
 <graphml>
 
 <key id="keyNode" for="node" attr.name="characterName" attr.type="string">
-<default>John Doe</default>
-</key>
-<key id="keyEdge" for="edge" attr.name="weight" attr.type="float"/>
-
+</key><key id="keyEdge" for="edge" attr.name="weight" attr.type="float"/>
 <graph id="graphTest1" edgedefault="undirected">
-<node id="those new Nimbus Two Thousand and Ones">
-<data key="keyNode">those new Nimbus Two Thousand and Ones</data>
-</node>
-<node id="a large ghost who held his bearded head under his arm , from which position he was blowing the horn">
-<data key="keyNode">a large ghost who held his bearded head under his arm , from which position he was blowing the horn</data>
-</node>
-<node id="the rain">
-<data key="keyNode">the rain</data>
+<node id="de">
+<data key="keyNode">de</data>
 </node>
 <node id="Sir Patrick and the rest of the Headless Hunt">
 <data key="keyNode">Sir Patrick and the rest of the Headless Hunt</data>
 </node>
-<node id="a long table , also covered in black velvet">
-<data key="keyNode">a long table , also covered in black velvet</data>
-</node>
-<node id="a large , glossy , purple envelope with silver lettering on the front">
-<data key="keyNode">a large , glossy , purple envelope with silver lettering on the front</data>
-</node>
-<node id="moldy peanuts">
-<data key="keyNode">moldy peanuts</data>
-</node>
-<node id="your">
-<data key="keyNode">your</data>
-</node>
-<node id="Wooden filing cabinets">
-<data key="keyNode">Wooden filing cabinets</data>
-</node>
 <node id="Harry urgently , and Ron and Hermione">
 <data key="keyNode">Harry urgently , and Ron and Hermione</data>
 </node>
-<node id="Filch 's">
-<data key="keyNode">Filch 's</data>
-</node>
-<node id="an entire drawer">
-<data key="keyNode">an entire drawer</data>
+<node id="Hunt">
+<data key="keyNode">Hunt</data>
 </node>
 <node id="Sir Nicholas de Mimsy-Porpington">
 <data key="keyNode">Sir Nicholas de Mimsy-Porpington</data>
 </node>
-<node id="A highly polished collection of chains and manacles">
-<data key="keyNode">A highly polished collection of chains and manacles</data>
+<node id="Z.">
+<data key="keyNode">Z.</data>
 </node>
-<node id="whatever Peeves">
-<data key="keyNode">whatever Peeves</data>
+<node id="George">
+<data key="keyNode">George</data>
 </node>
-<node id="the orchestra">
-<data key="keyNode">the orchestra</data>
-</node>
-<node id="the office , which made the oil lamp">
-<data key="keyNode">the office , which made the oil lamp</data>
+<node id="Hermione">
+<data key="keyNode">Hermione</data>
 </node>
 <node id="Sir Patrick 's">
 <data key="keyNode">Sir Patrick 's</data>
 </node>
-<node id="his bulbous nose">
-<data key="keyNode">his bulbous nose</data>
+<node id="Potter">
+<data key="keyNode">Potter</data>
 </node>
-<node id="Hufflepuff">
-<data key="keyNode">Hufflepuff</data>
-</node>
-<node id="the wreckage of a large black-and-gold cabinet that appeared to have been dropped from a great height">
-<data key="keyNode">the wreckage of a large black-and-gold cabinet that appeared to have been dropped from a great height</data>
-</node>
-<node id="Heard you talking about poor Myrtle">
-<data key="keyNode">Heard you talking about poor Myrtle</data>
+<node id="Mimsy-Porpington">
+<data key="keyNode">Mimsy-Porpington</data>
 </node>
 <node id="Nick 's">
 <data key="keyNode">Nick 's</data>
 </node>
-<node id="the Heir , beware">
-<data key="keyNode">the Heir , beware</data>
+<node id="Norris">
+<data key="keyNode">Norris</data>
+</node>
+<node id="Pomfrey">
+<data key="keyNode">Pomfrey</data>
 </node>
 <node id="Delaney-Podmore">
 <data key="keyNode">Delaney-Podmore</data>
 </node>
+<node id="Harry">
+<data key="keyNode">Harry</data>
+</node>
+<node id="Weasley">
+<data key="keyNode">Weasley</data>
+</node>
+<node id="J.">
+<data key="keyNode">J.</data>
+</node>
 <node id="Percy">
 <data key="keyNode">Percy</data>
 </node>
-<node id="the door">
-<data key="keyNode">the door</data>
+<node id="Nick">
+<data key="keyNode">Nick</data>
 </node>
 <node id="poor Myrtle">
 <data key="keyNode">poor Myrtle</data>
 </node>
-<node id="lamp-like yellow eyes">
-<data key="keyNode">lamp-like yellow eyes</data>
-</node>
-<node id="Sir Properly Decapitated-Podmore">
-<data key="keyNode">Sir Properly Decapitated-Podmore</data>
-</node>
 <node id="Dumbledore">
 <data key="keyNode">Dumbledore</data>
 </node>
-<node id="the Halloween feast">
-<data key="keyNode">the Halloween feast</data>
+<node id="Nicholas">
+<data key="keyNode">Nicholas</data>
 </node>
-<node id="it">
-<data key="keyNode">it</data>
+<node id="Fred">
+<data key="keyNode">Fred</data>
 </node>
-<node id="the parchment">
-<data key="keyNode">the parchment</data>
+<node id="Didsbury">
+<data key="keyNode">Didsbury</data>
 </node>
-<node id="her shoulder">
-<data key="keyNode">her shoulder</data>
+<node id="Mrs. Norris">
+<data key="keyNode">Mrs. Norris</data>
+</node>
+<node id="Ron">
+<data key="keyNode">Ron</data>
 </node>
 <node id="Mrs. Norris , the caretaker 's cat">
 <data key="keyNode">Mrs. Norris , the caretaker 's cat</data>
 </node>
-<node id="his neck">
-<data key="keyNode">his neck</data>
+<node id="Granger">
+<data key="keyNode">Granger</data>
 </node>
-<node id="The dungeon">
-<data key="keyNode">The dungeon</data>
+<node id="Madam">
+<data key="keyNode">Madam</data>
 </node>
-<node id="the Poltergeist">
-<data key="keyNode">the Poltergeist</data>
+<node id="Hagrid">
+<data key="keyNode">Hagrid</data>
 </node>
-<node id="my speech">
-<data key="keyNode">my speech</data>
+<node id="Nettles">
+<data key="keyNode">Nettles</data>
 </node>
 <node id="Hagrid 's">
 <data key="keyNode">Hagrid 's</data>
 </node>
-<node id="Filch 's desk">
-<data key="keyNode">Filch 's desk</data>
-</node>
 <node id="Nearly Headless Nick proudly">
 <data key="keyNode">Nearly Headless Nick proudly</data>
-</node>
-<node id="mud">
-<data key="keyNode">mud</data>
-</node>
-<node id="Gryffindor">
-<data key="keyNode">Gryffindor</data>
-</node>
-<node id="a quill">
-<data key="keyNode">a quill</data>
-</node>
-<node id="my deathday party">
-<data key="keyNode">my deathday party</data>
 </node>
 <node id="Ron hopefully , leading the way toward the steps to the entrance hall">
 <data key="keyNode">Ron hopefully , leading the way toward the steps to the entrance hall</data>
@@ -154,59 +112,32 @@
 <node id="Warlock D. J. Prod of Didsbury">
 <data key="keyNode">Warlock D. J. Prod of Didsbury</data>
 </node>
-<node id="students">
-<data key="keyNode">students</data>
-</node>
-<node id="I">
-<data key="keyNode">I</data>
+<node id="Warlock">
+<data key="keyNode">Warlock</data>
 </node>
 <node id="Ron nervously , and they set off around the edge of the dance floor">
 <data key="keyNode">Ron nervously , and they set off around the edge of the dance floor</data>
 </node>
+<node id="Prod">
+<data key="keyNode">Prod</data>
+</node>
 <node id="Miss Granger">
 <data key="keyNode">Miss Granger</data>
 </node>
-<node id="the low ceiling">
-<data key="keyNode">the low ceiling</data>
+<node id="of">
+<data key="keyNode">of</data>
 </node>
-<node id="Magical Creatures class">
-<data key="keyNode">Magical Creatures class</data>
-</node>
-<node id="a hunting horn">
-<data key="keyNode">a hunting horn</data>
-</node>
-<node id="the stairs">
-<data key="keyNode">the stairs</data>
-</node>
-<node id="a large roll of parchment">
-<data key="keyNode">a large roll of parchment</data>
-</node>
-<node id="the ink pot">
-<data key="keyNode">the ink pot</data>
-</node>
-<node id="a place most students avoided">
-<data key="keyNode">a place most students avoided</data>
-</node>
-<node id="Her Pepperup potion">
-<data key="keyNode">Her Pepperup potion</data>
-</node>
-<node id="Nearly Headless Nick">
-<data key="keyNode">Nearly Headless Nick</data>
+<node id="Wood">
+<data key="keyNode">Wood</data>
 </node>
 <node id="Oliver">
 <data key="keyNode">Oliver</data>
 </node>
-<node id="the salamander 's">
-<data key="keyNode">the salamander 's</data>
+<node id="Nearly Headless Nick">
+<data key="keyNode">Nearly Headless Nick</data>
 </node>
-<node id="Their">
-<data key="keyNode">Their</data>
-</node>
-<node id="his plumed hat">
-<data key="keyNode">his plumed hat</data>
-</node>
-<node id="a single oil lamp dangling from the low ceiling">
-<data key="keyNode">a single oil lamp dangling from the low ceiling</data>
+<node id="D.">
+<data key="keyNode">D.</data>
 </node>
 <node id="Hermione keenly when Harry had changed at last and joined her and Ron in the common room">
 <data key="keyNode">Hermione keenly when Harry had changed at last and joined her and Ron in the common room</data>
@@ -214,20 +145,17 @@
 <node id="Draco">
 <data key="keyNode">Draco</data>
 </node>
-<node id="the corridor">
-<data key="keyNode">the corridor</data>
-</node>
-<node id="a dozen ghost horses , each ridden by a headless horseman">
-<data key="keyNode">a dozen ghost horses , each ridden by a headless horseman</data>
-</node>
-<node id="a deep breath">
-<data key="keyNode">a deep breath</data>
-</node>
 <node id="Ginny Weasley , who had been looking pale">
 <data key="keyNode">Ginny Weasley , who had been looking pale</data>
 </node>
-<node id="a crowded dance floor">
-<data key="keyNode">a crowded dance floor</data>
+<node id="Patrick">
+<data key="keyNode">Patrick</data>
+</node>
+<node id="Fred and George Weasley">
+<data key="keyNode">Fred and George Weasley</data>
+</node>
+<node id="Sir Patrick 's head">
+<data key="keyNode">Sir Patrick 's head</data>
 </node>
 <node id="Madam Z. Nettles of Topsham">
 <data key="keyNode">Madam Z. Nettles of Topsham</data>
@@ -244,278 +172,164 @@
 <node id="Madam Pomfrey , the nurse">
 <data key="keyNode">Madam Pomfrey , the nurse</data>
 </node>
-<node id="His stomach">
-<data key="keyNode">His stomach</data>
+<node id="Headless">
+<data key="keyNode">Headless</data>
 </node>
 <node id="the Headless Hunt">
 <data key="keyNode">the Headless Hunt</data>
 </node>
-<node id="the other ghosts">
-<data key="keyNode">the other ghosts</data>
-</node>
-<node id="Halloween">
-<data key="keyNode">Halloween</data>
-</node>
 <node id="Kwikspell">
 <data key="keyNode">Kwikspell</data>
 </node>
-<node id="the stone wall">
-<data key="keyNode">the stone wall</data>
-</node>
-<edge id="those new Nimbus Two Thousand and Ones" source="those new Nimbus Two Thousand and Ones" target="Nearly Headless Nick">
-<data key="keyEdge">110.0</data>
+<edge id="de" source="de" target="Harry">
+<data key="keyEdge">1.0</data>
 </edge>
-<edge id="a large ghost who held his bearded head under his arm , from which position he was blowing the horn" source="a large ghost who held his bearded head under his arm , from which position he was blowing the horn" target="Ginny Weasley , who had been looking pale">
-<data key="keyEdge">6.0</data>
+<edge id="Sir Patrick and the rest of the Headless Hunt" source="Sir Patrick and the rest of the Headless Hunt" target="Patrick">
+<data key="keyEdge">1.0</data>
 </edge>
-<edge id="the rain" source="the rain" target="those new Nimbus Two Thousand and Ones">
-<data key="keyEdge">2.0</data>
+<edge id="Harry urgently , and Ron and Hermione" source="Harry urgently , and Ron and Hermione" target="Ron hopefully , leading the way toward the steps to the entrance hall">
+<data key="keyEdge">8.0</data>
 </edge>
-<edge id="Sir Patrick and the rest of the Headless Hunt" source="Sir Patrick and the rest of the Headless Hunt" target="Nearly Headless Nick">
-<data key="keyEdge">4.0</data>
+<edge id="Hunt" source="Hunt" target="Harry">
+<data key="keyEdge">1.0</data>
 </edge>
-<edge id="a long table , also covered in black velvet" source="a long table , also covered in black velvet" target="those new Nimbus Two Thousand and Ones">
-<data key="keyEdge">21.0</data>
+<edge id="Sir Nicholas de Mimsy-Porpington" source="Sir Nicholas de Mimsy-Porpington" target="Nearly Headless Nick">
+<data key="keyEdge">3.0</data>
 </edge>
-<edge id="a large , glossy , purple envelope with silver lettering on the front" source="a large , glossy , purple envelope with silver lettering on the front" target="those new Nimbus Two Thousand and Ones">
-<data key="keyEdge">43.0</data>
+<edge id="Z." source="Z." target="Madam">
+<data key="keyEdge">1.0</data>
 </edge>
-<edge id="moldy peanuts" source="moldy peanuts" target="Nearly Headless Nick">
+<edge id="George" source="George" target="Weasley">
+<data key="keyEdge">1.0</data>
+</edge>
+<edge id="Hermione" source="Hermione" target="Ron">
+<data key="keyEdge">10.0</data>
+</edge>
+<edge id="Sir Patrick 's" source="Sir Patrick 's" target="Hermione keenly when Harry had changed at last and joined her and Ron in the common room">
+<data key="keyEdge">1.0</data>
+</edge>
+<edge id="Potter" source="Potter" target="Harry">
+<data key="keyEdge">1.0</data>
+</edge>
+<edge id="Mimsy-Porpington" source="Mimsy-Porpington" target="de">
+<data key="keyEdge">1.0</data>
+</edge>
+<edge id="Norris" source="Norris" target="Nearly Headless Nick">
+<data key="keyEdge">3.0</data>
+</edge>
+<edge id="Pomfrey" source="Pomfrey" target="Madam">
+<data key="keyEdge">1.0</data>
+</edge>
+<edge id="Harry" source="Harry" target="Oliver">
+<data key="keyEdge">31.0</data>
+</edge>
+<edge id="J." source="J." target="Madam Z. Nettles of Topsham">
+<data key="keyEdge">1.0</data>
+</edge>
+<edge id="Weasley" source="Weasley" target="Ron hopefully , leading the way toward the steps to the entrance hall">
+<data key="keyEdge">1.0</data>
+</edge>
+<edge id="Percy" source="Percy" target="Ron hopefully , leading the way toward the steps to the entrance hall">
+<data key="keyEdge">3.0</data>
+</edge>
+<edge id="Nick" source="Nick" target="Harry">
+<data key="keyEdge">13.0</data>
+</edge>
+<edge id="poor Myrtle" source="poor Myrtle" target="Hermione keenly when Harry had changed at last and joined her and Ron in the common room">
+<data key="keyEdge">1.0</data>
+</edge>
+<edge id="Dumbledore" source="Dumbledore" target="Nearly Headless Nick">
+<data key="keyEdge">1.0</data>
+</edge>
+<edge id="Nicholas" source="Nicholas" target="de">
+<data key="keyEdge">1.0</data>
+</edge>
+<edge id="Fred" source="Fred" target="Ron hopefully , leading the way toward the steps to the entrance hall">
+<data key="keyEdge">3.0</data>
+</edge>
+<edge id="Didsbury" source="Didsbury" target="Prod">
+<data key="keyEdge">1.0</data>
+</edge>
+<edge id="Ron" source="Ron" target="Harry">
+<data key="keyEdge">13.0</data>
+</edge>
+<edge id="Granger" source="Granger" target="Weasley">
+<data key="keyEdge">1.0</data>
+</edge>
+<edge id="Madam" source="Madam" target="Nettles">
+<data key="keyEdge">1.0</data>
+</edge>
+<edge id="Nettles" source="Nettles" target="Z.">
+<data key="keyEdge">1.0</data>
+</edge>
+<edge id="Hagrid" source="Hagrid" target="Nearly Headless Nick">
+<data key="keyEdge">1.0</data>
+</edge>
+<edge id="Hagrid 's" source="Hagrid 's" target="Ron">
+<data key="keyEdge">1.0</data>
+</edge>
+<edge id="Ron hopefully , leading the way toward the steps to the entrance hall" source="Ron hopefully , leading the way toward the steps to the entrance hall" target="George">
+<data key="keyEdge">12.0</data>
+</edge>
+<edge id="Warlock" source="Warlock" target="Prod">
+<data key="keyEdge">1.0</data>
+</edge>
+<edge id="Ron nervously , and they set off around the edge of the dance floor" source="Ron nervously , and they set off around the edge of the dance floor" target="Nearly Headless Nick">
+<data key="keyEdge">1.0</data>
+</edge>
+<edge id="Prod" source="Prod" target="J.">
+<data key="keyEdge">1.0</data>
+</edge>
+<edge id="Miss Granger" source="Miss Granger" target="Hermione">
+<data key="keyEdge">3.0</data>
+</edge>
+<edge id="of" source="of" target="Prod">
+<data key="keyEdge">1.0</data>
+</edge>
+<edge id="Wood" source="Wood" target="Harry">
+<data key="keyEdge">1.0</data>
+</edge>
+<edge id="Oliver" source="Oliver" target="Wood">
+<data key="keyEdge">1.0</data>
+</edge>
+<edge id="Nearly Headless Nick" source="Nearly Headless Nick" target="Nick">
 <data key="keyEdge">23.0</data>
 </edge>
-<edge id="your" source="your" target="those new Nimbus Two Thousand and Ones">
-<data key="keyEdge">12.0</data>
-</edge>
-<edge id="Wooden filing cabinets" source="Wooden filing cabinets" target="those new Nimbus Two Thousand and Ones">
-<data key="keyEdge">8.0</data>
-</edge>
-<edge id="Harry urgently , and Ron and Hermione" source="Harry urgently , and Ron and Hermione" target="those new Nimbus Two Thousand and Ones">
-<data key="keyEdge">17.0</data>
-</edge>
-<edge id="Filch 's" source="Filch 's" target="those new Nimbus Two Thousand and Ones">
-<data key="keyEdge">20.0</data>
-</edge>
-<edge id="an entire drawer" source="an entire drawer" target="those new Nimbus Two Thousand and Ones">
-<data key="keyEdge">3.0</data>
-</edge>
-<edge id="Sir Nicholas de Mimsy-Porpington" source="Sir Nicholas de Mimsy-Porpington" target="those new Nimbus Two Thousand and Ones">
+<edge id="D." source="D." target="Prod">
 <data key="keyEdge">1.0</data>
 </edge>
-<edge id="A highly polished collection of chains and manacles" source="A highly polished collection of chains and manacles" target="those new Nimbus Two Thousand and Ones">
-<data key="keyEdge">82.0</data>
+<edge id="Hermione keenly when Harry had changed at last and joined her and Ron in the common room" source="Hermione keenly when Harry had changed at last and joined her and Ron in the common room" target="Ron hopefully , leading the way toward the steps to the entrance hall">
+<data key="keyEdge">7.0</data>
 </edge>
-<edge id="whatever Peeves" source="whatever Peeves" target="those new Nimbus Two Thousand and Ones">
-<data key="keyEdge">12.0</data>
-</edge>
-<edge id="the orchestra" source="the orchestra" target="those new Nimbus Two Thousand and Ones">
-<data key="keyEdge">3.0</data>
-</edge>
-<edge id="the office , which made the oil lamp" source="the office , which made the oil lamp" target="those new Nimbus Two Thousand and Ones">
-<data key="keyEdge">13.0</data>
-</edge>
-<edge id="Sir Patrick 's" source="Sir Patrick 's" target="Delaney-Podmore">
-<data key="keyEdge">9.0</data>
-</edge>
-<edge id="his bulbous nose" source="his bulbous nose" target="those new Nimbus Two Thousand and Ones">
-<data key="keyEdge">4.0</data>
-</edge>
-<edge id="Hufflepuff" source="Hufflepuff" target="those new Nimbus Two Thousand and Ones">
+<edge id="Ginny Weasley , who had been looking pale" source="Ginny Weasley , who had been looking pale" target="Hagrid">
 <data key="keyEdge">1.0</data>
 </edge>
-<edge id="the wreckage of a large black-and-gold cabinet that appeared to have been dropped from a great height" source="the wreckage of a large black-and-gold cabinet that appeared to have been dropped from a great height" target="Ginny Weasley , who had been looking pale">
-<data key="keyEdge">54.0</data>
-</edge>
-<edge id="Heard you talking about poor Myrtle" source="Heard you talking about poor Myrtle" target="those new Nimbus Two Thousand and Ones">
-<data key="keyEdge">153.0</data>
-</edge>
-<edge id="Nick 's" source="Nick 's" target="a large ghost who held his bearded head under his arm , from which position he was blowing the horn">
-<data key="keyEdge">29.0</data>
-</edge>
-<edge id="the Heir , beware" source="the Heir , beware" target="Nearly Headless Nick">
-<data key="keyEdge">2.0</data>
-</edge>
-<edge id="Delaney-Podmore" source="Delaney-Podmore" target="Nearly Headless Nick">
-<data key="keyEdge">1.0</data>
-</edge>
-<edge id="Percy" source="Percy" target="Ginny Weasley , who had been looking pale">
-<data key="keyEdge">2.0</data>
-</edge>
-<edge id="the door" source="the door" target="a large ghost who held his bearded head under his arm , from which position he was blowing the horn">
-<data key="keyEdge">18.0</data>
-</edge>
-<edge id="poor Myrtle" source="poor Myrtle" target="those new Nimbus Two Thousand and Ones">
-<data key="keyEdge">12.0</data>
-</edge>
-<edge id="lamp-like yellow eyes" source="lamp-like yellow eyes" target="those new Nimbus Two Thousand and Ones">
-<data key="keyEdge">51.0</data>
-</edge>
-<edge id="Sir Properly Decapitated-Podmore" source="Sir Properly Decapitated-Podmore" target="those new Nimbus Two Thousand and Ones">
-<data key="keyEdge">15.0</data>
-</edge>
-<edge id="Dumbledore" source="Dumbledore" target="a place most students avoided">
-<data key="keyEdge">2.0</data>
-</edge>
-<edge id="the Halloween feast" source="the Halloween feast" target="those new Nimbus Two Thousand and Ones">
-<data key="keyEdge">4.0</data>
-</edge>
-<edge id="it" source="it" target="a deep breath">
-<data key="keyEdge">74.0</data>
-</edge>
-<edge id="the parchment" source="the parchment" target="those new Nimbus Two Thousand and Ones">
-<data key="keyEdge">15.0</data>
-</edge>
-<edge id="her shoulder" source="her shoulder" target="Nearly Headless Nick">
-<data key="keyEdge">2.0</data>
-</edge>
-<edge id="Mrs. Norris , the caretaker 's cat" source="Mrs. Norris , the caretaker 's cat" target="a place most students avoided">
-<data key="keyEdge">5.0</data>
-</edge>
-<edge id="his neck" source="his neck" target="those new Nimbus Two Thousand and Ones">
-<data key="keyEdge">4.0</data>
-</edge>
-<edge id="The dungeon" source="The dungeon" target="those new Nimbus Two Thousand and Ones">
+<edge id="Patrick" source="Patrick" target="Delaney-Podmore">
 <data key="keyEdge">6.0</data>
 </edge>
-<edge id="the Poltergeist" source="the Poltergeist" target="those new Nimbus Two Thousand and Ones">
-<data key="keyEdge">1.0</data>
-</edge>
-<edge id="my speech" source="my speech" target="a place most students avoided">
-<data key="keyEdge">3.0</data>
-</edge>
-<edge id="Hagrid 's" source="Hagrid 's" target="those new Nimbus Two Thousand and Ones">
+<edge id="Fred and George Weasley" source="Fred and George Weasley" target="Weasley">
 <data key="keyEdge">2.0</data>
 </edge>
-<edge id="Filch 's desk" source="Filch 's desk" target="those new Nimbus Two Thousand and Ones">
-<data key="keyEdge">65.0</data>
-</edge>
-<edge id="Nearly Headless Nick proudly" source="Nearly Headless Nick proudly" target="a large ghost who held his bearded head under his arm , from which position he was blowing the horn">
-<data key="keyEdge">21.0</data>
-</edge>
-<edge id="mud" source="mud" target="those new Nimbus Two Thousand and Ones">
-<data key="keyEdge">4.0</data>
-</edge>
-<edge id="Gryffindor" source="Gryffindor" target="those new Nimbus Two Thousand and Ones">
+<edge id="Sir Patrick 's head" source="Sir Patrick 's head" target="Sir Patrick 's">
 <data key="keyEdge">2.0</data>
 </edge>
-<edge id="a quill" source="a quill" target="those new Nimbus Two Thousand and Ones">
-<data key="keyEdge">4.0</data>
-</edge>
-<edge id="my deathday party" source="my deathday party" target="Her Pepperup potion">
-<data key="keyEdge">8.0</data>
-</edge>
-<edge id="Ron hopefully , leading the way toward the steps to the entrance hall" source="Ron hopefully , leading the way toward the steps to the entrance hall" target="Nearly Headless Nick">
-<data key="keyEdge">27.0</data>
-</edge>
-<edge id="Warlock D. J. Prod of Didsbury" source="Warlock D. J. Prod of Didsbury" target="those new Nimbus Two Thousand and Ones">
-<data key="keyEdge">3.0</data>
-</edge>
-<edge id="students" source="students" target="a large ghost who held his bearded head under his arm , from which position he was blowing the horn">
-<data key="keyEdge">9.0</data>
-</edge>
-<edge id="I" source="I" target="those new Nimbus Two Thousand and Ones">
-<data key="keyEdge">13.0</data>
-</edge>
-<edge id="Ron nervously , and they set off around the edge of the dance floor" source="Ron nervously , and they set off around the edge of the dance floor" target="those new Nimbus Two Thousand and Ones">
-<data key="keyEdge">27.0</data>
-</edge>
-<edge id="Miss Granger" source="Miss Granger" target="a large ghost who held his bearded head under his arm , from which position he was blowing the horn">
-<data key="keyEdge">28.0</data>
-</edge>
-<edge id="the low ceiling" source="the low ceiling" target="those new Nimbus Two Thousand and Ones">
-<data key="keyEdge">5.0</data>
-</edge>
-<edge id="Magical Creatures class" source="Magical Creatures class" target="those new Nimbus Two Thousand and Ones">
-<data key="keyEdge">2.0</data>
-</edge>
-<edge id="a hunting horn" source="a hunting horn" target="those new Nimbus Two Thousand and Ones">
-<data key="keyEdge">3.0</data>
-</edge>
-<edge id="the stairs" source="the stairs" target="those new Nimbus Two Thousand and Ones">
-<data key="keyEdge">5.0</data>
-</edge>
-<edge id="a large roll of parchment" source="a large roll of parchment" target="a quill">
+<edge id="Madam Z. Nettles of Topsham" source="Madam Z. Nettles of Topsham" target="Prod">
 <data key="keyEdge">1.0</data>
 </edge>
-<edge id="the ink pot" source="the ink pot" target="a quill">
+<edge id="Peeves" source="Peeves" target="Hermione keenly when Harry had changed at last and joined her and Ron in the common room">
 <data key="keyEdge">1.0</data>
 </edge>
-<edge id="a place most students avoided" source="a place most students avoided" target="A highly polished collection of chains and manacles">
-<data key="keyEdge">12.0</data>
-</edge>
-<edge id="Her Pepperup potion" source="Her Pepperup potion" target="Nearly Headless Nick">
-<data key="keyEdge">42.0</data>
-</edge>
-<edge id="Nearly Headless Nick" source="Nearly Headless Nick" target="a long table , also covered in black velvet">
-<data key="keyEdge">259.0</data>
-</edge>
-<edge id="Oliver" source="Oliver" target="Nearly Headless Nick">
+<edge id="Malfoy" source="Malfoy" target="Draco">
 <data key="keyEdge">1.0</data>
 </edge>
-<edge id="the salamander 's" source="the salamander 's" target="those new Nimbus Two Thousand and Ones">
-<data key="keyEdge">3.0</data>
-</edge>
-<edge id="Their" source="Their" target="Nearly Headless Nick">
-<data key="keyEdge">1.0</data>
-</edge>
-<edge id="his plumed hat" source="his plumed hat" target="those new Nimbus Two Thousand and Ones">
-<data key="keyEdge">3.0</data>
-</edge>
-<edge id="a single oil lamp dangling from the low ceiling" source="a single oil lamp dangling from the low ceiling" target="those new Nimbus Two Thousand and Ones">
-<data key="keyEdge">2.0</data>
-</edge>
-<edge id="Hermione keenly when Harry had changed at last and joined her and Ron in the common room" source="Hermione keenly when Harry had changed at last and joined her and Ron in the common room" target="those new Nimbus Two Thousand and Ones">
-<data key="keyEdge">107.0</data>
-</edge>
-<edge id="Draco" source="Draco" target="Nearly Headless Nick">
-<data key="keyEdge">1.0</data>
-</edge>
-<edge id="the corridor" source="the corridor" target="Nearly Headless Nick">
+<edge id="Headless" source="Headless" target="Nearly Headless Nick">
 <data key="keyEdge">6.0</data>
 </edge>
-<edge id="a dozen ghost horses , each ridden by a headless horseman" source="a dozen ghost horses , each ridden by a headless horseman" target="those new Nimbus Two Thousand and Ones">
-<data key="keyEdge">29.0</data>
-</edge>
-<edge id="a deep breath" source="a deep breath" target="Her Pepperup potion">
-<data key="keyEdge">34.0</data>
-</edge>
-<edge id="Ginny Weasley , who had been looking pale" source="Ginny Weasley , who had been looking pale" target="Nearly Headless Nick">
-<data key="keyEdge">95.0</data>
-</edge>
-<edge id="a crowded dance floor" source="a crowded dance floor" target="those new Nimbus Two Thousand and Ones">
-<data key="keyEdge">6.0</data>
-</edge>
-<edge id="Madam Z. Nettles of Topsham" source="Madam Z. Nettles of Topsham" target="those new Nimbus Two Thousand and Ones">
-<data key="keyEdge">2.0</data>
-</edge>
-<edge id="Peeves" source="Peeves" target="those new Nimbus Two Thousand and Ones">
-<data key="keyEdge">15.0</data>
-</edge>
-<edge id="Malfoy" source="Malfoy" target="Nearly Headless Nick">
+<edge id="the Headless Hunt" source="the Headless Hunt" target="Harry">
 <data key="keyEdge">1.0</data>
 </edge>
-<edge id="Lockhart" source="Lockhart" target="Nearly Headless Nick">
+<edge id="Kwikspell" source="Kwikspell" target="Ron hopefully , leading the way toward the steps to the entrance hall">
 <data key="keyEdge">1.0</data>
-</edge>
-<edge id="Madam Pomfrey , the nurse" source="Madam Pomfrey , the nurse" target="those new Nimbus Two Thousand and Ones">
-<data key="keyEdge">215.0</data>
-</edge>
-<edge id="His stomach" source="His stomach" target="those new Nimbus Two Thousand and Ones">
-<data key="keyEdge">66.0</data>
-</edge>
-<edge id="the Headless Hunt" source="the Headless Hunt" target="Nearly Headless Nick">
-<data key="keyEdge">3.0</data>
-</edge>
-<edge id="the other ghosts" source="the other ghosts" target="Nearly Headless Nick">
-<data key="keyEdge">4.0</data>
-</edge>
-<edge id="Halloween" source="Halloween" target="those new Nimbus Two Thousand and Ones">
-<data key="keyEdge">20.0</data>
-</edge>
-<edge id="Kwikspell" source="Kwikspell" target="Nearly Headless Nick">
-<data key="keyEdge">6.0</data>
-</edge>
-<edge id="the stone wall" source="the stone wall" target="Her Pepperup potion">
-<data key="keyEdge">8.0</data>
 </edge>
 </graph>
 </graphml>

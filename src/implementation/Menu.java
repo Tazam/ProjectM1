@@ -161,7 +161,7 @@ public class Menu {
 			pipeline.annotate(document);
 			 // OUTPUT
 		    PrintWriter out = new PrintWriter("output.txt");
-			PrintWriter xmlOut = new PrintWriter("outpuc.xml");
+			///PrintWriter xmlOut = new PrintWriter("outpuc.xml");
 			 // create annotation object for output
 		    Annotation annotation = new Annotation(content);
 		
@@ -170,15 +170,17 @@ public class Menu {
 		    
 		    // print result on a file
 		    pipeline.prettyPrint(annotation, out );
-		    pipeline.prettyPrint(annotation, xmlOut);
+		   // pipeline.prettyPrint(annotation, xmlOut);
 			sc.close();
 			
 			Graph graph = new Graph();
-			graph.setName("graphTest1");
-			Windowing w = new Windowing(document,graph,true,"sentence","sliding",1);
+			graph.setName("graphTestSEQ");
+			Windowing w = new Windowing(document,graph,true,"SENTENCE","SEQUENTIAL",20);
 			w.MainWork();
 			//w.testCorefByToken();
 			graph.graphMLPrinter();
+			
+			//w.test2();
 			
 			
 		}
