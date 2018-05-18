@@ -40,8 +40,17 @@ public class QuoteComparator {
 	
 	public BasicStats compareFiles() throws IOException
 	{			
-		List<Pair<Integer, Integer>> stanfordQuotes = QuoteUtils.getStanfordQuotes(new File("corpus/Coraline.txt"));
-		List<Pair<Integer, Integer>> referenceQuotes = QuoteUtils.annotationLoader(new File("performance/quote/TextBaseCoraline.xml"));
+		//List<Pair<Integer, Integer>> stanfordQuotes = QuoteUtils.getStanfordQuotes(new File("corpus/Coraline.txt"));
+		//List<Pair<Integer, Integer>> referenceQuotes = QuoteUtils.annotationLoader(new File("performance/quote/TextBaseCoraline.xml"));
+		List<Pair<Integer, Integer>> stanfordQuotes = QuoteUtils.getStanfordQuotes(new File("corpus/Hp.txt"));
+		List<Pair<Integer, Integer>> referenceQuotes = QuoteUtils.annotationLoader(new File("performance/quote/TextBaseHp.xml"));
+		//List<Pair<Integer, Integer>> stanfordQuotes = QuoteUtils.getStanfordQuotes(new File("corpus/Coraline2.txt"));
+		//List<Pair<Integer, Integer>> referenceQuotes = QuoteUtils.annotationLoader(new File("performance/quote/TextBaseCoraline2.xml"));
+
+		//List<Pair<Integer, Integer>> stanfordQuotes = QuoteUtils.getStanfordQuotes(new File("corpus/Oz.txt"));
+		//List<Pair<Integer, Integer>> referenceQuotes = QuoteUtils.annotationLoader(new File("performance/quote/TextBaseOz.xml"));
+
+				
 		compareFile(stanfordQuotes, referenceQuotes);
 		displayQuotes(stanfordQuotes);
 		System.out.println("-----");
