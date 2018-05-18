@@ -1,0 +1,62 @@
+<entity>
+	<quote name="quote1">
+			<open>169</open>
+			<close>186</close>
+	</quote>
+	<quote name="quote2">
+			<open>236</open>
+			<close>243</close>
+	</quote>	
+	<quote name="quote3">
+			<open>259</open>
+			<close>274</close>
+	</quote>	
+	<quote name="quote4">
+			<open>275</open>
+			<close>281</close>
+	</quote>		
+	<quote name="quote5">
+			<open>299</open>
+			<close>321</close>
+	</quote>
+	<quote name="quote6">
+			<open>322</open>
+			<close>327</close>
+	</quote>	
+	<quote name="quote7">
+			<open>343</open>
+			<close>381</close>
+	</quote>		
+	<quote name="quote8">
+			<open>382</open>
+			<close>410</close>
+	</quote>	
+	<quote name="quote9">
+			<open>411</open>
+			<close>480</close>
+	</quote>			
+	<quote name="quote10">
+			<open>481</open>
+			<close>492</close>
+	</quote>
+	<quote name="quote11">
+			<open>493</open>
+			<close>528</close>
+	</quote>
+	<quote name="quote12">
+			<open>529</open>
+			<close>553</close>
+	</quote>
+	<quote name="quote13">
+			<open>576</open>
+			<close>752</close>
+	</quote>	
+	<quote name="quote14">
+			<open>753</open>
+			<close>786</close>
+	</quote>		
+	<quote name="quote15">
+			<open>1005</open>
+			<close>1062</close>
+	</quote>					
+</entity>

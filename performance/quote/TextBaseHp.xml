@@ -1,0 +1,18 @@
+<entity>
+	<quote name="quote1">
+			<open>114</open>
+			<close>137</close>
+	</quote>
+	<quote name="quote2">
+			<open>548</open>
+			<close>583</close>
+	</quote>	
+	<quote name="quote3">
+			<open>650</open>
+			<close>667</close>
+	</quote>	
+	<quote name="quote4">
+			<open>679</open>
+			<close>697</close>
+	</quote>							
+</entity>
