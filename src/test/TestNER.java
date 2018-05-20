@@ -3,6 +3,7 @@
  */
 package test;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.List;
 import java.util.Properties;
@@ -14,10 +15,12 @@ import edu.stanford.nlp.ling.CoreLabel;
 import edu.stanford.nlp.ling.CoreAnnotations.NamedEntityTagAnnotation;
 import edu.stanford.nlp.ling.CoreAnnotations.NormalizedNamedEntityTagAnnotation;
 import edu.stanford.nlp.ling.CoreAnnotations.SentencesAnnotation;
+import edu.stanford.nlp.pipeline.Annotation;
 import edu.stanford.nlp.pipeline.CoreDocument;
 import edu.stanford.nlp.pipeline.CoreSentence;
 import edu.stanford.nlp.pipeline.StanfordCoreNLP;
 import edu.stanford.nlp.util.CoreMap;
+import performance.coref.CorefUtils;
 import performance.ner.NERUtils;
 
 /**
@@ -27,7 +30,7 @@ import performance.ner.NERUtils;
 public class TestNER {
 	//NamedEntityTagAnnotation.class
 	public static void main(String[] args) throws IOException {
-		
+		/*
 		String text="Joe Smith was born in California. " +
 			      "In 2017, he went to Paris, France in the summer. " +
 			      "His flight left at 3:00pm on July 10th, 2017. " +
@@ -58,7 +61,18 @@ public class TestNER {
 	    
 	    System.out.println("NORM : "+document.annotation().get(NormalizedNamedEntityTagAnnotation.class));
 	    //document.annotation().get(NamedEntityTagAnnotation.class);
+		*/
+		File file = new File("corpus/bnw_page1.txt");
+		try {
+			Annotation a = NERUtils.getCleanAnnotation(file);
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 		
 	    }
-	
+		
+		
+		
 }

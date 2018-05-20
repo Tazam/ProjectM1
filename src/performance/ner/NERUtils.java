@@ -40,6 +40,7 @@ import performance.ssplit.SsplitUtils;
  *
  */
 public class NERUtils {
+	
 	public static Annotation getCleanAnnotation(File file) throws IOException, ClassNotFoundException
 	{
 		Annotation annotation = SsplitUtils.getCleanAnnotation(file);
@@ -47,7 +48,7 @@ public class NERUtils {
 		// On retrouve le fichier de référence à partir du nom du fichier du corpus.
 		// Corpus : corpus.txt => Référence : corpus_reference.txt
 		String fileName = FilenameUtils.removeExtension(file.getName());
-		String referencePath = Consts.NER_PATH + File.separator + fileName + Consts.REFERENCE_EXTENSION;
+		String referencePath = Consts.NER_PATH + File.separator + fileName + Consts.XML_REFERENCE_EXTENSION;
 		File referenceFile = new File(referencePath);
 		NERCombinerAnnotatorCustom custom = new NERCombinerAnnotatorCustom(true);
 		custom.annotateCustom(annotation, getMapTokenNerCustom(referenceFile));
