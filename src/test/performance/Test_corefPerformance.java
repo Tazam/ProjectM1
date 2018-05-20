@@ -19,13 +19,14 @@ public class Test_corefPerformance
 		//props.setProperty("coref.algorithm", "statistical");
 		CorefChainComparator comparator = new CorefChainComparator(props);
 		
-		File file = new File("corpus\\dadoes_page82.txt");
-		AnnotationHelper.textAnnotationHelper(file);
+		//File file = new File("corpus\\Coraline.txt");
+		//AnnotationHelper.helperPrint(file);
+		//AnnotationHelper.textAnnotationHelper(file);
 	
-		/*Stats stats1 = comparator.compareFiles_MUC();
-		Stats stats2 = comparator.compareFiles_BCUBE();
-		Stats stats3 = comparator.compareFiles_CEAF(Similarity.SIMPLE);
-		Stats stats4 = comparator.compareFiles_CEAF(Similarity.ADVANCED);
+		Stats stats1 = comparator.compareFiles_MUC(false);
+		Stats stats2 = comparator.compareFiles_BCUBE(false);
+		Stats stats3 = comparator.compareFiles_CEAF(Similarity.SIMPLE, false);
+		Stats stats4 = comparator.compareFiles_CEAF(Similarity.ADVANCED, false);
 		float avg = stats1.getFMeasure() + stats2.getFMeasure() + stats3.getFMeasure() + stats4.getFMeasure();
 		avg /= (float)4;
 		
@@ -49,7 +50,7 @@ public class Test_corefPerformance
 		System.out.println("Recall : " + stats4.getRecall());
 		System.out.println("f-mesure : " + stats4.getFMeasure());
 				
-		System.out.println("f-measure average : " + avg);*/
+		System.out.println("f-measure average : " + avg);
 		
 	}
 }

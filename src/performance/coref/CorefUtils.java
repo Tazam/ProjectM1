@@ -42,6 +42,7 @@ import edu.stanford.nlp.util.IntPair;
 import edu.stanford.nlp.util.IntTuple;
 import performance.Consts;
 import performance.coref.customannotators.CorefAnnotatorCustom;
+import performance.ner.NERUtils;
 import performance.ssplit.SsplitUtils;
 import java.util.Properties;
 
@@ -74,28 +75,20 @@ public class CorefUtils
 	private static CorefAnnotator coref = null;
 	private static CorefAnnotatorCustom corefCustom = null;
 	
-	// Construit l'annotation requise en entrée de coref sur un texte du corpus
-	// Pour ce faire, on récupère l'annotation nettoyée
-	// de NER, puis on ajoute Parser et Deparser de base de Stanford, car ces annotateurs là ne sont pas
-	// évalués par nous
+	
+
+	
 	public static Annotation getInitAnnotation(File file) throws IOException, ClassNotFoundException
 	{
 		// En attendant (pos, lemma et ner seront "inclus" dans la version nettoyée de ner):
 		if(initAnnotators == true)
 		{
 			initAnnotators = false;
-			
-			pos = new POSTaggerAnnotator();
-			lemma = new MorphaAnnotator();
-			ner = new NERCombinerAnnotator(false);
-			
+					
 			parser = new ParserAnnotator(false, -1);
 			deparser = new DependencyParseAnnotator();
 		}
-		Annotation annotation = SsplitUtils.getCleanAnnotation(file);
-		pos.annotate(annotation);
-		lemma.annotate(annotation);
-		ner.annotate(annotation);
+		Annotation annotation = NERUtils.getCleanAnnotation(file);
 
 		// Cette ligne devra être ajoutée lors de l'intégration du NER Propre
 		//Annotation annotation = NerUtils.getAnnotationCleaned(file);
@@ -110,22 +103,18 @@ public class CorefUtils
 		{
 			initAnnotators = false;
 			
-			tokenizer = new TokenizerAnnotator();
-			ssplit = new WordsToSentencesAnnotator();
 			pos = new POSTaggerAnnotator();
 			lemma = new MorphaAnnotator();
 			ner = new NERCombinerAnnotator(false);
 			parser = new ParserAnnotator(false, -1);
 			deparser = new DependencyParseAnnotator();
 		}
-		FileInputStream is = new FileInputStream(file);     
-		String content = IOUtils.toString(is, "UTF-8");
-		Annotation annotation = new Annotation(content);
-		tokenizer.annotate(annotation);
-		ssplit.annotate(annotation);
+		Annotation annotation = SsplitUtils.getCleanAnnotation(file);
 		pos.annotate(annotation);
 		lemma.annotate(annotation);
 		ner.annotate(annotation);
+		parser.annotate(annotation);
+		deparser.annotate(annotation);
 		
 		return annotation;
 	}
@@ -166,6 +155,8 @@ public class CorefUtils
 		
 		return annotation;
 	}
+	
+
 	
 	// Renvoie les chaînes de coréférence générées par l'annotateur de Stanford
 	// mais filtre pour ne garder que les chaînes qui représentent des personnes
