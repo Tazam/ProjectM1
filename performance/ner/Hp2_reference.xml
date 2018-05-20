@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<document>
+	<entity name="sentence_1">
+		<character>
+			<text>Scabbers</text>
+			<sent>1</sent>
+			<position>13</position>
+		</character>
+		<character>
+			<text>Ron</text>
+			<sent>1</sent>
+			<position>20</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_2">
+		<character>
+			<text>Black</text>
+			<sent>2</sent>
+			<position>8</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_4">
+		<character>
+			<text>Remus</text>
+			<sent>4</sent>
+			<position>6</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_6">
+		<character>
+			<text>Ron</text>
+			<sent>6</sent>
+			<position>12</position>
+		</character>
+		<character>
+			<text>Harry</text>
+			<sent>6</sent>
+			<position>18</position>
+		</character>
+		<character>
+			<text>Hermione</text>
+			<sent>6</sent>
+			<position>20</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_9">
+		<character>
+			<text>Lupin</text>
+			<sent>9</sent>
+			<position>13</position>
+		</character>
+		<character>
+			<text>Scabbers</text>
+			<sent>9</sent>
+			<position>24</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_10">
+		<character>
+			<text>Ron</text>
+			<sent>10</sent>
+			<position>10</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_11">
+		<character>
+			<text>Peter</text>
+			<sent>11</sent>
+			<position>8</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_12">
+		<character>
+			<text>PETER</text>
+			<sent>12</sent>
+			<position>5</position>
+		</character>
+		<character>
+			<text>SCABBERS</text>
+			<sent>12</sent>
+			<position>9</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_13">
+		<character>
+			<text>Ron</text>
+			<sent>13</sent>
+			<position>1</position>
+		</character>
+		<character>
+			<text>Scabbers</text>
+			<sent>13</sent>
+			<position>16</position>
+		</character>
+		<character>
+			<text>Ron</text>
+			<sent>13</sent>
+			<position>22</position>
+		</character>
+		<character>
+			<text>Harry</text>
+			<sent>13</sent>
+			<position>28</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_14">
+		<character>
+			<text>Black</text>
+			<sent>14</sent>
+			<position>4</position>
+		</character>
+		<character>
+			<text>Harry</text>
+			<sent>14</sent>
+			<position>6</position>
+		</character>
+		<character>
+			<text>Lupin</text>
+			<sent>14</sent>
+			<position>9</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_15">
+		<character>
+			<text>Pettigrew</text>
+			<sent>15</sent>
+			<position>6</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_18">
+		<character>
+			<text>Black</text>
+			<sent>18</sent>
+			<position>2</position>
+		</character>
+		<character>
+			<text>Scabbers</text>
+			<sent>18</sent>
+			<position>7</position>
+		</character>
+		<character>
+			<text>Ron</text>
+			<sent>18</sent>
+			<position>10</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_19">
+		<character>
+			<text>Sirius</text>
+			<sent>19</sent>
+			<position>4</position>
+		</character>
+		<character>
+			<text>Peter</text>
+			<sent>19</sent>
+			<position>6</position>
+		</character>
+		<character>
+			<text>Lupin</text>
+			<sent>19</sent>
+			<position>10</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_21">
+		<character>
+			<text>Peter</text>
+			<sent>21</sent>
+			<position>9</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_22">
+		<character>
+			<text>Ron</text>
+			<sent>22</sent>
+			<position>1</position>
+		</character>
+		<character>
+			<text>Harry</text>
+			<sent>22</sent>
+			<position>6</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_23">
+		<character>
+			<text>Harry</text>
+			<sent>23</sent>
+			<position>1</position>
+		</character>
+		<character>
+			<text>Ron</text>
+			<sent>23</sent>
+			<position>5</position>
+		</character>
+		<character>
+			<text>Black</text>
+			<sent>23</sent>
+			<position>18</position>
+		</character>
+		<character>
+			<text>Lupin</text>
+			<sent>23</sent>
+			<position>20</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_25">
+		<character>
+			<text>Scabbers</text>
+			<sent>25</sent>
+			<position>3</position>
+		</character>
+		<character>
+			<text>Peter</text>
+			<sent>25</sent>
+			<position>5</position>
+		</character>
+		<character>
+			<text>Pettigrew</text>
+			<sent>25</sent>
+			<position>6</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_26">
+		<character>
+			<text>Black</text>
+			<sent>26</sent>
+			<position>5</position>
+		</character>
+		<character>
+			<text>Lupin</text>
+			<sent>25</sent>
+			<position>12</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_27">
+		<character>
+			<text>Hermione</text>
+			<sent>27</sent>
+			<position>2</position>
+		</character>
+		<character>
+			<text>Lupin</text>
+			<sent>27</sent>
+			<position>22</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_28">
+		<character>
+			<text>Lupin</text>
+			<sent>28</sent>
+			<position>4</position>
+		</character>
+		<character>
+			<text>Scabbers</text>
+			<sent>28</sent>
+			<position>6</position>
+		</character>
+		<character>
+			<text>Pettigrew</text>
+			<sent>28</sent>
+			<position>10</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_30">
+		<character>
+			<text>Lupin</text>
+			<sent>30</sent>
+			<position>1</position>
+		</character>
+		<character>
+			<text>Hermione</text>
+			<sent>30</sent>
+			<position>13</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_31">
+		<character>
+			<text>Peter</text>
+			<sent>31</sent>
+			<position>9</position>
+		</character>
+		<character>
+			<text>Pettigrew</text>
+			<sent>31</sent>
+			<position>10</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_32">
+		<character>
+			<text>McGonagall</text>
+			<sent>32</sent>
+			<position>8</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_33">
+		<character>
+			<text>McGonagall</text>
+			<sent>33</sent>
+			<position>49</position>
+		</character>
+		<character>
+			<text>Pettigrew</text>
+			<sent>33</sent>
+			<position>66</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_34">
+		<character>
+			<text>Harry</text>
+			<sent>34</sent>
+			<position>1</position>
+		</character>
+		<character>
+			<text>Hermione</text>
+			<sent>34</sent>
+			<position>12</position>
+		</character>
+		<character>
+			<text>Lupin</text>
+			<sent>34</sent>
+			<position>19</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_35">
+		<character>
+			<text>Hermione</text>
+			<sent>35</sent>
+			<position>5</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_38">
+		<character>
+			<text>Remus</text>
+			<sent>38</sent>
+			<position>17</position>
+		</character>
+		<character>
+			<text>Black</text>
+			<sent>38</sent>
+			<position>21</position>
+		</character>
+		<character>
+			<text>Scabbers</text>
+			<sent>38</sent>
+			<position>27</position>
+		</character>
+	</entity>
+
+
+
+</document>

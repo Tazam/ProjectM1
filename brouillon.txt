@@ -1,0 +1,6 @@
+\paragraph{Sentence Splitting.}
+\label{trtmt:SentenceSplit}
+Cette étape consiste à découper le document en phrases, en regroupant des tokens du document. En général, on reconnaît les différentes phrases grâce à la ponctuation : une phrase se termine par un point (cela inclut aussi les points d'exclamation et d'interrogation). Pour le texte de référence, le résultat obtenu pour les trois premières phrases sera : \\
+\textsc{Joe Smith was born in California.}\\
+\textsc{In 2017, he went to Paris, France in the summer.}\\
+\textsc{His flight left at 3:00pm on July 10th, 2017.}\\ ...

@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<document>
+	<entity name="sentence_6">
+		<character>
+			<text>Director</text>
+			<sent>6</sent>
+			<position>8</position>
+		</character>
+	</entity>
+	
+	<entity name="sentence_7">
+		<character>
+			<text>Director</text>
+			<sent>7</sent>
+			<position>14</position>
+		</character>
+	</entity>
+	
+	<entity name="sentence_8">
+		<character>
+			<text>Director</text>
+			<sent>8</sent>
+			<position>23</position>
+		</character>
+	</entity>
+	
+	<entity name="sentence_22">
+		<character>
+			<text>Director</text>
+			<sent>22</sent>
+			<position>9</position>
+		</character>
+	</entity>
+</document>

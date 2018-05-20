@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<document>
+	<entity name="sentence_1">
+		<character>
+			<text>Isidore</text>
+			<sent>1</sent>
+			<position>1</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_18">
+		<character>
+			<text>Mercer</text>
+			<sent>18</sent>
+			<position>1</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_25">
+		<character>
+			<text>Mercer</text>
+			<sent>25</sent>
+			<position>1</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_26">
+		<character>
+			<text>Mercer</text>
+			<sent>26</sent>
+			<position>18</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_27">
+		<character>
+			<text>Mercer</text>
+			<sent>27</sent>
+			<position>7</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_28">
+		<character>
+			<text>Crawl</text>
+			<sent>28</sent>
+			<position>1</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_29">
+		<character>
+			<text>Mercer</text>
+			<sent>29</sent>
+			<position>3</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_30">
+		<character>
+			<text>Mercer</text>
+			<sent>30</sent>
+			<position>6</position>
+		</character>
+	</entity>
+
+
+</document>

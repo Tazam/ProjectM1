@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<document>
+	<entity name="sentence_1">
+		<character>
+			<text>Coraline</text>
+			<sent>1</sent>
+			<position>11</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_4">
+		<character>
+			<text>Coraline</text>
+			<sent>4</sent>
+			<position>1</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_6">
+		<character>
+			<text>Spink</text>
+			<sent>6</sent>
+			<position>2</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_12">
+		<character>
+			<text>Coraline</text>
+			<sent>12</sent>
+			<position>2</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_13">
+		<character>
+			<text>Spink</text>
+			<sent>13</sent>
+			<position>2</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_16">
+		<character>
+			<text>Coraline</text>
+			<sent>16</sent>
+			<position>1</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_17">
+		<character>
+			<text>Forcible</text>
+			<sent>17</sent>
+			<position>15</position>
+		</character>
+		<character>
+			<text>Spink</text>
+			<sent>17</sent>
+			<position>28</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_18">
+		<character>
+			<text>Spink</text>
+			<sent>18</sent>
+			<position>6</position>
+		</character>
+		<character>
+			<text>Caroline</text>
+			<sent>18</sent>
+			<position>8</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_19">
+		<character>
+			<text>Coraline</text>
+			<sent>19</sent>
+			<position>1</position>
+		</character>
+		<character>
+			<text>Spink</text>
+			<sent>19</sent>
+			<position>11</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_20">
+		<character>
+			<text>Forcible</text>
+			<sent>20</sent>
+			<position>28</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_22">
+		<character>
+			<text>Coraline</text>
+			<sent>22</sent>
+			<position>9</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_23">
+		<character>
+			<text>Forcible</text>
+			<sent>23</sent>
+			<position>12</position>
+		</character>
+	</entity>
+
+</document>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<document>
+	<entity name="sentence_1">
+		<character>
+			<text>Horace</text>
+			<sent>1</sent>
+			<position>28</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_3">
+		<character>
+			<text>Isidore</text>
+			<sent>3</sent>
+			<position>9</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_4">
+		<character>
+			<text>Isidore</text>
+			<sent>4</sent>
+			<position>3</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_10">
+		<character>
+			<text>Isidore</text>
+			<sent>10</sent>
+			<position>1</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_13">
+		<character>
+			<text>Sloat</text>
+			<sent>13</sent>
+			<position>11</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_16">
+		<character>
+			<text>Sloat</text>
+			<sent>16</sent>
+			<position>11</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_19">
+		<character>
+			<text>John</text>
+			<sent>19</sent>
+			<position>4</position>
+		</character>
+		<character>
+			<text>Isodore</text>
+			<sent>19</sent>
+			<position>5</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_20">
+		<character>
+			<text>Isodore</text>
+			<sent>20</sent>
+			<position>13</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_23">
+		<character>
+			<text>Milt</text>
+			<sent>23</sent>
+			<position>8</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_25">
+		<character>
+			<text>Horace</text>
+			<sent>25</sent>
+			<position>6</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_26">
+		<character>
+			<text>Horace</text>
+			<sent>26</sent>
+			<position>11</position>
+		</character>
+		<character>
+			<text>Wheelright</text>
+			<sent>26</sent>
+			<position>15</position>
+		</character>
+		<character>
+			<text>Carpenter</text>
+			<sent>26</sent>
+			<position>17</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_28">
+		<character>
+			<text>Isodore</text>
+			<sent>28</sent>
+			<position>7</position>
+		</character>
+		<character>
+			<text>Sloat</text>
+			<sent>28</sent>
+			<position>14</position>
+		</character>
+	</entity>
+
+		<entity name="sentence_29">
+		<character>
+			<text>Wheelright</text>
+			<sent>29</sent>
+			<position>15</position>
+		</character>
+		<character>
+			<text>Carpenter</text>
+			<sent>29</sent>
+			<position>17</position>
+		</character>
+		<character>
+			<text>Pilsen</text>
+			<sent>29</sent>
+			<position>21</position>
+		</character>
+	</entity>
+
+
+
+</document>

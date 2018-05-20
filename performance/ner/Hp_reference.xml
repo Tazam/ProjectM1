@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<document>
+	<entity name="sentence_1">
+		<character>
+			<text>Percy</text>
+			<sent>1</sent>
+			<position>1</position>
+		</character>
+		<character>
+			<text>Ginny</text>
+			<sent>1</sent>
+			<position>3</position>
+		</character>
+		<character>
+			<text>Harry</text>
+			<sent>1</sent>
+			<position>7</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_3">
+		<character>
+			<text>Penelope</text>
+			<sent>3</sent>
+			<position>6</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_4">
+		<character>
+			<text>Percy</text>
+			<sent>4</sent>
+			<position>2</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_5">
+		<character>
+			<text>Ginny</text>
+			<sent>5</sent>
+			<position>1</position>
+		</character>
+		<character>
+			<text>Harry</text>
+			<sent>5</sent>
+			<position>3</position>
+		</character>
+		<character>
+			<text>Percy</text>
+			<sent>5</sent>
+			<position>17</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_7">
+		<character>
+			<text>Weasley</text>
+			<sent>7</sent>
+			<position>13</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_8">
+		<character>
+			<text>Harry</text>
+			<sent>8</sent>
+			<position>12</position>
+		</character>
+		<character>
+			<text>Ron</text>
+			<sent>8</sent>
+			<position>15</position>
+		</character>
+		<character>
+			<text>Hermione</text>
+			<sent>8</sent>
+			<position>17</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_9">
+		<character>
+			<text>Ginny</text>
+			<sent>9</sent>
+			<position>5</position>
+		</character>
+		<character>
+			<text>Ron</text>
+			<sent>8</sent>
+			<position>9</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_10">
+		<character>
+			<text>Ginny</text>
+			<sent>10</sent>
+			<position>10</position>
+		</character>
+	</entity>
+
+		<entity name="sentence_11">
+		<character>
+			<text>Harry</text>
+			<sent>11</sent>
+			<position>1</position>
+		</character>
+		<character>
+			<text>Ron</text>
+			<sent>11</sent>
+			<position>3</position>
+		</character>
+		<character>
+			<text>Hermione</text>
+			<sent>11</sent>
+			<position>6</position>
+		</character>
+	</entity>
+
+
+</document>

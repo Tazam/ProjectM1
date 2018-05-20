@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<document>
+	<entity name="sentence_1">
+		<character>
+			<text>Coraline</text>
+			<sent>1</sent>
+			<position>1</position>
+		</character>
+	</entity>
+	
+	<entity name="sentence_4">
+		<character>
+			<text>Coraline</text>
+			<sent>4</sent>
+			<position>2</position>
+		</character>
+	</entity>
+	
+	<entity name="sentence_5">
+		<character>
+			<text>Coraline</text>
+			<sent>5</sent>
+			<position>6</position>
+		</character>
+	</entity>
+	
+	<entity name="sentence_9">
+		<character>
+			<text>Coraline</text>
+			<sent>9</sent>
+			<position>6</position>
+		</character>
+	</entity>
+	
+	<entity name="sentence_13">
+		<character>
+			<text>Coraline</text>
+			<sent>13</sent>
+			<position>14</position>
+		</character>
+		<character>
+			<text>Jones</text>
+			<sent>13</sent>
+			<position>15</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_23">
+		<character>
+			<text>Joneses</text>
+			<sent>23</sent>
+			<position>8</position>
+		</character>
+		<character>
+			<text>Coraline</text>
+			<sent>23</sent>
+			<position>17</position>
+		</character>
+	</entity>
+
+		<entity name="sentence_24">
+		<character>
+			<text>Coraline</text>
+			<sent>24</sent>
+			<position>1</position>
+		</character>
+	</entity>
+
+		<entity name="sentence_28">
+		<character>
+			<text>Coraline</text>
+			<sent>28</sent>
+			<position>1</position>
+		</character>
+	</entity>
+</document>

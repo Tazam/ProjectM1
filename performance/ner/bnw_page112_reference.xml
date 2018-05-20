@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<document>
+	<entity name="sentence_12">
+		<character>
+			<text>Henry</text>
+			<sent>12</sent>
+			<position>2</position>
+		</character>
+	</entity>
+	
+	<entity name="sentence_12">
+		<character>
+			<text>Henry</text>
+			<sent>12</sent>
+			<position>4</position>
+		</character>
+	</entity>
+</document>
