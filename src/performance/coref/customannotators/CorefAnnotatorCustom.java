@@ -174,13 +174,13 @@ public class CorefAnnotatorCustom extends TextAnnotationCreator implements Annot
       setNamedEntityTagGranularity(annotation, "fine");
     }
     // attempt to link ner derived entity mentions to representative entity mentions
-    for (CoreMap entityMention : annotation.get(CoreAnnotations.MentionsAnnotation.class)) {
+    /*for (CoreMap entityMention : annotation.get(CoreAnnotations.MentionsAnnotation.class)) {
       Optional<CoreMap> bestCoreferentEntityMention = findBestCoreferentEntityMention(entityMention, annotation);
       if (bestCoreferentEntityMention.isPresent()) {
         entityMention.set(CoreAnnotations.CanonicalEntityMentionIndexAnnotation.class,
             bestCoreferentEntityMention.get().get(CoreAnnotations.EntityMentionIndexAnnotation.class));
       }
-    }
+    }*/
   }
 
   public static List<Pair<IntTuple, IntTuple>> getLinks(Map<Integer, CorefChain> result) {
