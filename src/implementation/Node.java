@@ -3,6 +3,8 @@
  */
 package implementation;
 
+import java.util.Optional;
+
 /**
  * @author Schmidt Gaëtan
  *
@@ -27,6 +29,20 @@ public class Node {
 		this.weight = weight;
 	}
 	
+	/**
+	 * @param canonicalSpeaker
+	 * @param canonicalSpeaker2
+	 * @param i
+	 */
+	public Node(Optional<String> id, Optional<String> name, int weight) {
+		if (id.isPresent()&&name.isPresent())
+		{
+			this.id = id.get();
+			this.name = name.get();
+			this.weight = weight;
+		}
+	}
+
 	public String getId()
 	{
 		return this.id;

@@ -175,9 +175,12 @@ public class Menu {
 			
 			Graph graph = new Graph();
 			graph.setName("graphTestSEQ");
-			Windowing w = new Windowing(document,graph,true,"SENTENCE","SEQUENTIAL",20);
-			w.MainWork();
+			//Windowing w = new Windowing(document,graph,true,"SENTENCE","SEQUENTIAL",20);
+			//w.MainWork();
 			//w.testCorefByToken();
+			Mention m = new Mention(document,graph,true,true);
+			m.MainWork();
+			
 			graph.graphMLPrinter();
 			
 			//w.test2();

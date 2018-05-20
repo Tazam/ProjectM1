@@ -17,4 +17,5 @@ public final class Consts
 	
 	public static final String SSPLIT_PATH = PERFORMANCE_PATH + File.separator + "ssplit";
 	public static final String COREF_PATH = PERFORMANCE_PATH + File.separator + "coref";
+	public static final String NER_PATH = PERFORMANCE_PATH + File.separator + "ner";
 }

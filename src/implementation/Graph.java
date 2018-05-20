@@ -107,7 +107,13 @@ public class Graph {
 		buffer.write("</key>");
 		buffer.write("<key id=\"keyEdge\" for=\"edge\" attr.name=\"weight\" attr.type=\"float\"/>");
 		buffer.newLine();
-		buffer.write("<graph id=\""+this.name+"\" edgedefault=\"undirected\">");
+		if (this.edgeMap.get(0).isOreinted())
+		{
+			buffer.write("<graph id=\""+this.name+"\" edgedefault=\"directed\">");
+		}else
+		{
+			buffer.write("<graph id=\""+this.name+"\" edgedefault=\"undirected\">");
+		}
 		buffer.newLine();
 		
 		for (Node node : this.nodeMap.values())

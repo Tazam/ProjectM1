@@ -71,7 +71,7 @@ public class Windowing implements RelationshipExtractionMethod {
 	 * 
 	 * @author Schmidt Gaëtan
 	 */
-	private void windowing1()
+	private void coref1()
 	{
 		List<CoreSentence> sentences = document.sentences();
 		Map<String,Node> charMap = new HashMap<String, Node>();		
@@ -98,7 +98,7 @@ public class Windowing implements RelationshipExtractionMethod {
 						// si il n'a pas de coréférence on ajoute un neud.
 						if (corefEntity == null)
 						{
-							Node n = new Node(token.word(),token.word(),1);
+							Node n = new Node(token.word(),token.word(),0);
 							charMap.put(n.id, n);
 						}else // sinon,
 						{
@@ -114,7 +114,7 @@ public class Windowing implements RelationshipExtractionMethod {
 										charMap.get(mentionV.mentionSpan).addWeight(1);
 								}else
 								{
-									Node n = new Node(mentionV.mentionSpan,mentionV.mentionSpan,1);
+									Node n = new Node(mentionV.mentionSpan,mentionV.mentionSpan,0);
 									charMap.put(n.id, n);
 								}
 							}
@@ -136,7 +136,7 @@ public class Windowing implements RelationshipExtractionMethod {
 										charMap.get(mentionV.mentionSpan).addWeight(1);
 								}else
 								{
-								Node n = new Node(mentionV.mentionSpan,mentionV.mentionSpan,1);
+								Node n = new Node(mentionV.mentionSpan,mentionV.mentionSpan,0);
 								charMap.put(n.id, n);
 								}
 							}
@@ -158,7 +158,7 @@ public class Windowing implements RelationshipExtractionMethod {
 				{
 					if (nodeL.equals(nodeR))
 						continue;
-					Edge edge = new Edge(nodeL.id,nodeL,nodeR,false,1);
+					Edge edge = new Edge(nodeL.id,nodeL,nodeR,false,nodeL.weight+nodeR.weight);
 					if (!linkList.contains(edge)&&!containInverseLink(linkList,edge))
 					{
 						linkList.add(edge);

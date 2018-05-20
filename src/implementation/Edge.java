@@ -3,6 +3,8 @@
  */
 package implementation;
 
+import java.util.Optional;
+
 /**
  * @author Schmidt Gaëtan
  *
@@ -33,6 +35,23 @@ public class Edge {
 		this.ponderation = ponderation;
 	}
 	
+	/**
+	 * @param canonicalSpeaker
+	 * @param node
+	 * @param nodeR
+	 * @param weight
+	 */
+	public Edge(Optional<String> id, Node nodeLeft, Node nodeRight, boolean oriented, float ponderation) {
+		if (id.isPresent())
+		{
+			this.id = id.get();
+			this.nodeLeft = nodeLeft;
+			this.nodeRight = nodeRight;
+			this.oriented = oriented;
+			this.ponderation = ponderation;
+		}
+	}
+
 	public String getId()
 	{
 		return this.id;

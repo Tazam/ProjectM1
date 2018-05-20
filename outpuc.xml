@@ -1,0 +1,269 @@
+
+Sentence #1 (7 tokens):
+Joe Smith was born in California.
+
+Tokens:
+[Text=Joe CharacterOffsetBegin=0 CharacterOffsetEnd=3 PartOfSpeech=NNP Lemma=Joe NamedEntityTag=PERSON]
+[Text=Smith CharacterOffsetBegin=4 CharacterOffsetEnd=9 PartOfSpeech=NNP Lemma=Smith NamedEntityTag=PERSON]
+[Text=was CharacterOffsetBegin=10 CharacterOffsetEnd=13 PartOfSpeech=VBD Lemma=be NamedEntityTag=O]
+[Text=born CharacterOffsetBegin=14 CharacterOffsetEnd=18 PartOfSpeech=VBN Lemma=bear NamedEntityTag=O]
+[Text=in CharacterOffsetBegin=19 CharacterOffsetEnd=21 PartOfSpeech=IN Lemma=in NamedEntityTag=O]
+[Text=California CharacterOffsetBegin=22 CharacterOffsetEnd=32 PartOfSpeech=NNP Lemma=California NamedEntityTag=STATE_OR_PROVINCE]
+[Text=. CharacterOffsetBegin=32 CharacterOffsetEnd=33 PartOfSpeech=. Lemma=. NamedEntityTag=O]
+
+Dependency Parse (enhanced plus plus dependencies):
+root(ROOT-0, born-4)
+compound(Smith-2, Joe-1)
+nsubjpass(born-4, Smith-2)
+auxpass(born-4, was-3)
+case(California-6, in-5)
+nmod:in(born-4, California-6)
+punct(born-4, .-7)
+
+Extracted the following NER entity mentions:
+Joe Smith	PERSON
+California	STATE_OR_PROVINCE
+
+Sentence #2 (13 tokens):
+In 2017, he went to Paris, France in the summer.
+
+Tokens:
+[Text=In CharacterOffsetBegin=34 CharacterOffsetEnd=36 PartOfSpeech=IN Lemma=in NamedEntityTag=O]
+[Text=2017 CharacterOffsetBegin=37 CharacterOffsetEnd=41 PartOfSpeech=CD Lemma=2017 NamedEntityTag=DATE NormalizedNamedEntityTag=2017]
+[Text=, CharacterOffsetBegin=41 CharacterOffsetEnd=42 PartOfSpeech=, Lemma=, NamedEntityTag=O]
+[Text=he CharacterOffsetBegin=43 CharacterOffsetEnd=45 PartOfSpeech=PRP Lemma=he NamedEntityTag=O]
+[Text=went CharacterOffsetBegin=46 CharacterOffsetEnd=50 PartOfSpeech=VBD Lemma=go NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=51 CharacterOffsetEnd=53 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=Paris CharacterOffsetBegin=54 CharacterOffsetEnd=59 PartOfSpeech=NNP Lemma=Paris NamedEntityTag=CITY]
+[Text=, CharacterOffsetBegin=59 CharacterOffsetEnd=60 PartOfSpeech=, Lemma=, NamedEntityTag=O]
+[Text=France CharacterOffsetBegin=61 CharacterOffsetEnd=67 PartOfSpeech=NNP Lemma=France NamedEntityTag=COUNTRY]
+[Text=in CharacterOffsetBegin=68 CharacterOffsetEnd=70 PartOfSpeech=IN Lemma=in NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=71 CharacterOffsetEnd=74 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=summer CharacterOffsetBegin=75 CharacterOffsetEnd=81 PartOfSpeech=NN Lemma=summer NamedEntityTag=DATE NormalizedNamedEntityTag=summer ]
+[Text=. CharacterOffsetBegin=81 CharacterOffsetEnd=82 PartOfSpeech=. Lemma=. NamedEntityTag=O]
+
+Dependency Parse (enhanced plus plus dependencies):
+root(ROOT-0, went-5)
+case(2017-2, In-1)
+nmod:in(went-5, 2017-2)
+punct(went-5, ,-3)
+nsubj(went-5, he-4)
+case(Paris-7, to-6)
+nmod:to(went-5, Paris-7)
+punct(Paris-7, ,-8)
+appos(Paris-7, France-9)
+case(summer-12, in-10)
+det(summer-12, the-11)
+nmod:in(went-5, summer-12)
+punct(went-5, .-13)
+
+Extracted the following NER entity mentions:
+2017	DATE
+Paris	CITY
+France	COUNTRY
+summer	DATE
+he	PERSON
+
+Sentence #3 (12 tokens):
+His flight left at 3:00pm on July 10th, 2017.
+
+Tokens:
+[Text=His CharacterOffsetBegin=83 CharacterOffsetEnd=86 PartOfSpeech=PRP$ Lemma=he NamedEntityTag=O]
+[Text=flight CharacterOffsetBegin=87 CharacterOffsetEnd=93 PartOfSpeech=NN Lemma=flight NamedEntityTag=O]
+[Text=left CharacterOffsetBegin=94 CharacterOffsetEnd=98 PartOfSpeech=VBD Lemma=leave NamedEntityTag=O]
+[Text=at CharacterOffsetBegin=99 CharacterOffsetEnd=101 PartOfSpeech=IN Lemma=at NamedEntityTag=O]
+[Text=3:00 CharacterOffsetBegin=102 CharacterOffsetEnd=106 PartOfSpeech=CD Lemma=3:00 NamedEntityTag=TIME NormalizedNamedEntityTag=3:00pm]
+[Text=pm CharacterOffsetBegin=106 CharacterOffsetEnd=108 PartOfSpeech=NN Lemma=pm NamedEntityTag=TIME NormalizedNamedEntityTag=3:00pm]
+[Text=on CharacterOffsetBegin=109 CharacterOffsetEnd=111 PartOfSpeech=IN Lemma=on NamedEntityTag=O]
+[Text=July CharacterOffsetBegin=112 CharacterOffsetEnd=116 PartOfSpeech=NNP Lemma=July NamedEntityTag=DATE NormalizedNamedEntityTag=20170710]
+[Text=10th CharacterOffsetBegin=117 CharacterOffsetEnd=121 PartOfSpeech=JJ Lemma=10th NamedEntityTag=DATE NormalizedNamedEntityTag=20170710]
+[Text=, CharacterOffsetBegin=121 CharacterOffsetEnd=122 PartOfSpeech=, Lemma=, NamedEntityTag=DATE NormalizedNamedEntityTag=20170710]
+[Text=2017 CharacterOffsetBegin=123 CharacterOffsetEnd=127 PartOfSpeech=CD Lemma=2017 NamedEntityTag=DATE NormalizedNamedEntityTag=20170710]
+[Text=. CharacterOffsetBegin=127 CharacterOffsetEnd=128 PartOfSpeech=. Lemma=. NamedEntityTag=O]
+
+Dependency Parse (enhanced plus plus dependencies):
+root(ROOT-0, left-3)
+nmod:poss(flight-2, His-1)
+nsubj(left-3, flight-2)
+case(pm-6, at-4)
+nummod(pm-6, 3:00-5)
+nmod:at(left-3, pm-6)
+case(July-8, on-7)
+nmod:on(left-3, July-8)
+amod(July-8, 10th-9)
+punct(10th-9, ,-10)
+dep(10th-9, 2017-11)
+punct(left-3, .-12)
+
+Extracted the following NER entity mentions:
+3:00pm	TIME
+July 10th, 2017	DATE
+His	PERSON
+
+Sentence #4 (18 tokens):
+After eating some escargot for the first time, Joe said, "That was delicious!"
+
+Tokens:
+[Text=After CharacterOffsetBegin=129 CharacterOffsetEnd=134 PartOfSpeech=IN Lemma=after NamedEntityTag=O]
+[Text=eating CharacterOffsetBegin=135 CharacterOffsetEnd=141 PartOfSpeech=VBG Lemma=eat NamedEntityTag=O]
+[Text=some CharacterOffsetBegin=142 CharacterOffsetEnd=146 PartOfSpeech=DT Lemma=some NamedEntityTag=O]
+[Text=escargot CharacterOffsetBegin=147 CharacterOffsetEnd=155 PartOfSpeech=NN Lemma=escargot NamedEntityTag=O]
+[Text=for CharacterOffsetBegin=156 CharacterOffsetEnd=159 PartOfSpeech=IN Lemma=for NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=160 CharacterOffsetEnd=163 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=first CharacterOffsetBegin=164 CharacterOffsetEnd=169 PartOfSpeech=JJ Lemma=first NamedEntityTag=ORDINAL NormalizedNamedEntityTag=1.0]
+[Text=time CharacterOffsetBegin=170 CharacterOffsetEnd=174 PartOfSpeech=NN Lemma=time NamedEntityTag=O]
+[Text=, CharacterOffsetBegin=174 CharacterOffsetEnd=175 PartOfSpeech=, Lemma=, NamedEntityTag=O]
+[Text=Joe CharacterOffsetBegin=176 CharacterOffsetEnd=179 PartOfSpeech=NNP Lemma=Joe NamedEntityTag=PERSON]
+[Text=said CharacterOffsetBegin=180 CharacterOffsetEnd=184 PartOfSpeech=VBD Lemma=say NamedEntityTag=O]
+[Text=, CharacterOffsetBegin=184 CharacterOffsetEnd=185 PartOfSpeech=, Lemma=, NamedEntityTag=O]
+[Text=`` CharacterOffsetBegin=186 CharacterOffsetEnd=187 PartOfSpeech=`` Lemma=`` NamedEntityTag=O]
+[Text=That CharacterOffsetBegin=187 CharacterOffsetEnd=191 PartOfSpeech=DT Lemma=that NamedEntityTag=O]
+[Text=was CharacterOffsetBegin=192 CharacterOffsetEnd=195 PartOfSpeech=VBD Lemma=be NamedEntityTag=O]
+[Text=delicious CharacterOffsetBegin=196 CharacterOffsetEnd=205 PartOfSpeech=JJ Lemma=delicious NamedEntityTag=O]
+[Text=! CharacterOffsetBegin=205 CharacterOffsetEnd=206 PartOfSpeech=. Lemma=! NamedEntityTag=O]
+[Text='' CharacterOffsetBegin=206 CharacterOffsetEnd=207 PartOfSpeech='' Lemma='' NamedEntityTag=O]
+
+Dependency Parse (enhanced plus plus dependencies):
+root(ROOT-0, delicious-16)
+mark(eating-2, After-1)
+advcl:after(delicious-16, eating-2)
+det(escargot-4, some-3)
+dobj(eating-2, escargot-4)
+case(time-8, for-5)
+det(time-8, the-6)
+amod(time-8, first-7)
+nmod:for(eating-2, time-8)
+punct(said-11, ,-9)
+nsubj(said-11, Joe-10)
+parataxis(delicious-16, said-11)
+punct(said-11, ,-12)
+punct(delicious-16, ``-13)
+nsubj(delicious-16, That-14)
+cop(delicious-16, was-15)
+punct(delicious-16, !-17)
+punct(delicious-16, ''-18)
+
+Extracted the following NER entity mentions:
+first	ORDINAL
+Joe	PERSON
+
+Sentence #5 (10 tokens):
+He sent a postcard to his sister Jane Smith.
+
+Tokens:
+[Text=He CharacterOffsetBegin=208 CharacterOffsetEnd=210 PartOfSpeech=PRP Lemma=he NamedEntityTag=O]
+[Text=sent CharacterOffsetBegin=211 CharacterOffsetEnd=215 PartOfSpeech=VBD Lemma=send NamedEntityTag=O]
+[Text=a CharacterOffsetBegin=216 CharacterOffsetEnd=217 PartOfSpeech=DT Lemma=a NamedEntityTag=O]
+[Text=postcard CharacterOffsetBegin=218 CharacterOffsetEnd=226 PartOfSpeech=NN Lemma=postcard NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=227 CharacterOffsetEnd=229 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=his CharacterOffsetBegin=230 CharacterOffsetEnd=233 PartOfSpeech=PRP$ Lemma=he NamedEntityTag=O]
+[Text=sister CharacterOffsetBegin=234 CharacterOffsetEnd=240 PartOfSpeech=NN Lemma=sister NamedEntityTag=O]
+[Text=Jane CharacterOffsetBegin=241 CharacterOffsetEnd=245 PartOfSpeech=NNP Lemma=Jane NamedEntityTag=PERSON]
+[Text=Smith CharacterOffsetBegin=246 CharacterOffsetEnd=251 PartOfSpeech=NNP Lemma=Smith NamedEntityTag=PERSON]
+[Text=. CharacterOffsetBegin=251 CharacterOffsetEnd=252 PartOfSpeech=. Lemma=. NamedEntityTag=O]
+
+Dependency Parse (enhanced plus plus dependencies):
+root(ROOT-0, sent-2)
+nsubj(sent-2, He-1)
+det(postcard-4, a-3)
+dobj(sent-2, postcard-4)
+case(Smith-9, to-5)
+nmod:poss(Smith-9, his-6)
+compound(Smith-9, sister-7)
+compound(Smith-9, Jane-8)
+nmod:to(sent-2, Smith-9)
+punct(sent-2, .-10)
+
+Extracted the following NER entity mentions:
+Jane Smith	PERSON
+He	PERSON
+his	PERSON
+
+Sentence #6 (29 tokens):
+After hearing about Joe's trip, Jane decided she might go to France one day.Marc said, 'I'm the bigger butterfly in this world !!!!!!!!!!!!'
+
+Tokens:
+[Text=After CharacterOffsetBegin=253 CharacterOffsetEnd=258 PartOfSpeech=IN Lemma=after NamedEntityTag=O]
+[Text=hearing CharacterOffsetBegin=259 CharacterOffsetEnd=266 PartOfSpeech=VBG Lemma=hear NamedEntityTag=O]
+[Text=about CharacterOffsetBegin=267 CharacterOffsetEnd=272 PartOfSpeech=IN Lemma=about NamedEntityTag=O]
+[Text=Joe CharacterOffsetBegin=273 CharacterOffsetEnd=276 PartOfSpeech=NNP Lemma=Joe NamedEntityTag=PERSON]
+[Text='s CharacterOffsetBegin=276 CharacterOffsetEnd=278 PartOfSpeech=POS Lemma='s NamedEntityTag=O]
+[Text=trip CharacterOffsetBegin=279 CharacterOffsetEnd=283 PartOfSpeech=NN Lemma=trip NamedEntityTag=O]
+[Text=, CharacterOffsetBegin=283 CharacterOffsetEnd=284 PartOfSpeech=, Lemma=, NamedEntityTag=O]
+[Text=Jane CharacterOffsetBegin=285 CharacterOffsetEnd=289 PartOfSpeech=NNP Lemma=Jane NamedEntityTag=PERSON]
+[Text=decided CharacterOffsetBegin=290 CharacterOffsetEnd=297 PartOfSpeech=VBD Lemma=decide NamedEntityTag=O]
+[Text=she CharacterOffsetBegin=298 CharacterOffsetEnd=301 PartOfSpeech=PRP Lemma=she NamedEntityTag=O]
+[Text=might CharacterOffsetBegin=302 CharacterOffsetEnd=307 PartOfSpeech=MD Lemma=might NamedEntityTag=O]
+[Text=go CharacterOffsetBegin=308 CharacterOffsetEnd=310 PartOfSpeech=VB Lemma=go NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=311 CharacterOffsetEnd=313 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=France CharacterOffsetBegin=314 CharacterOffsetEnd=320 PartOfSpeech=NNP Lemma=France NamedEntityTag=COUNTRY]
+[Text=one CharacterOffsetBegin=321 CharacterOffsetEnd=324 PartOfSpeech=CD Lemma=one NamedEntityTag=NUMBER NormalizedNamedEntityTag=1.0]
+[Text=day.Marc CharacterOffsetBegin=325 CharacterOffsetEnd=333 PartOfSpeech=NNP Lemma=day.Marc NamedEntityTag=O]
+[Text=said CharacterOffsetBegin=334 CharacterOffsetEnd=338 PartOfSpeech=VBD Lemma=say NamedEntityTag=O]
+[Text=, CharacterOffsetBegin=338 CharacterOffsetEnd=339 PartOfSpeech=, Lemma=, NamedEntityTag=O]
+[Text=` CharacterOffsetBegin=340 CharacterOffsetEnd=341 PartOfSpeech=`` Lemma=` NamedEntityTag=O]
+[Text=I CharacterOffsetBegin=341 CharacterOffsetEnd=342 PartOfSpeech=PRP Lemma=I NamedEntityTag=O]
+[Text='m CharacterOffsetBegin=342 CharacterOffsetEnd=344 PartOfSpeech=VBP Lemma=be NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=345 CharacterOffsetEnd=348 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=bigger CharacterOffsetBegin=349 CharacterOffsetEnd=355 PartOfSpeech=JJR Lemma=bigger NamedEntityTag=O]
+[Text=butterfly CharacterOffsetBegin=356 CharacterOffsetEnd=365 PartOfSpeech=NN Lemma=butterfly NamedEntityTag=O]
+[Text=in CharacterOffsetBegin=366 CharacterOffsetEnd=368 PartOfSpeech=IN Lemma=in NamedEntityTag=O]
+[Text=this CharacterOffsetBegin=369 CharacterOffsetEnd=373 PartOfSpeech=DT Lemma=this NamedEntityTag=O]
+[Text=world CharacterOffsetBegin=374 CharacterOffsetEnd=379 PartOfSpeech=NN Lemma=world NamedEntityTag=O]
+[Text=!!!!!!!!!!!! CharacterOffsetBegin=380 CharacterOffsetEnd=392 PartOfSpeech=NN Lemma=!!!!!!!!!!!! NamedEntityTag=O]
+[Text=' CharacterOffsetBegin=392 CharacterOffsetEnd=393 PartOfSpeech='' Lemma=' NamedEntityTag=O]
+
+Dependency Parse (enhanced plus plus dependencies):
+root(ROOT-0, decided-9)
+mark(hearing-2, After-1)
+advcl:after(decided-9, hearing-2)
+case(trip-6, about-3)
+nmod:poss(trip-6, Joe-4)
+case(Joe-4, 's-5)
+nmod:about(hearing-2, trip-6)
+punct(decided-9, ,-7)
+nsubj(decided-9, Jane-8)
+nsubj(go-12, she-10)
+aux(go-12, might-11)
+ccomp(decided-9, go-12)
+case(France-14, to-13)
+nmod:to(go-12, France-14)
+nummod(day.Marc-16, one-15)
+nsubj(said-17, day.Marc-16)
+ccomp(go-12, said-17)
+punct(said-17, ,-18)
+punct(said-17, `-19)
+nsubj(butterfly-24, I-20)
+cop(butterfly-24, 'm-21)
+det(butterfly-24, the-22)
+amod(butterfly-24, bigger-23)
+ccomp(said-17, butterfly-24)
+case(!!!!!!!!!!!!-28, in-25)
+det(!!!!!!!!!!!!-28, this-26)
+compound(!!!!!!!!!!!!-28, world-27)
+nmod:in(butterfly-24, !!!!!!!!!!!!-28)
+punct(decided-9, '-29)
+
+Extracted the following NER entity mentions:
+Joe	PERSON
+Jane	PERSON
+France	COUNTRY
+one	NUMBER
+she	PERSON
+
+Coreference set:
+	(2,4,[4,5]) -> (1,2,[1,3]), that is: "he" -> "Joe Smith"
+	(3,1,[1,2]) -> (1,2,[1,3]), that is: "His" -> "Joe Smith"
+	(4,10,[10,11]) -> (1,2,[1,3]), that is: "Joe" -> "Joe Smith"
+	(5,1,[1,2]) -> (1,2,[1,3]), that is: "He" -> "Joe Smith"
+	(5,6,[6,7]) -> (1,2,[1,3]), that is: "his" -> "Joe Smith"
+	(6,4,[4,6]) -> (1,2,[1,3]), that is: "Joe 's" -> "Joe Smith"
+
+Coreference set:
+	(6,14,[14,15]) -> (2,9,[9,10]), that is: "France" -> "France"
+
+Coreference set:
+	(6,10,[10,11]) -> (6,8,[8,9]), that is: "she" -> "Jane"
+
+Extracted quotes: 
+[QuotationIndexAnnotation=0, CharacterOffsetBegin=186, Text="That was delicious!", Speaker=Joe Smith]

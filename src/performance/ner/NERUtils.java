@@ -19,6 +19,7 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
+import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.io.IOUtils;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -30,6 +31,7 @@ import edu.stanford.nlp.coref.data.Mention;
 import edu.stanford.nlp.pipeline.Annotation;
 import edu.stanford.nlp.pipeline.CoreDocument;
 import edu.stanford.nlp.pipeline.StanfordCoreNLP;
+import performance.Consts;
 import performance.ssplit.SsplitUtils;
 
 
@@ -41,8 +43,14 @@ public class NERUtils {
 	public static Annotation getCleanAnnotation(File file) throws IOException, ClassNotFoundException
 	{
 		Annotation annotation = SsplitUtils.getCleanAnnotation(file);
+		
+		// On retrouve le fichier de référence à partir du nom du fichier du corpus.
+		// Corpus : corpus.txt => Référence : corpus_reference.txt
+		String fileName = FilenameUtils.removeExtension(file.getName());
+		String referencePath = Consts.NER_PATH + File.separator + fileName + Consts.REFERENCE_EXTENSION;
+		File referenceFile = new File(referencePath);
 		NERCombinerAnnotatorCustom custom = new NERCombinerAnnotatorCustom(true);
-		custom.annotate(annotation); 
+		custom.annotateCustom(annotation, getMapTokenNerCustom(referenceFile));
 		return annotation;
 	}
 	
