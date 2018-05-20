@@ -9,6 +9,7 @@ import edu.stanford.nlp.ling.CoreAnnotations;
 import edu.stanford.nlp.ling.CoreLabel;
 import edu.stanford.nlp.ling.tokensregex.types.Tags;
 import edu.stanford.nlp.pipeline.Annotation;
+import edu.stanford.nlp.pipeline.CoreSentence;
 import edu.stanford.nlp.pipeline.DefaultPaths;
 import edu.stanford.nlp.pipeline.EntityMentionsAnnotator;
 import edu.stanford.nlp.pipeline.LanguageInfo;
@@ -43,9 +44,20 @@ import java.text.SimpleDateFormat;
  * Cette classe des une variation de la classe original qui contient une fouction pour générer les annotations via un objet TokenNerCustom pour les entité avec le tag PERSON.
  */
 public class NERCombinerAnnotatorCustom extends SentenceAnnotator  {
+	
+	private static HashMap<Integer,HashMap<Integer,TokenNerCustom>> lToken;
+	
+	public static void init( HashMap<Integer,HashMap<Integer,TokenNerCustom>> _lToken)
+	{
+		lToken = _lToken;
+		sentenceNum = 0;
+	}
+	
 
   /** A logger for this class */
   private static final Redwood.RedwoodChannels log = Redwood.channels(NERCombinerAnnotatorCustom.class);
+  
+  
 
   private final NERClassifierCombiner ner;
 
@@ -290,6 +302,8 @@ public class NERCombinerAnnotatorCustom extends SentenceAnnotator  {
     else
       return spanishTag;
   }
+  
+  private static int sentenceNum;
   /**
    * 
    * @param annotation
@@ -297,11 +311,15 @@ public class NERCombinerAnnotatorCustom extends SentenceAnnotator  {
    * @author Schmidt Gaëtan
    * 
    */
-  public void annotateCustom(Annotation annotation,HashMap<Integer,HashMap<Integer,TokenNerCustom>> lToken)
+  @Override
+  public void doOneSentence(Annotation annotation, CoreMap sentence)
+  //public void annotateCustom(Annotation annotation)
   {
-	  int sentenceNum = 0;
-	  for (CoreMap sentence : annotation.get(CoreAnnotations.SentencesAnnotation.class)) 
-	  {
+	 // CoreSentence sentence = (CoreSentence) sentence2;
+	  
+	  //int sentenceNum = 0;
+	  //for (CoreMap sentence : annotation.get(CoreAnnotations.SentencesAnnotation.class)) 
+	//  {
 		  List<CoreLabel> tokens = sentence.get(CoreAnnotations.TokensAnnotation.class);
 		//  System.out.println("sent Num : "+sentenceNum);
 		//  System.out.println(tokens.toString());
@@ -326,7 +344,6 @@ public class NERCombinerAnnotatorCustom extends SentenceAnnotator  {
 		    	 // System.out.println("i : "+i);
 		    	String neTag;// = output.get(i).get(CoreAnnotations.NamedEntityTagAnnotation.class);
 		    	  
-		        
 		        if (lToken.get(sentenceNum)!=null && lToken.get(sentenceNum).get(i)!=null)
 		        {
 		        	neTag = lToken.get(sentenceNum).get(i).getNerTag();
@@ -364,11 +381,15 @@ public class NERCombinerAnnotatorCustom extends SentenceAnnotator  {
 		      }
 		    }
 		    sentenceNum++;
-	  }
+	 // }
+	  
+	// if entity mentions should be built, run that
+	    if (this.buildEntityMentions)
+	      entityMentionsAnnotator.annotate(annotation);
   }
 
-  @Override
-  public void doOneSentence(Annotation annotation, CoreMap sentence) {
+  //@Override
+  public void doOneSentence2(Annotation annotation, CoreMap sentence) {
     List<CoreLabel> tokens = sentence.get(CoreAnnotations.TokensAnnotation.class);
     List<CoreLabel> output; // only used if try assignment works.
     if (tokens.size() <= this.maxSentenceLength) {

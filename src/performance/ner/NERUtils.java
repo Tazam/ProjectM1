@@ -56,7 +56,8 @@ public class NERUtils {
 		String referencePath = Consts.NER_PATH + File.separator + fileName + Consts.XML_REFERENCE_EXTENSION;
 		File referenceFile = new File(referencePath);
 		NERCombinerAnnotatorCustom custom = new NERCombinerAnnotatorCustom(true);
-		custom.annotateCustom(annotation, getMapTokenNerCustom(referenceFile));
+		NERCombinerAnnotatorCustom.init(getMapTokenNerCustom(referenceFile));
+		custom.annotate(annotation);
 		return annotation;
 	}
 	
@@ -191,7 +192,7 @@ public class NERUtils {
 	    NERCombinerAnnotatorCustom custom = new NERCombinerAnnotatorCustom(true);
 	    File file = new File("performance/ner/TextBase.xml");
 	   // custom.annotate(annotation);
-	    custom.annotateCustom(annotation, getMapTokenNerCustom(file));
+	//    custom.annotateCustom(annotation, getMapTokenNerCustom(file));
 	    PrintWriter out = new PrintWriter("outputTest.txt");
 	    pipeline.prettyPrint(annotation, out );
 	}

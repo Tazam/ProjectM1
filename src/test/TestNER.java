@@ -18,6 +18,9 @@ import edu.stanford.nlp.ling.CoreAnnotations.SentencesAnnotation;
 import edu.stanford.nlp.pipeline.Annotation;
 import edu.stanford.nlp.pipeline.CoreDocument;
 import edu.stanford.nlp.pipeline.CoreSentence;
+import edu.stanford.nlp.pipeline.CorefAnnotator;
+import edu.stanford.nlp.pipeline.DependencyParseAnnotator;
+import edu.stanford.nlp.pipeline.ParserAnnotator;
 import edu.stanford.nlp.pipeline.StanfordCoreNLP;
 import edu.stanford.nlp.util.CoreMap;
 import performance.coref.CorefUtils;
@@ -65,6 +68,12 @@ public class TestNER {
 		File file = new File("corpus/bnw_page1.txt");
 		try {
 			Annotation a = NERUtils.getCleanAnnotation(file);
+			ParserAnnotator parser = new ParserAnnotator(false, -1);
+			DependencyParseAnnotator deparser = new DependencyParseAnnotator();
+			parser.annotate(a);
+			deparser.annotate(a);
+			CorefAnnotator coref = new CorefAnnotator(new Properties());
+			coref.annotate(a);
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
