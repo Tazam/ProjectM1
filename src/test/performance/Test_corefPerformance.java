@@ -19,9 +19,9 @@ public class Test_corefPerformance
 		//props.setProperty("coref.algorithm", "statistical");
 		CorefChainComparator comparator = new CorefChainComparator(props);
 		
-		//File file = new File("corpus\\Coraline.txt");
+		File file = new File("corpus\\Oz2.txt");
 		//AnnotationHelper.helperPrint(file);
-		//AnnotationHelper.textAnnotationHelper(file);
+		AnnotationHelper.textAnnotationHelper(file);
 	
 		Stats stats1 = comparator.compareFiles_MUC(false);
 		Stats stats2 = comparator.compareFiles_BCUBE(false);

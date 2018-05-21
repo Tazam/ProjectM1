@@ -68,7 +68,8 @@ public class CorefChainComparator
 			System.out.println("Evaluation  MUC sur : " + corpusFolder[i].getName());
 			Map<Integer, CorefChain> stanfordCorefChain = getStanfordChains(corpusFolder, i, cleaned);
 			Map<Integer, CorefChain> referenceCorefChain = getReferenceChains(corpusFolder, i);
-			
+			System.out.println("stanford " + stanfordCorefChain);
+			System.out.println("ref " + referenceCorefChain);
 			compareFile_MUC(stanfordCorefChain, referenceCorefChain);
 		}
 		return this.muc;
