@@ -13,6 +13,7 @@ public class NerStats {
 	float falsePositives;
 	float falseNegatives;
 	float slotErrorRate;
+	
 	public NerStats()
 	{
 		this.truePositives = 0;
@@ -26,6 +27,20 @@ public class NerStats {
 		this.truePositives += truePositives;
 		this.falsePositives += falsePositives;
 		this.falseNegatives += falseNegatives;
+	}
+	public float getTP()
+	{
+		return this.truePositives;
+	}
+	
+	public float getFP()
+	{
+		return this.falsePositives;
+	}
+	
+	public float getFN()
+	{
+		return this.falseNegatives;
 	}
 	
 	public float getRecall()
@@ -56,6 +71,14 @@ public class NerStats {
 		result += this.truePositives + "; False Positives : " + this.falsePositives + "; False Negatives :";
 		result += this.falseNegatives + "]";
 		return result;
+	}
+	
+	public void clear()
+	{
+		this.truePositives = 0;
+		this.falsePositives = 0;
+		this.falseNegatives = 0;
+		this.slotErrorRate = 0;
 	}
 
 }

@@ -3,10 +3,13 @@
  */
 package performance.ner;
 
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Properties;
 
 import org.apache.commons.io.IOUtils;
@@ -16,6 +19,9 @@ import edu.stanford.nlp.pipeline.Annotation;
 import edu.stanford.nlp.pipeline.CoreDocument;
 import edu.stanford.nlp.pipeline.CoreSentence;
 import edu.stanford.nlp.pipeline.StanfordCoreNLP;
+import edu.stanford.nlp.util.Pair;
+import implementation.Edge;
+import implementation.Node;
 import performance.stats.NerStats;
 
 /**
@@ -24,12 +30,6 @@ import performance.stats.NerStats;
  */
 public class NerCompatator {
 	
-	private NerStats stats;
-	
-	public NerCompatator()
-	{
-		this.stats =  new NerStats();
-	}
 	
 
 	/**
@@ -37,10 +37,11 @@ public class NerCompatator {
 	 * @throws IOException 
 	 * @throws ClassNotFoundException 
 	 */
-	public void compare() throws ClassNotFoundException, IOException 
+	public static NerStats compare(String filePath) throws ClassNotFoundException, IOException 
 	{
 		
-		File file = new File("");
+		File file = new File(filePath);
+		NerStats stats = new NerStats();
 		
 		Annotation annotation = NERUtils.getCleanAnnotation(file);
 		Annotation annotationStanford = NERUtils.getOriginalAnnotation(file);
@@ -55,20 +56,21 @@ public class NerCompatator {
 			{
 				if ("PERSON".equals(documentStanford.tokens().get(pos).ner()))
 				{
-					this.stats.updateStats(1, 0, 0); // une personne est détécté comme une persone = vraix positif
+					stats.updateStats(1, 0, 0); // une personne est détécté comme une persone = vraix positif
 				}else
 				{
-					this.stats.updateStats(0, 0, 1); // une personne n'est pas détécté = faux négatif
+					stats.updateStats(0, 0, 1); // une personne n'est pas détécté = faux négatif
 				}
 			}else
 			{
 				if ("PERSON".equals(documentStanford.tokens().get(pos).ner()))
 				{
-					this.stats.updateStats(0, 1, 0); // un objet détécté comme personne = faux positif
+					stats.updateStats(0, 1, 0); // un objet détécté comme personne = faux positif
 				}
 			}
 			pos++;
 		}
+		return stats;
 
 	}
 	
@@ -93,9 +95,53 @@ public class NerCompatator {
 	
 	public static void main(String[] args) throws IOException
 	{
-		NerCompatator comp = new NerCompatator();
-		File file = new File("corpus/dadoes_page18.txt");    
-		comp.test(file);
+		ArrayList<String> fileList = new ArrayList<String>();
+		fileList.add("corpus/bnw_page1.txt");
+		fileList.add("corpus/bnw_page112.txt");
+		//fileList.add("corpus/bvn_page63.txt");
+		fileList.add("corpus/Coraline.txt");
+		fileList.add("corpus/Coraline2.txt");
+		fileList.add("corpus/dadoes_page18.txt");
+		fileList.add("corpus/dadoes_page213.txt");
+		fileList.add("corpus/dadoes_page82.txt");
+		fileList.add("corpus/Hp.txt");
+		fileList.add("corpus/Hp2.txt");
+		
+		ArrayList<Pair<String,NerStats>> statsList = new ArrayList<Pair<String,NerStats>>();
+		
+		for (String path : fileList)
+		{
+			System.out.println("compare ... "+path);
+			try {
+				statsList.add(new Pair<String, NerStats>(path,NerCompatator.compare(path)));
+				
+			} catch (ClassNotFoundException e) {
+				e.printStackTrace();
+				continue;
+				
+			}
+
+			
+			
+			
+		}
+		
+		FileWriter fw = new FileWriter("performance/ner/nerPerf.csv");
+		BufferedWriter buffer = new BufferedWriter(fw);
+			
+			buffer.write("File;Vrais positifs;Faux positifs;Faux négatif;Precision;Rappel;F-Mesure");
+			buffer.newLine();
+			
+			for (Pair<String,NerStats> p : statsList)
+			{
+				System.out.println("ecrit ... "+p.first());
+				buffer.write(p.first()+";"+p.second().getTP()+";"+p.second().getFP()+";"+p.second().getFN()+";"+p.second().getPrecision()+";"+p.second().getRecall()+";"+p.second().getFMeasure(1));
+				buffer.newLine();
+			}
+			buffer.flush();
+			buffer.close();
+		
+		
 	}
 
 }
