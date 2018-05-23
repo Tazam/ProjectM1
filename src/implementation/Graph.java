@@ -93,7 +93,12 @@ public class Graph {
 	
 	public void graphMLPrinter() throws IOException
 	{
-		FileWriter fw = new FileWriter(this.name+".graphml");
+		graphMLPrinter("");
+	}
+	
+	public void graphMLPrinter(String path) throws IOException
+	{
+		FileWriter fw = new FileWriter(path+"/"+this.name+".graphml");
 		BufferedWriter buffer = new BufferedWriter(fw);
 		
 		buffer.write("<?xml version=\"1.0\" encoding=\"UTF-8\"?>");

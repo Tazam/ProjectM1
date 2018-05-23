@@ -24,7 +24,13 @@ public class Mention implements RelationshipExtractionMethod {
 	 Graph graph;
 	 Boolean oriented;
 	 Boolean ponderation;
-	 
+	 /**
+	  * 
+	  * @param document
+	  * @param graph
+	  * @param oriented
+	  * @param ponderation
+	  */
 	 public Mention(CoreDocument document, Graph graph, Boolean oriented, Boolean ponderation)
 	 {
 		 this.document = document;

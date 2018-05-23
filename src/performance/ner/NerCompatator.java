@@ -6,7 +6,6 @@ package performance.ner;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -20,8 +19,6 @@ import edu.stanford.nlp.pipeline.CoreDocument;
 import edu.stanford.nlp.pipeline.CoreSentence;
 import edu.stanford.nlp.pipeline.StanfordCoreNLP;
 import edu.stanford.nlp.util.Pair;
-import implementation.Edge;
-import implementation.Node;
 import performance.stats.NerStats;
 
 /**
@@ -106,6 +103,14 @@ public class NerCompatator {
 		fileList.add("corpus/dadoes_page82.txt");
 		fileList.add("corpus/Hp.txt");
 		fileList.add("corpus/Hp2.txt");
+		fileList.add("corpus/hyperion_page203.txt");
+		fileList.add("corpus/hyperion_page378.txt");
+		fileList.add("corpus/hyperion_page9.txt");
+		fileList.add("corpus/ial_page1.txt");
+		fileList.add("corpus/ial_page56.txt");
+		fileList.add("corpus/ial_page96.txt");
+		fileList.add("corpus/Oz.txt");
+		fileList.add("corpus/Oz2.txt");
 		
 		ArrayList<Pair<String,NerStats>> statsList = new ArrayList<Pair<String,NerStats>>();
 		
