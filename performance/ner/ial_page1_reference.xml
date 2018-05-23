@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<document>
+	<entity name="sentence_1">
+		<character>
+			<text>Robert</text>
+			<sent>1</sent>
+			<position>6</position>
+		</character>
+		<character>
+			<text>Neville</text>
+			<sent>1</sent>
+			<position>7</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_22">
+		<character>
+			<text>Neville</text>
+			<sent>22</sent>
+			<position>11</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_24">
+		<character>
+			<text>Robert</text>
+			<sent>24</sent>
+			<position>15</position>
+		</character>
+		<character>
+			<text>Neville</text>
+			<sent>24</sent>
+			<position>16</position>
+		</character>
+	</entity>
+
+
+</document>

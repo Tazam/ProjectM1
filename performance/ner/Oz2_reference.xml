@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<document>
+
+	<entity name="sentence_1">
+		<character>
+			<text>Dorothy</text>
+			<sent>1</sent>
+			<position>13</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_3">
+		<character>
+			<text>Scarecrow</text>
+			<sent>3</sent>
+			<position>12</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_8">
+		<character>
+			<text>Scarecrow</text>
+			<sent>8</sent>
+			<position>11</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_12">
+		<character>
+			<text>Scarecrow</text>
+			<sent>12</sent>
+			<position>14</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_14">
+		<character>
+			<text>Lion</text>
+			<sent>14</sent>
+			<position>11</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_15">
+		<character>
+			<text>Oz</text>
+			<sent>15</sent>
+			<position>14</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_19">
+		<character>
+			<text>Lion</text>
+			<sent>19</sent>
+			<position>17</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_21">
+		<character>
+			<text>Oz</text>
+			<sent>21</sent>
+			<position>17</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_26">
+		<character>
+			<text>Tin</text>
+			<sent>26</sent>
+			<position>13</position>
+		</character>
+		<character>
+			<text>Woodman</text>
+			<sent>26</sent>
+			<position>14</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_28">
+		<character>
+			<text>Oz</text>
+			<sent>28</sent>
+			<position>7</position>
+		</character>
+	</entity>
+
+</document>
