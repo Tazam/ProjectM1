@@ -12,7 +12,6 @@ import edu.stanford.nlp.coref.data.CorefChain;
 import edu.stanford.nlp.coref.data.CorefChain.CorefMention;
 import edu.stanford.nlp.ling.CoreLabel;
 import edu.stanford.nlp.pipeline.CoreDocument;
-import edu.stanford.nlp.pipeline.CoreSentence;
 
 /**
  * @author Schmidt Gaëtan
@@ -91,7 +90,7 @@ public class Windowing implements RelationshipExtractionMethod {
 				
 				if (token.ner().equals("PERSON"))
 				{
-					CorefChain corefEntity = corefByToken(document.corefChains(),token);
+					CorefChain corefEntity = impUtils.corefByToken(document.corefChains(),token);
 					
 					// si il n'a pas de coréférence on ajoute un neud.
 					if (corefEntity == null)
@@ -101,7 +100,7 @@ public class Windowing implements RelationshipExtractionMethod {
 					}else // sinon,
 					{
 						// on récupère une mention valide de la chaine (prévien de certaines erreurs possible de coref
-						CorefMention mentionV = valideRepresentativeMention(corefEntity);
+						CorefMention mentionV = impUtils.valideRepresentativeMention(corefEntity,document);
 						
 						// on vérifie s'il éxiste pour augmenter le poid de l'objet éxistant
 						if (mentionV!=null)
@@ -121,11 +120,11 @@ public class Windowing implements RelationshipExtractionMethod {
 					
 				}else if (token.ner().equals("O"))// si ce n'est pas une entité nommé
 				{
-					CorefChain corefEntity = corefByToken(document.corefChains(),token);
+					CorefChain corefEntity = impUtils.corefByToken(document.corefChains(),token);
 					// si il a une coréférence
 					if (corefEntity!=null)
 					{
-						CorefMention mentionV = valideRepresentativeMention(corefEntity);
+						CorefMention mentionV = impUtils.valideRepresentativeMention(corefEntity,document);
 						if (mentionV!=null)
 						{
 							if (charMap.containsKey(mentionV.mentionSpan))
@@ -319,65 +318,11 @@ public class Windowing implements RelationshipExtractionMethod {
 	
 	
 	
-	private CorefChain corefByToken(Map<Integer,CorefChain> corefChains, CoreLabel token)
-	{
-		CorefChain ret = null;
-		
-		for (CorefChain corefchain : corefChains.values())
-		{
-			for (CorefMention mention : corefchain.getMentionsInTextualOrder())
-			{
-				if (mention.sentNum == token.sentIndex())
-				{
-					if (mention.startIndex-1 <= token.index()&& token.index() <= mention.endIndex-1)
-					{
-						return corefchain;
-					}
-				}
-			}
-		
-		}
-		return ret;
-	}
 	
-	/**
-	 * 
-	 * @param corefchain
-	 * @return corefMention : corefMention wich contains a NER entity or null
-	 * @author Schmidt Gaëtan
-	 */
-	private CorefMention valideRepresentativeMention(CorefChain corefchain)
-	{
-
-		if (corefMentionContainsNER(corefchain.getRepresentativeMention()))
-		{
-			return corefchain.getRepresentativeMention();
-		}else
-		{
-			for (CorefMention mention : corefchain.getMentionsInTextualOrder())
-			{
-				if (corefMentionContainsNER(mention))
-					return mention;
-			}
-		}
-		return null;
-	}
 	
-	/**
-	 * 
-	 * @param corefMention
-	 * @return true : arg contains a ner entity
-	 * @author Schmidt Gaëtan
-	 */
-	private boolean corefMentionContainsNER(CorefMention corefMention)
-	{
-		for (int i = corefMention.startIndex-1; i < corefMention.endIndex-1; i++)
-		{
-			if ("PERSON".equals(document.sentences().get(corefMention.sentNum-1).tokens().get(i).ner()))
-				return true;
-		}
-		return false;
-	}
+	
+	
+	
 	
 
 }

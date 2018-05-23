@@ -1,0 +1,10 @@
+File;Precision;Rappel;F-Mesure
+corpus/bnw_page1.txt;NaN;0.0;NaN
+corpus/bnw_page112.txt;0.4;1.0;0.5714286
+corpus/Coraline.txt;0.6666667;0.44444445;0.5333333
+corpus/Coraline2.txt;0.13333334;0.18181819;0.15384616
+corpus/dadoes_page18.txt;0.53846157;0.53846157;0.53846157
+corpus/dadoes_page213.txt;1.0;0.5;0.6666667
+corpus/dadoes_page82.txt;0.1764706;0.21428572;0.1935484
+corpus/Hp.txt;0.22222222;0.36363637;0.27586207
+corpus/Hp2.txt;0.26086956;0.26666668;0.26373625

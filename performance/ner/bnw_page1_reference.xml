@@ -1,5 +1,13 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 <document>
+	<entity name="sentence_4">
+		<character>
+			<text>workers</text>
+			<sent>4</sent>
+			<position>5</position>
+		</character>
+	</entity>
+
 	<entity name="sentence_6">
 		<character>
 			<text>Director</text>
@@ -18,12 +26,25 @@
 	
 	<entity name="sentence_8">
 		<character>
+			<text>students</text>
+			<sent>8</sent>
+			<position>6</position>
+		</character>
+		<character>
 			<text>Director</text>
 			<sent>8</sent>
 			<position>23</position>
 		</character>
 	</entity>
 	
+	<entity name="sentence_12">
+		<character>
+			<text>students</text>
+			<sent>12</sent>
+			<position>17</position>
+		</character>
+	</entity>
+
 	<entity name="sentence_22">
 		<character>
 			<text>Director</text>

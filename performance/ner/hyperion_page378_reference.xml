@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<document>
+	<entity name="sentence_1">
+		<character>
+			<text>Silenus</text>
+			<sent>1</sent>
+			<position>1</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_3">
+		<character>
+			<text>Sol</text>
+			<sent>3</sent>
+			<position>9</position>
+		</character>
+		<character>
+			<text>Weintraub</text>
+			<sent>3</sent>
+			<position>10</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_4">
+		<character>
+			<text>Consul</text>
+			<sent>4</sent>
+			<position>7</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_6">
+		<character>
+			<text>Hoyt</text>
+			<sent>6</sent>
+			<position>18</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_7">
+		<character>
+			<text>Kassad</text>
+			<sent>7</sent>
+			<position>6</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_11">
+		<character>
+			<text>Silenus</text>
+			<sent>11</sent>
+			<position>13</position>
+		</character>
+		<character>
+			<text>Sol</text>
+			<sent>11</sent>
+			<position>21</position>
+		</character>
+		<character>
+			<text>Weintraub</text>
+			<sent>11</sent>
+			<position>22</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_12">
+		<character>
+			<text>Rachel</text>
+			<sent>12</sent>
+			<position>1</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_13">
+		<character>
+			<text>Lenar</text>
+			<sent>13</sent>
+			<position>1</position>
+		</character>
+		<character>
+			<text>Hoyt</text>
+			<sent>13</sent>
+			<position>2</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_14">
+		<character>
+			<text>Brawne</text>
+			<sent>14</sent>
+			<position>11</position>
+		</character>
+		<character>
+			<text>Lamia</text>
+			<sent>14</sent>
+			<position>12</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_16">
+		<character>
+			<text>Consul</text>
+			<sent>16</sent>
+			<position>2</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_18">
+		<character>
+			<text>Martin</text>
+			<sent>18</sent>
+			<position>9</position>
+		</character>
+		<character>
+			<text>Silenus</text>
+			<sent>18</sent>
+			<position>10</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_19">
+		<character>
+			<text>Consul</text>
+			<sent>19</sent>
+			<position>2</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_20">
+		<character>
+			<text>Silenus</text>
+			<sent>20</sent>
+			<position>8</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_22">
+		<character>
+			<text>Hoyt</text>
+			<sent>22</sent>
+			<position>11</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_24">
+		<character>
+			<text>Silenus</text>
+			<sent>24</sent>
+			<position>7</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_25">
+		<character>
+			<text>Bush</text>
+			<sent>25</sent>
+			<position>12</position>
+		</character>
+		<character>
+			<text>Masteen</text>
+			<sent>25</sent>
+			<position>13</position>
+		</character>
+		<character>
+			<text>Consul</text>
+			<sent>25</sent>
+			<position>16</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_27">
+		<character>
+			<text>Kassad</text>
+			<sent>27</sent>
+			<position>1</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_36">
+		<character>
+			<text>Lamia</text>
+			<sent>36</sent>
+			<position>3</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_37">
+		<character>
+			<text>Masteen</text>
+			<sent>37</sent>
+			<position>3</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_38">
+		<character>
+			<text>Consul</text>
+			<sent>38</sent>
+			<position>5</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_41">
+		<character>
+			<text>Consul</text>
+			<sent>41</sent>
+			<position>9</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_42">
+		<character>
+			<text>Brawne</text>
+			<sent>42</sent>
+			<position>1</position>
+		</character>
+		<character>
+			<text>Lamia</text>
+			<sent>42</sent>
+			<position>2</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_45">
+		<character>
+			<text>Consul</text>
+			<sent>45</sent>
+			<position>2</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_47">
+		<character>
+			<text>Kassad</text>
+			<sent>47</sent>
+			<position>7</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_49">
+		<character>
+			<text>Silenus</text>
+			<sent>49</sent>
+			<position>13</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_51">
+		<character>
+			<text>Lamia</text>
+			<sent>49</sent>
+			<position>7</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_52">
+		<character>
+			<text>Shrike</text>
+			<sent>52</sent>
+			<position>8</position>
+		</character>
+		<character>
+			<text>Hoyt</text>
+			<sent>52</sent>
+			<position>12</position>
+		</character>
+	</entity>
+
+</document>

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<document>
+	<entity name="sentence_1">
+		<character>
+			<text>Het</text>
+			<sent>1</sent>
+			<position>8</position>
+		</character>
+		<character>
+			<text>Masteen</text>
+			<sent>1</sent>
+			<position>9</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_2">
+		<character>
+			<text>Consul</text>
+			<sent>2</sent>
+			<position>3</position>
+		</character>
+	</entity>
+
+		<entity name="sentence_3">
+		<character>
+			<text>Consul</text>
+			<sent>3</sent>
+			<position>3</position>
+		</character>
+		<character>
+			<text>Lenar</text>
+			<sent>3</sent>
+			<position>8</position>
+		</character>
+		<character>
+			<text>Hoyt</text>
+			<sent>3</sent>
+			<position>9</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_4">
+		<character>
+			<text>Consul</text>
+			<sent>4</sent>
+			<position>5</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_5">
+		<character>
+			<text>Hoyt</text>
+			<sent>5</sent>
+			<position>6</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_6">
+		<character>
+			<text>Lenar</text>
+			<sent>6</sent>
+			<position>1</position>
+		</character>
+		<character>
+			<text>Hoyt</text>
+			<sent>6</sent>
+			<position>2</position>
+		</character>
+		<character>
+			<text>Consul</text>
+			<sent>6</sent>
+			<position>9</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_7">
+		<character>
+			<text>Consul</text>
+			<sent>7</sent>
+			<position>2</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_8">
+		<character>
+			<text>Consul</text>
+			<sent>8</sent>
+			<position>4</position>
+		</character>
+		<character>
+			<text>Lenar</text>
+			<sent>8</sent>
+			<position>51</position>
+		</character>
+		<character>
+			<text>Hoyt</text>
+			<sent>8</sent>
+			<position>52</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_10">
+		<character>
+			<text>Consul</text>
+			<sent>10</sent>
+			<position>2</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_12">
+		<character>
+			<text>Fedmahn</text>
+			<sent>12</sent>
+			<position>6</position>
+		</character>
+		<character>
+			<text>Kassad</text>
+			<sent>12</sent>
+			<position>7</position>
+		</character>
+		<character>
+			<text>Butcher</text>
+			<sent>12</sent>
+			<position>13</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_13">
+		<character>
+			<text>Consul</text>
+			<sent>13</sent>
+			<position>3</position>
+		</character>
+		<character>
+			<text>Kassad</text>
+			<sent>13</sent>
+			<position>21</position>
+		</character>
+	</entity>
+
+		<entity name="sentence_14">
+		<character>
+			<text>Fedmahn</text>
+			<sent>14</sent>
+			<position>2</position>
+		</character>
+		<character>
+			<text>Kassad</text>
+			<sent>14</sent>
+			<position>3</position>
+		</character>
+		<character>
+			<text>Masteen</text>
+			<sent>14</sent>
+			<position>17</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_15">
+		<character>
+			<text>Hoyt</text>
+			<sent>15</sent>
+			<position>9</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_16">
+		<character>
+			<text>Hoyt</text>
+			<sent>16</sent>
+			<position>4</position>
+		</character>
+		<character>
+			<text>Kassad</text>
+			<sent>16</sent>
+			<position>9</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_19">
+		<character>
+			<text>Hoyt</text>
+			<sent>19</sent>
+			<position>5</position>
+		</character>
+	</entity>
+
+</document>

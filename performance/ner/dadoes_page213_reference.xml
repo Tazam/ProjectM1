@@ -8,11 +8,69 @@
 		</character>
 	</entity>
 
+	<entity name="sentence_2">
+		<character>
+			<text>crow</text>
+			<sent>2</sent>
+			<position>22</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_3">
+		<character>
+			<text>donkey</text>
+			<sent>3</sent>
+			<position>2</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_5">
+		<character>
+			<text>donkey</text>
+			<sent>3</sent>
+			<position>7</position>
+		</character>
+		<character>
+			<text>donkey</text>
+			<sent>3</sent>
+			<position>30</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_6">
+		<character>
+			<text>donkey</text>
+			<sent>6</sent>
+			<position>17</position>
+		</character>
+		<text>crow</text>
+			<sent>6</sent>
+			<position>10</position>
+		</character>
+	</entity>
+
+
 	<entity name="sentence_18">
 		<character>
 			<text>Mercer</text>
 			<sent>18</sent>
 			<position>1</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_23">
+		<character>
+			<text>spider</text>
+			<sent>23</sent>
+			<position>3</position>
+		</character>
+	</entity>
+
+	<entity name="sentence_24">
+		<character>
+			<text>spider</text>
+			<sent>24</sent>
+			<position>12</position>
 		</character>
 	</entity>
 
