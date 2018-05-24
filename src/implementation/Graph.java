@@ -158,12 +158,14 @@ public class Graph {
 			buffer.write("</node>");
 			buffer.newLine();
 		}
-		
+		float pond = 1;
 		for (Edge edge : this.edgeMap.values())
 		{
+			if (edge.ponderation<=0)
+				pond = edge.ponderation;
 			buffer.write("<edge id=\""+edge.id+"\" source=\""+edge.nodeLeft.id+"\" target=\""+edge.nodeRight.id+"\">");
 			buffer.newLine();
-			buffer.write("<data key=\"keyEdge\">"+edge.ponderation+"</data>");
+			buffer.write("<data key=\"keyEdge\">"+pond+"</data>");
 			buffer.newLine();
 			buffer.write("</edge>");
 			buffer.newLine();
