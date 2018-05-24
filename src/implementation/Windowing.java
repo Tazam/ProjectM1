@@ -67,13 +67,19 @@ public class Windowing implements RelationshipExtractionMethod {
 		System.out.println("MAIN WORK");
 
 		if ("SENTENCE".equals(optionSize))
+		{
+			System.out.println("SENTENCE !");
 			corefSent();
+		}
 		if ("WORD".equals(optionSize))
-			corefWord();
+			{
+			System.out.println("WORD ! ");
+				corefWord();
+			}
 		
 		
 		System.out.println("GRAPH :");
-		graph.toString();
+		System.out.println(this.graph.toString());
 		System.out.println("fin");
 		
 
@@ -181,11 +187,15 @@ public class Windowing implements RelationshipExtractionMethod {
 			
 			// on ajoute les noeuds au graph.
 			for (Node n : charMap.values())
-				graph.addNode(n);
+				this.graph.addNode(n);
 			
 			// on ajoute les arcs.
 			for (Edge e : linkList)
-				graph.addEdgeWithPonderation(e);
+				{
+					//System.out.println("EDGE:");
+					this.graph.addEdgeWithPonderation(e);
+					//System.out.println(this.graph.edgeMap.toString());
+				}
 			
 			//System.out.println("EDGE:");
 			//System.out.println(linkList.toString());
@@ -205,6 +215,8 @@ public class Windowing implements RelationshipExtractionMethod {
 				i++;
 			}
 		}while (i<sentences.size());
+		//System.out.println("--------------------------------*********//////////////");
+		//System.out.println(this.graph.edgeMap.toString());
 		
 	}
 	
@@ -332,6 +344,7 @@ public class Windowing implements RelationshipExtractionMethod {
 				i++;
 			}
 		}while (i<tokens.size());
+		
 		
 	}
 	/*

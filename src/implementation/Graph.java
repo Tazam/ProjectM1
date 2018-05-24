@@ -17,6 +17,7 @@ public class Graph {
 	
 	protected Map<String,Node> nodeMap;
 	protected Map<String, Edge> edgeMap;
+	protected boolean oriented;
 	String name;
 	
 	public Graph()
@@ -98,7 +99,27 @@ public class Graph {
 	
 	public void graphMLPrinter(String path) throws IOException
 	{
-		FileWriter fw = new FileWriter(path+"/"+this.name+".graphml");
+		
+
+		if (this.nodeMap.isEmpty())
+		{
+			System.out.println("Erreur nodeMapeMpty !");
+			return;
+		}
+		
+		if (this.edgeMap.isEmpty())
+		{
+			System.out.println("Erreur edgeMapeMpty !");
+			return;
+		}
+		
+		String pathDest = this.name+".graphml";
+		
+		if (!"".equals(path))
+			pathDest = path+"/"+this.name+".graphml";
+		
+		
+		FileWriter fw = new FileWriter(pathDest);
 		BufferedWriter buffer = new BufferedWriter(fw);
 		
 		buffer.write("<?xml version=\"1.0\" encoding=\"UTF-8\"?>");
@@ -112,7 +133,14 @@ public class Graph {
 		buffer.write("</key>");
 		buffer.write("<key id=\"keyEdge\" for=\"edge\" attr.name=\"weight\" attr.type=\"float\"/>");
 		buffer.newLine();
-		if (this.edgeMap.get(0).isOreinted())
+		
+		for (Edge etpm : this.edgeMap.values())
+		{
+			this.oriented = etpm.oriented;
+			break;
+		}
+		
+		if (this.oriented)
 		{
 			buffer.write("<graph id=\""+this.name+"\" edgedefault=\"directed\">");
 		}else
@@ -146,6 +174,8 @@ public class Graph {
 		buffer.write("</graphml>");
 		buffer.flush();
 		buffer.close();
+		
+		System.out.println(pathDest+" printed !");
 	}
 	
 	public String toString()
