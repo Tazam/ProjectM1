@@ -14,15 +14,10 @@ public class Test_corefPerformance
 	public static void main(String[] args) throws ClassNotFoundException, IOException
 	{
 		Properties props = new Properties();
-		props.setProperty("coref.algorithm", "neural");
-		props.setProperty("coref.maxMentionDistance", "100");
-		//props.setProperty("coref.algorithm", "statistical");
+		//props.setProperty("coref.algorithm", "neural");
+		props.setProperty("coref.algorithm", "statistical");
 		CorefChainComparator comparator = new CorefChainComparator(props);
-		
-		File file = new File("corpus\\Oz2.txt");
-		//AnnotationHelper.helperPrint(file);
-		AnnotationHelper.textAnnotationHelper(file);
-	
+			
 		Stats stats1 = comparator.compareFiles_MUC(false);
 		Stats stats2 = comparator.compareFiles_BCUBE(false);
 		Stats stats3 = comparator.compareFiles_CEAF(Similarity.SIMPLE, false);
