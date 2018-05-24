@@ -161,7 +161,7 @@ public class Graph {
 		float pond = 1;
 		for (Edge edge : this.edgeMap.values())
 		{
-			if (edge.ponderation<0)
+			if (edge.ponderation>0)
 				pond = edge.ponderation;
 			buffer.write("<edge id=\""+edge.id+"\" source=\""+edge.nodeLeft.id+"\" target=\""+edge.nodeRight.id+"\">");
 			buffer.newLine();
