@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml>
+
+<key id="keyNode" for="node" attr.name="characterName" attr.type="string">
+</key><key id="keyEdge" for="edge" attr.name="weight" attr.type="float"/>
+<graph id="graph_mention_Le_Trone_de_fer_tome_ 01_prelude.txt" edgedefault="directed">
+<node id="messer">
+<data key="keyNode">messer</data>
+</node>
+<node id="--">
+<data key="keyNode">--</data>
+</node>
+<node id="Gared">
+<data key="keyNode">Gared</data>
+</node>
+<node id="Tu">
+<data key="keyNode">Tu</data>
+</node>
+<node id="Waymar Royce">
+<data key="keyNode">Waymar Royce</data>
+</node>
+<node id="Royce">
+<data key="keyNode">Royce</data>
+</node>
+<node id="Waymar">
+<data key="keyNode">Waymar</data>
+</node>
+<node id="gâtouilles">
+<data key="keyNode">gâtouilles</data>
+</node>
+<node id="Meilleur">
+<data key="keyNode">Meilleur</data>
+</node>
+<node id="gens">
+<data key="keyNode">gens</data>
+</node>
+<node id="Ma">
+<data key="keyNode">Ma</data>
+</node>
+<node id="Robert">
+<data key="keyNode">Robert</data>
+</node>
+<node id="Les">
+<data key="keyNode">Les</data>
+</node>
+<node id="Tombés">
+<data key="keyNode">Tombés</data>
+</node>
+<edge id="Gared" source="Gared" target="Ma">
+<data key="keyEdge">1.0</data>
+</edge>
+<edge id="Waymar Royce" source="Waymar Royce" target="messer">
+<data key="keyEdge">1.0</data>
+</edge>
+<edge id="Royce" source="Royce" target="Gared">
+<data key="keyEdge">1.0</data>
+</edge>
+<edge id="Waymar" source="Waymar" target="--">
+<data key="keyEdge">1.0</data>
+</edge>
+</graph>
+</graphml>

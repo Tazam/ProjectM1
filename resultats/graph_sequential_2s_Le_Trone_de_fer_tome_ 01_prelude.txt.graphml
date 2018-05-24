@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml>
+
+<key id="keyNode" for="node" attr.name="characterName" attr.type="string">
+</key><key id="keyEdge" for="edge" attr.name="weight" attr.type="float"/>
+<graph id="graph_sequential_2s_Le_Trone_de_fer_tome_ 01_prelude.txt" edgedefault="undirected">
+<node id="messer">
+<data key="keyNode">messer</data>
+</node>
+<node id="Braconnait">
+<data key="keyNode">Braconnait</data>
+</node>
+<node id="--">
+<data key="keyNode">--</data>
+</node>
+<node id="Gared">
+<data key="keyNode">Gared</data>
+</node>
+<node id="Tu">
+<data key="keyNode">Tu</data>
+</node>
+<node id="Ser Waymar Royce">
+<data key="keyNode">Ser Waymar Royce</data>
+</node>
+<node id="Ser">
+<data key="keyNode">Ser</data>
+</node>
+<node id="Personne">
+<data key="keyNode">Personne</data>
+</node>
+<node id="Royce">
+<data key="keyNode">Royce</data>
+</node>
+<node id="Waymar">
+<data key="keyNode">Waymar</data>
+</node>
+<node id="gâtouilles">
+<data key="keyNode">gâtouilles</data>
+</node>
+<node id="Juché">
+<data key="keyNode">Juché</data>
+</node>
+<node id="Meilleur">
+<data key="keyNode">Meilleur</data>
+</node>
+<node id="gens">
+<data key="keyNode">gens</data>
+</node>
+<node id="Belle">
+<data key="keyNode">Belle</data>
+</node>
+<node id="Ma">
+<data key="keyNode">Ma</data>
+</node>
+<node id="Robert">
+<data key="keyNode">Robert</data>
+</node>
+<node id="Les">
+<data key="keyNode">Les</data>
+</node>
+<node id="Tombés">
+<data key="keyNode">Tombés</data>
+</node>
+<edge id="--" source="--" target="Tu">
+<data key="keyEdge">146.0</data>
+</edge>
+<edge id="messer" source="messer" target="Royce">
+<data key="keyEdge">34.0</data>
+</edge>
+<edge id="Meilleur" source="Meilleur" target="Gared">
+<data key="keyEdge">2.0</data>
+</edge>
+<edge id="Gared" source="Gared" target="Royce">
+<data key="keyEdge">56.0</data>
+</edge>
+<edge id="Tu" source="Tu" target="Tombés">
+<data key="keyEdge">70.0</data>
+</edge>
+<edge id="Ser Waymar Royce" source="Ser Waymar Royce" target="Royce">
+<data key="keyEdge">100.0</data>
+</edge>
+<edge id="Ser" source="Ser" target="Waymar">
+<data key="keyEdge">49.0</data>
+</edge>
+<edge id="gens" source="gens" target="Les">
+<data key="keyEdge">49.0</data>
+</edge>
+<edge id="Royce" source="Royce" target="Waymar">
+<data key="keyEdge">244.0</data>
+</edge>
+<edge id="Waymar" source="Waymar" target="Gared">
+<data key="keyEdge">74.0</data>
+</edge>
+<edge id="gâtouilles" source="gâtouilles" target="--">
+<data key="keyEdge">48.0</data>
+</edge>
+<edge id="Tombés" source="Tombés" target="--">
+<data key="keyEdge">20.0</data>
+</edge>
+</graph>
+</graphml>

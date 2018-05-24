@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml>
+
+<key id="keyNode" for="node" attr.name="characterName" attr.type="string">
+</key><key id="keyEdge" for="edge" attr.name="weight" attr.type="float"/>
+<graph id="graph_sliding_2s_Le_Trone_de_fer_tome_ 01_Catelyn_1.txt" edgedefault="undirected">
+<node id="Tommen">
+<data key="keyNode">Tommen</data>
+</node>
+<node id="Alors">
+<data key="keyNode">Alors</data>
+</node>
+<node id="Arya">
+<data key="keyNode">Arya</data>
+</node>
+<node id="comme disait Ned">
+<data key="keyNode">comme disait Ned</data>
+</node>
+<node id="Winterfell">
+<data key="keyNode">Winterfell</data>
+</node>
+<node id="Baratheon">
+<data key="keyNode">Baratheon</data>
+</node>
+<node id="Robert">
+<data key="keyNode">Robert</data>
+</node>
+<node id="Peur">
+<data key="keyNode">Peur</data>
+</node>
+<node id="Hoster">
+<data key="keyNode">Hoster</data>
+</node>
+<node id="Arryn">
+<data key="keyNode">Arryn</data>
+</node>
+<node id="--">
+<data key="keyNode">--</data>
+</node>
+<node id="Elle">
+<data key="keyNode">Elle</data>
+</node>
+<node id="Imputables">
+<data key="keyNode">Imputables</data>
+</node>
+<node id="Mestre">
+<data key="keyNode">Mestre</data>
+</node>
+<node id="Brandon">
+<data key="keyNode">Brandon</data>
+</node>
+<node id="Jon">
+<data key="keyNode">Jon</data>
+</node>
+<node id="Brynden">
+<data key="keyNode">Brynden</data>
+</node>
+<node id="Ben">
+<data key="keyNode">Ben</data>
+</node>
+<node id="Catelyn">
+<data key="keyNode">Catelyn</data>
+</node>
+<node id="Ned">
+<data key="keyNode">Ned</data>
+</node>
+<node id="Tully">
+<data key="keyNode">Tully</data>
+</node>
+<node id="Piètre">
+<data key="keyNode">Piètre</data>
+</node>
+<node id="Mance">
+<data key="keyNode">Mance</data>
+</node>
+<node id="Luwin">
+<data key="keyNode">Luwin</data>
+</node>
+<node id="Rayder">
+<data key="keyNode">Rayder</data>
+</node>
+<node id="Rickon">
+<data key="keyNode">Rickon</data>
+</node>
+<edge id="--" source="--" target="Arya">
+<data key="keyEdge">199.0</data>
+</edge>
+<edge id="Elle" source="Elle" target="comme disait Ned">
+<data key="keyEdge">107.0</data>
+</edge>
+<edge id="Tommen" source="Tommen" target="Ned">
+<data key="keyEdge">39.0</data>
+</edge>
+<edge id="Alors" source="Alors" target="Robert">
+<data key="keyEdge">48.0</data>
+</edge>
+<edge id="Arya" source="Arya" target="Rickon">
+<data key="keyEdge">33.0</data>
+</edge>
+<edge id="Imputables" source="Imputables" target="Ben">
+<data key="keyEdge">35.0</data>
+</edge>
+<edge id="Mestre" source="Mestre" target="Luwin">
+<data key="keyEdge">49.0</data>
+</edge>
+<edge id="comme disait Ned" source="comme disait Ned" target="Ned">
+<data key="keyEdge">206.0</data>
+</edge>
+<edge id="Jon" source="Jon" target="Arryn">
+<data key="keyEdge">49.0</data>
+</edge>
+<edge id="Brynden" source="Brynden" target="Ned">
+<data key="keyEdge">24.0</data>
+</edge>
+<edge id="Ben" source="Ben" target="--">
+<data key="keyEdge">35.0</data>
+</edge>
+<edge id="Catelyn" source="Catelyn" target="Piètre">
+<data key="keyEdge">30.0</data>
+</edge>
+<edge id="Ned" source="Ned" target="Elle">
+<data key="keyEdge">158.0</data>
+</edge>
+<edge id="Tully" source="Tully" target="Hoster">
+<data key="keyEdge">50.0</data>
+</edge>
+<edge id="Piètre" source="Piètre" target="--">
+<data key="keyEdge">35.0</data>
+</edge>
+<edge id="Baratheon" source="Baratheon" target="Robert">
+<data key="keyEdge">50.0</data>
+</edge>
+<edge id="Robert" source="Robert" target="Jon">
+<data key="keyEdge">156.0</data>
+</edge>
+<edge id="Mance" source="Mance" target="Rayder">
+<data key="keyEdge">49.0</data>
+</edge>
+<edge id="Peur" source="Peur" target="--">
+<data key="keyEdge">42.0</data>
+</edge>
+<edge id="Hoster" source="Hoster" target="Ned">
+<data key="keyEdge">50.0</data>
+</edge>
+<edge id="Rickon" source="Rickon" target="Elle">
+<data key="keyEdge">46.0</data>
+</edge>
+<edge id="Arryn" source="Arryn" target="Jon">
+<data key="keyEdge">58.0</data>
+</edge>
+</graph>
+</graphml>
